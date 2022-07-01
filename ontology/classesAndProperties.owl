@@ -1,0 +1,1388 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#"
+     xml:base="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseCompatibleWithMotherbaord -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseCompatibleWithMotherbaord">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Case"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Motherboard"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#compatibleCPU -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#compatibleCPU">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#componentCompatibleWithMotherboard"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CPU"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#compatibleCase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#compatibleCase">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#componentCompatibleWithMotherboard"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#compatibleGPU -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#compatibleGPU">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#componentCompatibleWithMotherboard"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GPU"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#compatibleHDD -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#compatibleHDD">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#componentCompatibleWithMotherboard"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HDD"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#compatibleMonitor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#compatibleMonitor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#componentCompatibleWithMotherboard"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#compatibleRAM -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#compatibleRAM">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#componentCompatibleWithMotherboard"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#RAM"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#compatibleSSD -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#compatibleSSD">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#componentCompatibleWithMotherboard"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#SSD"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#complatiblePSU -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#complatiblePSU">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#componentCompatibleWithMotherboard"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#componentCompatibleWithMotherboard -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#componentCompatibleWithMotherboard">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Motherboard"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerCompatibleWithCPU -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerCompatibleWithCPU">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Cooler"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CPU"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#L2 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#L2">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#cache"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#L3 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#L3">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#cache"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PCIe -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PCIe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#audioConnectivity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#audioConnectivity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Audio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#baseClock -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#baseClock">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#clock"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#cache -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#cache">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CPU"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#cameraResolution -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#cameraResolution">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Camera"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseATXSupport -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseATXSupport">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseDimenisons -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseDimenisons">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Case"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseHeight">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseDimenisons"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseLength">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseDimenisons"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseRGB -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseRGB">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseWidth">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseDimenisons"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseeATXSupport -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseeATXSupport">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedShort"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#casemATXSupport -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#casemATXSupport">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseminiITXSupport -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseminiITXSupport">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#clock -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#clock">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CPU"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerConnector -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerConnector">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Cooler"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerCurrent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerCurrent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Cooler"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerFanSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerFanSize">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Cooler"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerFanSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerFanSpeed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Cooler"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerHeatPipes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerHeatPipes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Cooler"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerNoiseLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerNoiseLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Cooler"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerWarranty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerWarranty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Cooler"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coresNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coresNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CPU"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#cpuMemorySpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#cpuMemorySpeed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ddrType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ddrType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpu6PinConnectors -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpu6PinConnectors">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpu8PinConnectors -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpu8PinConnectors">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuBus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuBus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuCUDA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuCUDA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuDimensions -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuDimensions">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GPU"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuDisplayPorts -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuDisplayPorts">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuHDMIPorts -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuHDMIPorts">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuHeight">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuDimensions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuLength">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuDimensions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuMemory -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuMemory">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuMemorySpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuMemorySpeed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuMemoryType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuMemoryType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuPCIe -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuPCIe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuSpeed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuWidth">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuDimensions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#keyboardCableLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#keyboardCableLength">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Keyboard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#keyboardConnection -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#keyboardConnection">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Keyboard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#keyboardIsMechanical -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#keyboardIsMechanical">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Keyboard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#keyboardIsRGB -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#keyboardIsRGB">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Keyboard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#keyboardIsTKL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#keyboardIsTKL">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Keyboard"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#keyboardPoolingRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#keyboardPoolingRate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Keyboard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#logicalCores -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#logicalCores">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coresNumber"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#maxTemp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#maxTemp">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memoryCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memoryCapacity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Memory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memoryExternal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memoryExternal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Memory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memoryFormat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memoryFormat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Memory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memoryInterface -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memoryInterface">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Memory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memoryReadSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memoryReadSpeed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memorySpeed"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memorySpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memorySpeed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Memory"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memoryWriteSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memoryWriteSpeed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memorySpeed"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorAspectRatio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorAspectRatio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Monitor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorBrightness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorBrightness">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Monitor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorDiagonal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorDiagonal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Monitor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorHasAudio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorHasAudio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Monitor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorHasDisplayPort -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorHasDisplayPort">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Monitor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorHasFreeSync -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorHasFreeSync">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Monitor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorHasGSync -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorHasGSync">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Monitor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorHasTouchscreen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorHasTouchscreen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Monitor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorHasVESA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorHasVESA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Monitor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorPanelType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorPanelType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Monitor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorRefreshRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorRefreshRate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Monitor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorResolution -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorResolution">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Monitor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorResponseTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorResponseTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Monitor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motheboardChipset -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motheboardChipset">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardFormFactor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardFormFactor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardHasWiFi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardHasWiFi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardIsRGB -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardIsRGB">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardLAN -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardLAN">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardRAMModules -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardRAMModules">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardRamMaxSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardRamMaxSpeed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardSocket -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardSocket">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardUSBPorts -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardUSBPorts">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardWiFiVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardWiFiVersion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#mouseConnection -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#mouseConnection">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Mouse"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#mouseDPI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#mouseDPI">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Mouse"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#mouseIsRGB -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#mouseIsRGB">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Mouse"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#mouseMass -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#mouseMass">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Mouse"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#mousePoolingRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#mousePoolingRate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Mouse"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#mouseSensor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#mouseSensor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Mouse"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#networkingBluetooth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#networkingBluetooth">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Networking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#networkingLan -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#networkingLan">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Networking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#networkingWiFi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#networkingWiFi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Networking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#opticalDriveIntegratedCardReader -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#opticalDriveIntegratedCardReader">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#OpticalDrive"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#opticalDriveType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#opticalDriveType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#OpticalDrive"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#physicalCores -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#physicalCores">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coresNumber"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#printerType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#printerType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Printer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psu6PinConnectors -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psu6PinConnectors">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psu8PinConnectors -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psu8PinConnectors">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuCertificate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuCertificate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuFormFactor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuFormFactor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuHasOCP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuHasOCP">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuHasOPP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuHasOPP">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuHasOTP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuHasOTP">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuHasOVP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuHasOVP">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuHasPFC -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuHasPFC">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuHasSCP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuHasSCP">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuHasUVP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuHasUVP">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuIsModular -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuIsModular">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuMolexConnectors -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuMolexConnectors">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuPower -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuPower">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuSATAConnectors -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#psuSATAConnectors">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ramCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ramCapacity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#RAM"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ramDDR -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ramDDR">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#RAM"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ramFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ramFrequency">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#RAM"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ramLatency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ramLatency">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#RAM"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ramModulesNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ramModulesNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#RAM"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#socket -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#socket">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#tdp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#tdp">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#technology -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#technology">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#turboBoost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#turboBoost">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#clock"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#unlockedOverclocking -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#unlockedOverclocking">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CPU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Audio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Audio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Peripherals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CPU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CPU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Camera -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Camera">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Peripherals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Case -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Case">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Component"/>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Cooler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Cooler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Earphones -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Earphones">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Audio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GPU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GPU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HDD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HDD">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Memory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HardwareComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HardwareComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Keyboard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Keyboard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Peripherals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Memory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Memory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Microphone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Microphone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Peripherals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Monitor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Monitor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Peripherals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Motherboard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Motherboard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Mouse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Mouse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Peripherals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Networking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Networking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#OpticalDrive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#OpticalDrive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PSU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Peripherals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Peripherals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Printer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Printer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Peripherals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#RAM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#RAM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#SSD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#SSD">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Memory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Speakers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Speakers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Audio"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
