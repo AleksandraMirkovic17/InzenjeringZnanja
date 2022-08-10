@@ -247,7 +247,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#caseeATXSupport">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Case"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedShort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -576,7 +576,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memoryCapacity">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Memory"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -612,7 +612,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memoryReadSpeed">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memorySpeed"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -629,7 +629,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memoryWriteSpeed">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#memorySpeed"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -1571,12 +1571,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#G915_LIGHTSPEED">
         <rdf:type rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Keyboard"/>
-        <keyboardCableLength rdf:datatype="http://www.w3.org/2001/XMLSchema#int">120</keyboardCableLength>
+        <keyboardCableLength rdf:datatype="http://www.w3.org/2001/XMLSchema#string">120</keyboardCableLength>
         <keyboardConnection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USB</keyboardConnection>
         <keyboardIsMechanical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</keyboardIsMechanical>
         <keyboardIsRGB rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</keyboardIsRGB>
         <keyboardIsTKL rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</keyboardIsTKL>
-        <keyboardPoolingRate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</keyboardPoolingRate>
+        <keyboardPoolingRate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1000</keyboardPoolingRate>
     </owl:NamedIndividual>
     
 
@@ -1606,7 +1606,7 @@
         <gpuMemorySpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</gpuMemorySpeed>
         <gpuMemoryType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GDDR5X</gpuMemoryType>
         <gpuPCIe rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</gpuPCIe>
-        <gpuSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10000</gpuSpeed>
+        <gpuSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10000</gpuSpeed>
     </owl:NamedIndividual>
     
 
@@ -1667,7 +1667,7 @@
         <gpuMemorySpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1200</gpuMemorySpeed>
         <gpuMemoryType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GDDR6</gpuMemoryType>
         <gpuPCIe rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</gpuPCIe>
-        <gpuSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11000</gpuSpeed>
+        <gpuSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11000</gpuSpeed>
     </owl:NamedIndividual>
     
 
@@ -1704,12 +1704,12 @@
         <motherboardFormFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATX</motherboardFormFactor>
         <motherboardHasWiFi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</motherboardHasWiFi>
         <motherboardIsRGB rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</motherboardIsRGB>
-        <motherboardLAN rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</motherboardLAN>
+        <motherboardLAN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</motherboardLAN>
         <motherboardRAMModules rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</motherboardRAMModules>
         <motherboardRamMaxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4500</motherboardRamMaxSpeed>
         <motherboardSocket rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AM4</motherboardSocket>
         <motherboardUSBPorts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</motherboardUSBPorts>
-        <motherboardWiFiVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</motherboardWiFiVersion>
+        <motherboardWiFiVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</motherboardWiFiVersion>
     </owl:NamedIndividual>
     
 
@@ -1726,12 +1726,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#SCORPION_KG916">
         <rdf:type rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Keyboard"/>
-        <keyboardCableLength rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</keyboardCableLength>
+        <keyboardCableLength rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</keyboardCableLength>
         <keyboardConnection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wireless</keyboardConnection>
         <keyboardIsMechanical rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</keyboardIsMechanical>
         <keyboardIsRGB rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</keyboardIsRGB>
         <keyboardIsTKL rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</keyboardIsTKL>
-        <keyboardPoolingRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2000</keyboardPoolingRate>
+        <keyboardPoolingRate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</keyboardPoolingRate>
     </owl:NamedIndividual>
     
 
@@ -1762,7 +1762,7 @@
         <motherboardRamMaxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5000</motherboardRamMaxSpeed>
         <motherboardSocket rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AM4</motherboardSocket>
         <motherboardUSBPorts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</motherboardUSBPorts>
-        <motherboardWiFiVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</motherboardWiFiVersion>
+        <motherboardWiFiVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</motherboardWiFiVersion>
     </owl:NamedIndividual>
     
 
@@ -1804,7 +1804,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#18_TB_Western_Digital_WD181PURP">
         <rdf:type rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HDD"/>
         <compatibleHDD rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#X570_Taichi_Razer_Edition"/>
-        <memoryCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</memoryCapacity>
+        <memoryCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18</memoryCapacity>
         <memoryExternal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</memoryExternal>
         <memoryFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.5</memoryFormat>
         <memoryInterface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SATA</memoryInterface>
@@ -1833,7 +1833,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#512_GB_Apacer_AS2280P4U_PRO">
         <rdf:type rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#SSD"/>
         <compatibleSSD rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ROG_Crosshair_VIII_Dark_Hero"/>
-        <memoryCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</memoryCapacity>
+        <memoryCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</memoryCapacity>
         <memoryExternal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</memoryExternal>
         <memoryFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M.2</memoryFormat>
         <memoryInterface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVME</memoryInterface>
@@ -1848,7 +1848,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#960_GB_Samsung_MZ7L3960HCJR-00A07">
         <rdf:type rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#SSD"/>
         <compatibleSSD rdf:resource="http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#X570_Taichi_Razer_Edition"/>
-        <memoryCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</memoryCapacity>
+        <memoryCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</memoryCapacity>
         <memoryExternal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</memoryExternal>
         <memoryFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.5</memoryFormat>
         <memoryInterface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SATA</memoryInterface>
