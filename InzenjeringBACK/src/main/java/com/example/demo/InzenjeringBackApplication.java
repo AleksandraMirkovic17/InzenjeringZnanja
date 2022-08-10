@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.semanticweb.owlapi.model.OWLOntology;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -20,7 +21,11 @@ public class InzenjeringBackApplication implements CommandLineRunner {
 		System.out.println("********************************************************************************");
 		System.out.println("********************************************************************************");
 		System.out.println("********************************************************************************");
-		service.testOntology();
+		OWLOntology ontology=service.creatOntology();
+		String query = getQuery();
+		System.out.println(query);
+		System.out.println("********************************************************************************");
+		service.executeTestQuery(query);
 
 	}
 

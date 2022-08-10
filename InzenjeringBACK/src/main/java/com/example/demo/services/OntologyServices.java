@@ -25,9 +25,16 @@ public class OntologyServices {
     private Model model;
 
     public OntologyServices() {
-        createManager();
-        loadOntology();
-        loadModel();
+
+        String filePath = "..\\ontology\\classesAndInstances.owl";
+        this.model = ModelFactory.createDefaultModel();
+        try {
+            InputStream is = new FileInputStream(filePath);
+            RDFDataMgr.read(this.model, is, Lang.TURTLE);
+            is.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public OWLOntologyManager getManager() {
@@ -42,9 +49,6 @@ public class OntologyServices {
         return this.model;
     }
 
-    public void testOntology() {
-        System.out.println(this.ontology);
-    }
 
     public void executeTestQuery(String query) {
         QueryExecution qe = QueryExecutionFactory.create(QueryFactory.create(query), model);
@@ -65,11 +69,9 @@ public class OntologyServices {
         return retVal;
     }
 
-    private void createManager() {
-        this.manager = OWLManager.createOWLOntologyManager();
-    }
 
-    private void loadOntology() {
+    public OWLOntology creatOntology() {
+        this.manager = OWLManager.createOWLOntologyManager();
         String filePath = "..\\ontology\\classesAndInstances.owl";
         File file = new File(filePath);
         try {
@@ -77,16 +79,9 @@ public class OntologyServices {
         } catch (Exception e) {
             System.out.println(e);
         }
+
+        return this.ontology;
     }
 
-    private void loadModel() {
-        String filePath = "..\\ontology\\classesAndInstances.owl";
-        this.model = ModelFactory.createDefaultModel();
-        try {
-            InputStream is = new FileInputStream(filePath);
-            RDFDataMgr.read(this.model, is, Lang.TURTLE);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+
 }
