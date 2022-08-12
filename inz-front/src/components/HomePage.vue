@@ -8,24 +8,23 @@
     <div class = "d-sm-flex align-items-center justify-content-between">
    <div class="form-group">
     <label for="exampleFormControlSelect1"> Select motherboard</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <select class="form-control" id="exampleFormControlSelect1"  v-model="selectedMotherboard">
+      <option v-for="m in motherboards" v-bind:value="m" :key="m"> {{m}}</option>
     </select>
   
     <br>
     <label for="exampleFormControlSelect1">Select upgrade</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <select class="form-control" id="exampleFormControlSelect1" v-model="selectedUpgrade">
       <option>CPU</option>
       <option>RAM</option>
     </select>
     <br>
     <br>
+    <div class="col-md-8">
+      <button type="submit" class="btn btn-success" v-on:click="Submit()">SUBMIT</button>
+    </div>
  <label for="exampleFormControlSelect1">CPU</label>
-    <table class="table table-striped table-dark">
+  <table class="table table-striped table-dark">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -63,6 +62,46 @@
 </section>
 
 </template>
+<script>
+
+import axios from "axios";
+export default{
+   data(){
+        return{
+            selectedMotherboard: '',
+             motherboards : new Array()
+
+        }
+    },
+    mounted(){
+      axios.get('http://localhost:8081/query/getAllMotherboards')
+          .then(response1 => {
+            console.log("motherboards ", response1.data)
+            this.motherboards = response1.data;
+            if(this.motherboards.length>0){
+              this.selectedMotherboard = this.motherboards[0];
+            }
+
+          }).catch(error => {
+    console.log(error.response)
+          })
+
+
+    },
+    methods:
+    {
+      Submit()
+      {
+        axios.get()
+      }
+
+
+    }
+}
+
+
+</script>
+
 
 <style>
 

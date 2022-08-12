@@ -55,18 +55,13 @@ public class OntologyServices {
         return retVal;
     }
 
-    private String getQuery() {
+    public String getQuery() {
         return "prefix : <http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#>\n" +
                 "prefix owl: <http://www.w3.org/2002/07/owl#>\n" +
                 "prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
                 "prefix xml: <http://www.w3.org/XML/1998/namespace>\n" +
                 "prefix xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
-                "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" +
-                "SELECT ?ramname ?rc\n" +
-                "WHERE {\n" +
-                "?ramname rdf:type :RAM . \n" +
-                "?ramname :ramCapacity ?rc . \n" +
-                "}\n";
+                "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n";
     }
     public void test()
     {
