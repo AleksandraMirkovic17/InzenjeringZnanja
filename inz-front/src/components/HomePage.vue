@@ -23,37 +23,28 @@
     <div class="col-md-8">
       <button type="submit" class="btn btn-success" v-on:click="Submit()">SUBMIT</button>
     </div>
- <label for="exampleFormControlSelect1">CPU</label>
+<div v-if="view==true && selectedUpgrade=='RAM'">
+ <label for="exampleFormControlSelect1">RAM</label>
   <table class="table table-striped table-dark">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Name</th>
+      <th scope="col">Ram capacity</th>
+      <th scope="col">Ram frequency</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+    <tr v-for="(ram, index) in allRams" :key="ram.id">
+      <th scope="row">{{index+1}}</th>
+      <td>{{ram.name}}</td>
+      <td>{{ram.ramCapacity}}</td>
+      <td>{{ram.ramFrequency}}</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+   
   </tbody>
 </table>
+</div>
   </div>
   </div>
       
@@ -69,7 +60,11 @@ export default{
    data(){
         return{
             selectedMotherboard: '',
-             motherboards : new Array()
+             motherboards : new Array(),
+             selectedUpgrade: '',
+             view : false,
+             allRams: new Array()
+
 
         }
     },
@@ -92,7 +87,25 @@ export default{
     {
       Submit()
       {
-        axios.get()
+         console.log("RAM:  ", this.selectedUpgrade)
+        if(this.selectedMotherboard == '' || this.selectedUpgrade=='')
+        {
+          alert('Please select all fields')
+          return;
+        }
+        if(this.selectedUpgrade == 'RAM')
+        {
+         
+        axios.get('http://localhost:8081/query/RAM/:'+this.selectedMotherboard)
+        .then(response =>{
+          this.allRams=response.data;
+          this.view=true;
+          console.log("all Rams ", response.data)
+        }).catch(error => {
+    console.log(error.response)
+          })
+
+      }
       }
 
 

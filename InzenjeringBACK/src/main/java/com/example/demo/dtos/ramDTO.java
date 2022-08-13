@@ -2,9 +2,9 @@ package com.example.demo.dtos;
 
 public class ramDTO {
     public String name;
-    public int ramDDR;
     public int ramCapacity;
     public int ramFrequency;
+
 
 
     public ramDTO() {
@@ -18,13 +18,6 @@ public class ramDTO {
         this.name = name;
     }
 
-    public int getRamDDR() {
-        return ramDDR;
-    }
-
-    public void setRamDDR(int ramDDR) {
-        this.ramDDR = ramDDR;
-    }
 
     public int getRamCapacity() {
         return ramCapacity;
@@ -39,6 +32,12 @@ public class ramDTO {
     }
 
     public void setRamFrequency(int ramFrequency) {
+        this.ramFrequency = ramFrequency;
+    }
+
+    public ramDTO(String name, int ramCapacity, int ramFrequency) {
+        this.name = name;
+        this.ramCapacity = ramCapacity;
         this.ramFrequency = ramFrequency;
     }
 }
