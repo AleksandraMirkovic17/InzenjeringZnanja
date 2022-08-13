@@ -45,6 +45,30 @@
   </tbody>
 </table>
 </div>
+<div v-if="view==true && selectedUpgrade=='CPU'">
+ <label for="exampleFormControlSelect1">CPU</label>
+  <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Base clock</th>
+      <th scope="col">Cpu memory speed</th>
+      <th scope="col">Socket</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="(cpu, index) in allCpus" :key="cpu.id">
+      <th scope="row">{{index+1}}</th>
+      <td>{{cpu.name}}</td>
+      <td>{{cpu.baseClock}}</td>
+      <td>{{cpu.cpuMemorySpeed}}</td>
+       <td>{{cpu.socket}}</td>
+    </tr>
+   
+  </tbody>
+</table>
+</div>
   </div>
   </div>
       
@@ -63,9 +87,8 @@ export default{
              motherboards : new Array(),
              selectedUpgrade: '',
              view : false,
-             allRams: new Array()
-
-
+             allRams: new Array(),
+             allCpus: new Array()
         }
     },
     mounted(){
@@ -101,6 +124,19 @@ export default{
           this.allRams=response.data;
           this.view=true;
           console.log("all Rams ", response.data)
+        }).catch(error => {
+    console.log(error.response)
+          })
+
+      }
+      if(this.selectedUpgrade == 'CPU')
+        {
+         
+        axios.get('http://localhost:8081/query/CPU/:'+this.selectedMotherboard)
+        .then(response =>{
+          this.allCpus=response.data;
+          this.view=true;
+          console.log("all cpus ", response.data)
         }).catch(error => {
     console.log(error.response)
           })

@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 
+import com.example.demo.dtos.cpuDTO;
 import com.example.demo.dtos.ramDTO;
 import com.example.demo.services.QueryService;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -30,5 +31,11 @@ public class QueryController {
     @ResponseBody
     public ResponseEntity<List<ramDTO>> getAllCompatibileRams(@PathVariable String selectedMotherboard) {
         return new ResponseEntity<>(queryService.upgradeRAM(selectedMotherboard), HttpStatus.OK);
+    }
+
+    @GetMapping("/CPU/{selectedMotherboard}")
+    @ResponseBody
+    public ResponseEntity<List<cpuDTO>> getAllCompatibileCpus(@PathVariable String selectedMotherboard) {
+        return new ResponseEntity<>(queryService.upgradeCPU(selectedMotherboard), HttpStatus.OK);
     }
 }
