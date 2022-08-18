@@ -214,6 +214,12 @@
                   rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerSocket
+:coolerSocket rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Cooler ;
+              rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#coolerWarranty
 :coolerWarranty rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Cooler ;
@@ -318,6 +324,12 @@
 :gpuSpeed rdf:type owl:DatatypeProperty ;
           rdfs:domain :GPU ;
           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuTeraflops
+:gpuTeraflops rdf:type owl:DatatypeProperty ;
+              rdfs:domain :GPU ;
+              rdfs:range xsd:int .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#gpuWidth
@@ -477,7 +489,7 @@
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorRefreshRate
 :monitorRefreshRate rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Monitor ;
-                    rdfs:range xsd:boolean .
+                    rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#monitorResolution
@@ -906,22 +918,452 @@
 #    Individuals
 #################################################################
 
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ADATA_-_S50
+:ADATA_-_S50 rdf:type owl:NamedIndividual ,
+                      :SSD ;
+             :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+             :memoryCapacity "4"^^xsd:string ;
+             :memoryExternal "false"^^xsd:boolean ;
+             :memoryFormat "M.2"^^xsd:string ;
+             :memoryInterface "NVME"^^xsd:string ;
+             :memoryReadSpeed "500"^^xsd:string ;
+             :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ADATA_-_S70
+:ADATA_-_S70 rdf:type owl:NamedIndividual ,
+                      :SSD ;
+             :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+             :memoryCapacity "4"^^xsd:string ;
+             :memoryExternal "false"^^xsd:boolean ;
+             :memoryFormat "M.2"^^xsd:string ;
+             :memoryInterface "NVME"^^xsd:string ;
+             :memoryReadSpeed "500"^^xsd:string ;
+             :memoryWriteSpeed "1000"^^xsd:string .
+
+
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ALCATROZ_FUTURA_BLACK_N1000
 :ALCATROZ_FUTURA_BLACK_N1000 rdf:type owl:NamedIndividual ,
                                       :Case ;
                              :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
                              :caseATXSupport "true"^^xsd:boolean ;
+                             :caseHeight "70cm"^^xsd:string ;
+                             :caseLength "30cm"^^xsd:string ;
+                             :caseRGB "true"^^xsd:boolean ;
+                             :caseWidth "25cm"^^xsd:string ;
                              :caseeATXSupport "false"^^xsd:boolean ;
-                             :casemATXSupport "true"^^xsd:boolean .
+                             :casemATXSupport "true"^^xsd:boolean ;
+                             :caseminiITXSupport "true"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_9_5900X
-:AMD_Ryzen_9_5900X rdf:type owl:NamedIndividual ,
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_EPYC_7571
+:AMD_EPYC_7571 rdf:type owl:NamedIndividual ,
+                        :CPU ;
+               :compatibleCPU :X570_Taichi_Razer_Edition ;
+               :L2 "10"^^xsd:int ;
+               :L3 "20"^^xsd:int ;
+               :PCIe "4"^^xsd:int ;
+               :baseClock "3700"^^xsd:int ;
+               :cpuMemorySpeed "3200"^^xsd:int ;
+               :ddrType "4"^^xsd:int ;
+               :logicalCores "24"^^xsd:int ;
+               :maxTemp "110"^^xsd:int ;
+               :physicalCores "12"^^xsd:int ;
+               :socket "AM4"^^xsd:string ;
+               :tdp "105"^^xsd:int ;
+               :technology "7"^^xsd:int ;
+               :turboBoost "4800"^^xsd:int ;
+               :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_EPYC_7773X
+:AMD_EPYC_7773X rdf:type owl:NamedIndividual ,
+                         :CPU ;
+                :compatibleCPU :X570_Taichi_Razer_Edition ;
+                :L2 "10"^^xsd:int ;
+                :L3 "20"^^xsd:int ;
+                :PCIe "4"^^xsd:int ;
+                :baseClock "3700"^^xsd:int ;
+                :cpuMemorySpeed "3200"^^xsd:int ;
+                :ddrType "4"^^xsd:int ;
+                :logicalCores "24"^^xsd:int ;
+                :maxTemp "110"^^xsd:int ;
+                :physicalCores "12"^^xsd:int ;
+                :socket "AM4"^^xsd:string ;
+                :tdp "105"^^xsd:int ;
+                :technology "7"^^xsd:int ;
+                :turboBoost "4800"^^xsd:int ;
+                :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_EPYC_Embedded_7292P
+:AMD_EPYC_Embedded_7292P rdf:type owl:NamedIndividual ,
+                                  :CPU ;
+                         :compatibleCPU :X570_Taichi_Razer_Edition ;
+                         :L2 "10"^^xsd:int ;
+                         :L3 "20"^^xsd:int ;
+                         :PCIe "4"^^xsd:int ;
+                         :baseClock "3700"^^xsd:int ;
+                         :cpuMemorySpeed "3200"^^xsd:int ;
+                         :ddrType "4"^^xsd:int ;
+                         :logicalCores "24"^^xsd:int ;
+                         :maxTemp "110"^^xsd:int ;
+                         :physicalCores "12"^^xsd:int ;
+                         :socket "AM4"^^xsd:string ;
+                         :tdp "105"^^xsd:int ;
+                         :technology "7"^^xsd:int ;
+                         :turboBoost "4800"^^xsd:int ;
+                         :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_6900_XT
+:AMD_Radeon_6900_XT rdf:type owl:NamedIndividual ,
+                             :GPU ;
+                    :compatibleGPU :X570_Taichi_Razer_Edition ;
+                    :gpu6PinConnectors "2"^^xsd:int ;
+                    :gpu8PinConnectors "0"^^xsd:int ;
+                    :gpuBus "5000"^^xsd:int ;
+                    :gpuCUDA "2480"^^xsd:int ;
+                    :gpuDisplayPorts "2"^^xsd:int ;
+                    :gpuHDMIPorts "2"^^xsd:int ;
+                    :gpuHeight "15cm"^^xsd:string ;
+                    :gpuLength "18cm"^^xsd:string ;
+                    :gpuMemory "8"^^xsd:int ;
+                    :gpuMemorySpeed "1000"^^xsd:int ;
+                    :gpuMemoryType "GDDR5X"^^xsd:string ;
+                    :gpuPCIe "4"^^xsd:int ;
+                    :gpuSpeed "10000"^^xsd:string ;
+                    :gpuTeraflops "15"^^xsd:int ;
+                    :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_RX_5600M
+:AMD_Radeon_RX_5600M rdf:type owl:NamedIndividual ,
+                              :GPU ;
+                     :compatibleGPU :X570_Taichi_Razer_Edition ;
+                     :gpu6PinConnectors "2"^^xsd:int ;
+                     :gpu8PinConnectors "0"^^xsd:int ;
+                     :gpuBus "5000"^^xsd:int ;
+                     :gpuCUDA "2480"^^xsd:int ;
+                     :gpuDisplayPorts "2"^^xsd:int ;
+                     :gpuHDMIPorts "2"^^xsd:int ;
+                     :gpuHeight "15cm"^^xsd:string ;
+                     :gpuLength "18cm"^^xsd:string ;
+                     :gpuMemory "8"^^xsd:int ;
+                     :gpuMemorySpeed "1000"^^xsd:int ;
+                     :gpuMemoryType "GDDR5X"^^xsd:string ;
+                     :gpuPCIe "4"^^xsd:int ;
+                     :gpuSpeed "10000"^^xsd:string ;
+                     :gpuTeraflops "11"^^xsd:int ;
+                     :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_RX_5600_XT
+:AMD_Radeon_RX_5600_XT rdf:type owl:NamedIndividual ,
+                                :GPU ;
+                       :compatibleGPU :X570_Taichi_Razer_Edition ;
+                       :gpu6PinConnectors "2"^^xsd:int ;
+                       :gpu8PinConnectors "0"^^xsd:int ;
+                       :gpuBus "5000"^^xsd:int ;
+                       :gpuCUDA "2480"^^xsd:int ;
+                       :gpuDisplayPorts "2"^^xsd:int ;
+                       :gpuHDMIPorts "2"^^xsd:int ;
+                       :gpuHeight "15cm"^^xsd:string ;
+                       :gpuLength "18cm"^^xsd:string ;
+                       :gpuMemory "8"^^xsd:int ;
+                       :gpuMemorySpeed "1000"^^xsd:int ;
+                       :gpuMemoryType "GDDR5X"^^xsd:string ;
+                       :gpuPCIe "4"^^xsd:int ;
+                       :gpuSpeed "10000"^^xsd:string ;
+                       :gpuTeraflops "10"^^xsd:int ;
+                       :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_RX_5700
+:AMD_Radeon_RX_5700 rdf:type owl:NamedIndividual ,
+                             :GPU ;
+                    :compatibleGPU :X570_Taichi_Razer_Edition ;
+                    :gpu6PinConnectors "2"^^xsd:int ;
+                    :gpu8PinConnectors "0"^^xsd:int ;
+                    :gpuBus "5000"^^xsd:int ;
+                    :gpuCUDA "2480"^^xsd:int ;
+                    :gpuDisplayPorts "2"^^xsd:int ;
+                    :gpuHDMIPorts "2"^^xsd:int ;
+                    :gpuHeight "15cm"^^xsd:string ;
+                    :gpuLength "18cm"^^xsd:string ;
+                    :gpuMemory "8"^^xsd:int ;
+                    :gpuMemorySpeed "1000"^^xsd:int ;
+                    :gpuMemoryType "GDDR5X"^^xsd:string ;
+                    :gpuPCIe "4"^^xsd:int ;
+                    :gpuSpeed "10000"^^xsd:string ;
+                    :gpuTeraflops "9"^^xsd:int ;
+                    :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_RX_5700_XT
+:AMD_Radeon_RX_5700_XT rdf:type owl:NamedIndividual ,
+                                :GPU ;
+                       :compatibleGPU :X570_Taichi_Razer_Edition ;
+                       :gpu6PinConnectors "2"^^xsd:int ;
+                       :gpu8PinConnectors "0"^^xsd:int ;
+                       :gpuBus "5000"^^xsd:int ;
+                       :gpuCUDA "2480"^^xsd:int ;
+                       :gpuDisplayPorts "2"^^xsd:int ;
+                       :gpuHDMIPorts "2"^^xsd:int ;
+                       :gpuHeight "15cm"^^xsd:string ;
+                       :gpuLength "18cm"^^xsd:string ;
+                       :gpuMemory "8"^^xsd:int ;
+                       :gpuMemorySpeed "1000"^^xsd:int ;
+                       :gpuMemoryType "GDDR5X"^^xsd:string ;
+                       :gpuPCIe "4"^^xsd:int ;
+                       :gpuSpeed "10000"^^xsd:string ;
+                       :gpuTeraflops "9"^^xsd:int ;
+                       :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_RX_6600
+:AMD_Radeon_RX_6600 rdf:type owl:NamedIndividual ,
+                             :GPU ;
+                    :compatibleGPU :X570_Taichi_Razer_Edition ;
+                    :gpu6PinConnectors "2"^^xsd:int ;
+                    :gpu8PinConnectors "0"^^xsd:int ;
+                    :gpuBus "5000"^^xsd:int ;
+                    :gpuCUDA "2480"^^xsd:int ;
+                    :gpuDisplayPorts "2"^^xsd:int ;
+                    :gpuHDMIPorts "2"^^xsd:int ;
+                    :gpuHeight "15cm"^^xsd:string ;
+                    :gpuLength "18cm"^^xsd:string ;
+                    :gpuMemory "8"^^xsd:int ;
+                    :gpuMemorySpeed "1000"^^xsd:int ;
+                    :gpuMemoryType "GDDR5X"^^xsd:string ;
+                    :gpuPCIe "4"^^xsd:int ;
+                    :gpuSpeed "10000"^^xsd:string ;
+                    :gpuTeraflops "9"^^xsd:int ;
+                    :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_RX_6600M
+:AMD_Radeon_RX_6600M rdf:type owl:NamedIndividual ,
+                              :GPU ;
+                     :compatibleGPU :X570_Taichi_Razer_Edition ;
+                     :gpu6PinConnectors "2"^^xsd:int ;
+                     :gpu8PinConnectors "0"^^xsd:int ;
+                     :gpuBus "5000"^^xsd:int ;
+                     :gpuCUDA "2480"^^xsd:int ;
+                     :gpuDisplayPorts "2"^^xsd:int ;
+                     :gpuHDMIPorts "2"^^xsd:int ;
+                     :gpuHeight "15cm"^^xsd:string ;
+                     :gpuLength "18cm"^^xsd:string ;
+                     :gpuMemory "8"^^xsd:int ;
+                     :gpuMemorySpeed "1000"^^xsd:int ;
+                     :gpuMemoryType "GDDR5X"^^xsd:string ;
+                     :gpuPCIe "4"^^xsd:int ;
+                     :gpuSpeed "10000"^^xsd:string ;
+                     :gpuTeraflops "9"^^xsd:int ;
+                     :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_RX_6600_XT
+:AMD_Radeon_RX_6600_XT rdf:type owl:NamedIndividual ,
+                                :GPU ;
+                       :compatibleGPU :X570_Taichi_Razer_Edition ;
+                       :gpu6PinConnectors "2"^^xsd:int ;
+                       :gpu8PinConnectors "0"^^xsd:int ;
+                       :gpuBus "5000"^^xsd:int ;
+                       :gpuCUDA "2480"^^xsd:int ;
+                       :gpuDisplayPorts "2"^^xsd:int ;
+                       :gpuHDMIPorts "2"^^xsd:int ;
+                       :gpuHeight "15cm"^^xsd:string ;
+                       :gpuLength "18cm"^^xsd:string ;
+                       :gpuMemory "8"^^xsd:int ;
+                       :gpuMemorySpeed "1000"^^xsd:int ;
+                       :gpuMemoryType "GDDR5X"^^xsd:string ;
+                       :gpuPCIe "4"^^xsd:int ;
+                       :gpuSpeed "10000"^^xsd:string ;
+                       :gpuTeraflops "9"^^xsd:int ;
+                       :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_RX_6700_XT
+:AMD_Radeon_RX_6700_XT rdf:type owl:NamedIndividual ,
+                                :GPU ;
+                       :compatibleGPU :X570_Taichi_Razer_Edition ;
+                       :gpu6PinConnectors "2"^^xsd:int ;
+                       :gpu8PinConnectors "0"^^xsd:int ;
+                       :gpuBus "5000"^^xsd:int ;
+                       :gpuCUDA "2480"^^xsd:int ;
+                       :gpuDisplayPorts "2"^^xsd:int ;
+                       :gpuHDMIPorts "2"^^xsd:int ;
+                       :gpuHeight "15cm"^^xsd:string ;
+                       :gpuLength "18cm"^^xsd:string ;
+                       :gpuMemory "8"^^xsd:int ;
+                       :gpuMemorySpeed "1000"^^xsd:int ;
+                       :gpuMemoryType "GDDR5X"^^xsd:string ;
+                       :gpuPCIe "4"^^xsd:int ;
+                       :gpuSpeed "10000"^^xsd:string ;
+                       :gpuTeraflops "9"^^xsd:int ;
+                       :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_RX_6800
+:AMD_Radeon_RX_6800 rdf:type owl:NamedIndividual ,
+                             :GPU ;
+                    :compatibleGPU :X570_Taichi_Razer_Edition ;
+                    :gpu6PinConnectors "2"^^xsd:int ;
+                    :gpu8PinConnectors "0"^^xsd:int ;
+                    :gpuBus "5000"^^xsd:int ;
+                    :gpuCUDA "2480"^^xsd:int ;
+                    :gpuDisplayPorts "2"^^xsd:int ;
+                    :gpuHDMIPorts "2"^^xsd:int ;
+                    :gpuHeight "15cm"^^xsd:string ;
+                    :gpuLength "18cm"^^xsd:string ;
+                    :gpuMemory "8"^^xsd:int ;
+                    :gpuMemorySpeed "1000"^^xsd:int ;
+                    :gpuMemoryType "GDDR5X"^^xsd:string ;
+                    :gpuPCIe "4"^^xsd:int ;
+                    :gpuSpeed "10000"^^xsd:string ;
+                    :gpuTeraflops "9"^^xsd:int ;
+                    :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_RX_6800M
+:AMD_Radeon_RX_6800M rdf:type owl:NamedIndividual ,
+                              :GPU ;
+                     :compatibleGPU :X570_Taichi_Razer_Edition ;
+                     :gpu6PinConnectors "2"^^xsd:int ;
+                     :gpu8PinConnectors "0"^^xsd:int ;
+                     :gpuBus "5000"^^xsd:int ;
+                     :gpuCUDA "2480"^^xsd:int ;
+                     :gpuDisplayPorts "2"^^xsd:int ;
+                     :gpuHDMIPorts "2"^^xsd:int ;
+                     :gpuHeight "15cm"^^xsd:string ;
+                     :gpuLength "18cm"^^xsd:string ;
+                     :gpuMemory "8"^^xsd:int ;
+                     :gpuMemorySpeed "1000"^^xsd:int ;
+                     :gpuMemoryType "GDDR5X"^^xsd:string ;
+                     :gpuPCIe "4"^^xsd:int ;
+                     :gpuSpeed "10000"^^xsd:string ;
+                     :gpuTeraflops "9"^^xsd:int ;
+                     :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_RX_6800_XT
+:AMD_Radeon_RX_6800_XT rdf:type owl:NamedIndividual ,
+                                :GPU ;
+                       :compatibleGPU :X570_Taichi_Razer_Edition ;
+                       :gpu6PinConnectors "2"^^xsd:int ;
+                       :gpu8PinConnectors "0"^^xsd:int ;
+                       :gpuBus "5000"^^xsd:int ;
+                       :gpuCUDA "2480"^^xsd:int ;
+                       :gpuDisplayPorts "2"^^xsd:int ;
+                       :gpuHDMIPorts "2"^^xsd:int ;
+                       :gpuHeight "15cm"^^xsd:string ;
+                       :gpuLength "18cm"^^xsd:string ;
+                       :gpuMemory "8"^^xsd:int ;
+                       :gpuMemorySpeed "1000"^^xsd:int ;
+                       :gpuMemoryType "GDDR5X"^^xsd:string ;
+                       :gpuPCIe "4"^^xsd:int ;
+                       :gpuSpeed "10000"^^xsd:string ;
+                       :gpuTeraflops "9"^^xsd:int ;
+                       :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_RX_Vega_56
+:AMD_Radeon_RX_Vega_56 rdf:type owl:NamedIndividual ,
+                                :GPU ;
+                       :compatibleGPU :X570_Taichi_Razer_Edition ;
+                       :gpu6PinConnectors "2"^^xsd:int ;
+                       :gpu8PinConnectors "0"^^xsd:int ;
+                       :gpuBus "5000"^^xsd:int ;
+                       :gpuCUDA "2480"^^xsd:int ;
+                       :gpuDisplayPorts "2"^^xsd:int ;
+                       :gpuHDMIPorts "2"^^xsd:int ;
+                       :gpuHeight "15cm"^^xsd:string ;
+                       :gpuLength "18cm"^^xsd:string ;
+                       :gpuMemory "8"^^xsd:int ;
+                       :gpuMemorySpeed "1000"^^xsd:int ;
+                       :gpuMemoryType "GDDR5X"^^xsd:string ;
+                       :gpuPCIe "4"^^xsd:int ;
+                       :gpuSpeed "10000"^^xsd:string ;
+                       :gpuTeraflops "9"^^xsd:int ;
+                       :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_RX_Vega_64
+:AMD_Radeon_RX_Vega_64 rdf:type owl:NamedIndividual ,
+                                :GPU ;
+                       :compatibleGPU :X570_Taichi_Razer_Edition ;
+                       :gpu6PinConnectors "2"^^xsd:int ;
+                       :gpu8PinConnectors "0"^^xsd:int ;
+                       :gpuBus "5000"^^xsd:int ;
+                       :gpuCUDA "2480"^^xsd:int ;
+                       :gpuDisplayPorts "2"^^xsd:int ;
+                       :gpuHDMIPorts "2"^^xsd:int ;
+                       :gpuHeight "15cm"^^xsd:string ;
+                       :gpuLength "18cm"^^xsd:string ;
+                       :gpuMemory "8"^^xsd:int ;
+                       :gpuMemorySpeed "1000"^^xsd:int ;
+                       :gpuMemoryType "GDDR5X"^^xsd:string ;
+                       :gpuPCIe "4"^^xsd:int ;
+                       :gpuSpeed "10000"^^xsd:string ;
+                       :gpuTeraflops "9"^^xsd:int ;
+                       :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_VII
+:AMD_Radeon_VII rdf:type owl:NamedIndividual ,
+                         :GPU ;
+                :compatibleGPU :X570_Taichi_Razer_Edition ;
+                :gpu6PinConnectors "2"^^xsd:int ;
+                :gpu8PinConnectors "0"^^xsd:int ;
+                :gpuBus "5000"^^xsd:int ;
+                :gpuCUDA "2480"^^xsd:int ;
+                :gpuDisplayPorts "2"^^xsd:int ;
+                :gpuHDMIPorts "2"^^xsd:int ;
+                :gpuHeight "15cm"^^xsd:string ;
+                :gpuLength "18cm"^^xsd:string ;
+                :gpuMemory "8"^^xsd:int ;
+                :gpuMemorySpeed "1000"^^xsd:int ;
+                :gpuMemoryType "GDDR5X"^^xsd:string ;
+                :gpuPCIe "4"^^xsd:int ;
+                :gpuSpeed "10000"^^xsd:string ;
+                :gpuTeraflops "9"^^xsd:int ;
+                :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Radeon_Vega_Frontier_Edition
+:AMD_Radeon_Vega_Frontier_Edition rdf:type owl:NamedIndividual ,
+                                           :GPU ;
+                                  :compatibleGPU :X570_Taichi_Razer_Edition ;
+                                  :gpu6PinConnectors "2"^^xsd:int ;
+                                  :gpu8PinConnectors "0"^^xsd:int ;
+                                  :gpuBus "5000"^^xsd:int ;
+                                  :gpuCUDA "2480"^^xsd:int ;
+                                  :gpuDisplayPorts "2"^^xsd:int ;
+                                  :gpuHDMIPorts "2"^^xsd:int ;
+                                  :gpuHeight "15cm"^^xsd:string ;
+                                  :gpuLength "18cm"^^xsd:string ;
+                                  :gpuMemory "8"^^xsd:int ;
+                                  :gpuMemorySpeed "1000"^^xsd:int ;
+                                  :gpuMemoryType "GDDR5X"^^xsd:string ;
+                                  :gpuPCIe "4"^^xsd:int ;
+                                  :gpuSpeed "10000"^^xsd:string ;
+                                  :gpuTeraflops "9"^^xsd:int ;
+                                  :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_3_2300X
+:AMD_Ryzen_3_2300X rdf:type owl:NamedIndividual ,
                             :CPU ;
                    :compatibleCPU :X570_Taichi_Razer_Edition ;
+                   :L2 "10"^^xsd:int ;
+                   :L3 "20"^^xsd:int ;
+                   :PCIe "4"^^xsd:int ;
                    :baseClock "3700"^^xsd:int ;
                    :cpuMemorySpeed "3200"^^xsd:int ;
+                   :ddrType "4"^^xsd:int ;
                    :logicalCores "24"^^xsd:int ;
+                   :maxTemp "110"^^xsd:int ;
                    :physicalCores "12"^^xsd:int ;
                    :socket "AM4"^^xsd:string ;
                    :tdp "105"^^xsd:int ;
@@ -930,11 +1372,495 @@
                    :unlockedOverclocking "true"^^xsd:boolean .
 
 
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_3_PRO_4200GE
+:AMD_Ryzen_3_PRO_4200GE rdf:type owl:NamedIndividual ,
+                                 :CPU ;
+                        :compatibleCPU :X570_Taichi_Razer_Edition ;
+                        :L2 "10"^^xsd:int ;
+                        :L3 "20"^^xsd:int ;
+                        :PCIe "4"^^xsd:int ;
+                        :baseClock "3700"^^xsd:int ;
+                        :cpuMemorySpeed "3200"^^xsd:int ;
+                        :ddrType "4"^^xsd:int ;
+                        :logicalCores "24"^^xsd:int ;
+                        :maxTemp "110"^^xsd:int ;
+                        :physicalCores "12"^^xsd:int ;
+                        :socket "AM4"^^xsd:string ;
+                        :tdp "105"^^xsd:int ;
+                        :technology "7"^^xsd:int ;
+                        :turboBoost "4800"^^xsd:int ;
+                        :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_5_2600H
+:AMD_Ryzen_5_2600H rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :compatibleCPU :X570_Taichi_Razer_Edition ;
+                   :L2 "10"^^xsd:int ;
+                   :L3 "20"^^xsd:int ;
+                   :PCIe "4"^^xsd:int ;
+                   :baseClock "3700"^^xsd:int ;
+                   :cpuMemorySpeed "3200"^^xsd:int ;
+                   :ddrType "4"^^xsd:int ;
+                   :logicalCores "24"^^xsd:int ;
+                   :maxTemp "110"^^xsd:int ;
+                   :physicalCores "12"^^xsd:int ;
+                   :socket "AM4"^^xsd:string ;
+                   :tdp "105"^^xsd:int ;
+                   :technology "7"^^xsd:int ;
+                   :turboBoost "4800"^^xsd:int ;
+                   :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_5_3600X
+:AMD_Ryzen_5_3600X rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :compatibleCPU :X570_Taichi_Razer_Edition ;
+                   :L2 "10"^^xsd:int ;
+                   :L3 "20"^^xsd:int ;
+                   :PCIe "4"^^xsd:int ;
+                   :baseClock "3700"^^xsd:int ;
+                   :cpuMemorySpeed "3200"^^xsd:int ;
+                   :ddrType "4"^^xsd:int ;
+                   :logicalCores "24"^^xsd:int ;
+                   :maxTemp "110"^^xsd:int ;
+                   :physicalCores "12"^^xsd:int ;
+                   :socket "AM4"^^xsd:string ;
+                   :tdp "105"^^xsd:int ;
+                   :technology "7"^^xsd:int ;
+                   :turboBoost "4800"^^xsd:int ;
+                   :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_5_6600U
+:AMD_Ryzen_5_6600U rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :compatibleCPU :X570_Taichi_Razer_Edition ;
+                   :L2 "10"^^xsd:int ;
+                   :L3 "20"^^xsd:int ;
+                   :PCIe "4"^^xsd:int ;
+                   :baseClock "3700"^^xsd:int ;
+                   :cpuMemorySpeed "3200"^^xsd:int ;
+                   :ddrType "4"^^xsd:int ;
+                   :logicalCores "24"^^xsd:int ;
+                   :maxTemp "110"^^xsd:int ;
+                   :physicalCores "12"^^xsd:int ;
+                   :socket "AM4"^^xsd:string ;
+                   :tdp "105"^^xsd:int ;
+                   :technology "7"^^xsd:int ;
+                   :turboBoost "4800"^^xsd:int ;
+                   :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_5_PRO_5650G
+:AMD_Ryzen_5_PRO_5650G rdf:type owl:NamedIndividual ,
+                                :CPU ;
+                       :compatibleCPU :X570_Taichi_Razer_Edition ;
+                       :L2 "10"^^xsd:int ;
+                       :L3 "20"^^xsd:int ;
+                       :PCIe "4"^^xsd:int ;
+                       :baseClock "3700"^^xsd:int ;
+                       :cpuMemorySpeed "3200"^^xsd:int ;
+                       :ddrType "4"^^xsd:int ;
+                       :logicalCores "24"^^xsd:int ;
+                       :maxTemp "110"^^xsd:int ;
+                       :physicalCores "12"^^xsd:int ;
+                       :socket "AM4"^^xsd:string ;
+                       :tdp "105"^^xsd:int ;
+                       :technology "7"^^xsd:int ;
+                       :turboBoost "4800"^^xsd:int ;
+                       :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_5_PRO_5650U
+:AMD_Ryzen_5_PRO_5650U rdf:type owl:NamedIndividual ,
+                                :CPU ;
+                       :compatibleCPU :X570_Taichi_Razer_Edition ;
+                       :L2 "10"^^xsd:int ;
+                       :L3 "20"^^xsd:int ;
+                       :PCIe "4"^^xsd:int ;
+                       :baseClock "3700"^^xsd:int ;
+                       :cpuMemorySpeed "3200"^^xsd:int ;
+                       :ddrType "4"^^xsd:int ;
+                       :logicalCores "24"^^xsd:int ;
+                       :maxTemp "110"^^xsd:int ;
+                       :physicalCores "12"^^xsd:int ;
+                       :socket "AM4"^^xsd:string ;
+                       :tdp "105"^^xsd:int ;
+                       :technology "7"^^xsd:int ;
+                       :turboBoost "4800"^^xsd:int ;
+                       :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_7_5800
+:AMD_Ryzen_7_5800 rdf:type owl:NamedIndividual ,
+                           :CPU ;
+                  :compatibleCPU :X570_Taichi_Razer_Edition ;
+                  :L2 "10"^^xsd:int ;
+                  :L3 "20"^^xsd:int ;
+                  :PCIe "4"^^xsd:int ;
+                  :baseClock "3700"^^xsd:int ;
+                  :cpuMemorySpeed "3200"^^xsd:int ;
+                  :ddrType "4"^^xsd:int ;
+                  :logicalCores "24"^^xsd:int ;
+                  :maxTemp "110"^^xsd:int ;
+                  :physicalCores "12"^^xsd:int ;
+                  :socket "AM4"^^xsd:string ;
+                  :tdp "105"^^xsd:int ;
+                  :technology "7"^^xsd:int ;
+                  :turboBoost "4800"^^xsd:int ;
+                  :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_7_5800H
+:AMD_Ryzen_7_5800H rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :compatibleCPU :X570_Taichi_Razer_Edition ;
+                   :L2 "10"^^xsd:int ;
+                   :L3 "20"^^xsd:int ;
+                   :PCIe "4"^^xsd:int ;
+                   :baseClock "3700"^^xsd:int ;
+                   :cpuMemorySpeed "3200"^^xsd:int ;
+                   :ddrType "4"^^xsd:int ;
+                   :logicalCores "24"^^xsd:int ;
+                   :maxTemp "110"^^xsd:int ;
+                   :physicalCores "12"^^xsd:int ;
+                   :socket "AM4"^^xsd:string ;
+                   :tdp "105"^^xsd:int ;
+                   :technology "7"^^xsd:int ;
+                   :turboBoost "4800"^^xsd:int ;
+                   :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_7_5800U
+:AMD_Ryzen_7_5800U rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :compatibleCPU :X570_Taichi_Razer_Edition ;
+                   :L2 "10"^^xsd:int ;
+                   :L3 "20"^^xsd:int ;
+                   :PCIe "4"^^xsd:int ;
+                   :baseClock "3700"^^xsd:int ;
+                   :cpuMemorySpeed "3200"^^xsd:int ;
+                   :ddrType "4"^^xsd:int ;
+                   :logicalCores "24"^^xsd:int ;
+                   :maxTemp "110"^^xsd:int ;
+                   :physicalCores "12"^^xsd:int ;
+                   :socket "AM4"^^xsd:string ;
+                   :tdp "105"^^xsd:int ;
+                   :technology "7"^^xsd:int ;
+                   :turboBoost "4800"^^xsd:int ;
+                   :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_7_5800X3D
+:AMD_Ryzen_7_5800X3D rdf:type owl:NamedIndividual ,
+                              :CPU ;
+                     :compatibleCPU :X570_Taichi_Razer_Edition ;
+                     :L2 "10"^^xsd:int ;
+                     :L3 "20"^^xsd:int ;
+                     :PCIe "4"^^xsd:int ;
+                     :baseClock "3700"^^xsd:int ;
+                     :cpuMemorySpeed "3200"^^xsd:int ;
+                     :ddrType "4"^^xsd:int ;
+                     :logicalCores "24"^^xsd:int ;
+                     :maxTemp "110"^^xsd:int ;
+                     :physicalCores "12"^^xsd:int ;
+                     :socket "AM4"^^xsd:string ;
+                     :tdp "105"^^xsd:int ;
+                     :technology "7"^^xsd:int ;
+                     :turboBoost "4800"^^xsd:int ;
+                     :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_7_5825U
+:AMD_Ryzen_7_5825U rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :compatibleCPU :X570_Taichi_Razer_Edition ;
+                   :L2 "10"^^xsd:int ;
+                   :L3 "20"^^xsd:int ;
+                   :PCIe "4"^^xsd:int ;
+                   :baseClock "3700"^^xsd:int ;
+                   :cpuMemorySpeed "3200"^^xsd:int ;
+                   :ddrType "4"^^xsd:int ;
+                   :logicalCores "24"^^xsd:int ;
+                   :maxTemp "110"^^xsd:int ;
+                   :physicalCores "12"^^xsd:int ;
+                   :socket "AM4"^^xsd:string ;
+                   :tdp "105"^^xsd:int ;
+                   :technology "7"^^xsd:int ;
+                   :turboBoost "4800"^^xsd:int ;
+                   :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_7_6800U
+:AMD_Ryzen_7_6800U rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :compatibleCPU :X570_Taichi_Razer_Edition ;
+                   :L2 "10"^^xsd:int ;
+                   :L3 "20"^^xsd:int ;
+                   :PCIe "4"^^xsd:int ;
+                   :baseClock "3700"^^xsd:int ;
+                   :cpuMemorySpeed "3200"^^xsd:int ;
+                   :ddrType "4"^^xsd:int ;
+                   :logicalCores "24"^^xsd:int ;
+                   :maxTemp "110"^^xsd:int ;
+                   :physicalCores "12"^^xsd:int ;
+                   :socket "AM4"^^xsd:string ;
+                   :tdp "105"^^xsd:int ;
+                   :technology "7"^^xsd:int ;
+                   :turboBoost "4800"^^xsd:int ;
+                   :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_7_PRO_1700X
+:AMD_Ryzen_7_PRO_1700X rdf:type owl:NamedIndividual ,
+                                :CPU ;
+                       :compatibleCPU :X570_Taichi_Razer_Edition ;
+                       :L2 "10"^^xsd:int ;
+                       :L3 "20"^^xsd:int ;
+                       :PCIe "4"^^xsd:int ;
+                       :baseClock "3700"^^xsd:int ;
+                       :cpuMemorySpeed "3200"^^xsd:int ;
+                       :ddrType "4"^^xsd:int ;
+                       :logicalCores "24"^^xsd:int ;
+                       :maxTemp "110"^^xsd:int ;
+                       :physicalCores "12"^^xsd:int ;
+                       :socket "AM4"^^xsd:string ;
+                       :tdp "105"^^xsd:int ;
+                       :technology "7"^^xsd:int ;
+                       :turboBoost "4800"^^xsd:int ;
+                       :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_7_PRO_3700U
+:AMD_Ryzen_7_PRO_3700U rdf:type owl:NamedIndividual ,
+                                :CPU ;
+                       :compatibleCPU :X570_Taichi_Razer_Edition ;
+                       :L2 "10"^^xsd:int ;
+                       :L3 "20"^^xsd:int ;
+                       :PCIe "4"^^xsd:int ;
+                       :baseClock "3700"^^xsd:int ;
+                       :cpuMemorySpeed "3200"^^xsd:int ;
+                       :ddrType "4"^^xsd:int ;
+                       :logicalCores "24"^^xsd:int ;
+                       :maxTemp "110"^^xsd:int ;
+                       :physicalCores "12"^^xsd:int ;
+                       :socket "AM4"^^xsd:string ;
+                       :tdp "105"^^xsd:int ;
+                       :technology "7"^^xsd:int ;
+                       :turboBoost "4800"^^xsd:int ;
+                       :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_9_3900X
+:AMD_Ryzen_9_3900X rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :compatibleCPU :X570_Taichi_Razer_Edition ;
+                   :L2 "10"^^xsd:int ;
+                   :L3 "20"^^xsd:int ;
+                   :PCIe "4"^^xsd:int ;
+                   :baseClock "3700"^^xsd:int ;
+                   :cpuMemorySpeed "3200"^^xsd:int ;
+                   :ddrType "4"^^xsd:int ;
+                   :logicalCores "24"^^xsd:int ;
+                   :maxTemp "110"^^xsd:int ;
+                   :physicalCores "12"^^xsd:int ;
+                   :socket "AM4"^^xsd:string ;
+                   :tdp "105"^^xsd:int ;
+                   :technology "7"^^xsd:int ;
+                   :turboBoost "4800"^^xsd:int ;
+                   :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_9_3950X
+:AMD_Ryzen_9_3950X rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :compatibleCPU :X570_Taichi_Razer_Edition ;
+                   :L2 "10"^^xsd:int ;
+                   :L3 "20"^^xsd:int ;
+                   :PCIe "4"^^xsd:int ;
+                   :baseClock "3700"^^xsd:int ;
+                   :cpuMemorySpeed "3200"^^xsd:int ;
+                   :ddrType "4"^^xsd:int ;
+                   :logicalCores "24"^^xsd:int ;
+                   :maxTemp "110"^^xsd:int ;
+                   :physicalCores "12"^^xsd:int ;
+                   :socket "AM4"^^xsd:string ;
+                   :tdp "105"^^xsd:int ;
+                   :technology "7"^^xsd:int ;
+                   :turboBoost "4800"^^xsd:int ;
+                   :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_9_5900
+:AMD_Ryzen_9_5900 rdf:type owl:NamedIndividual ,
+                           :CPU ;
+                  :compatibleCPU :X570_Taichi_Razer_Edition ;
+                  :L2 "10"^^xsd:int ;
+                  :L3 "20"^^xsd:int ;
+                  :PCIe "4"^^xsd:int ;
+                  :baseClock "3700"^^xsd:int ;
+                  :cpuMemorySpeed "3200"^^xsd:int ;
+                  :ddrType "4"^^xsd:int ;
+                  :logicalCores "24"^^xsd:int ;
+                  :maxTemp "110"^^xsd:int ;
+                  :physicalCores "12"^^xsd:int ;
+                  :socket "AM4"^^xsd:string ;
+                  :tdp "105"^^xsd:int ;
+                  :technology "7"^^xsd:int ;
+                  :turboBoost "4800"^^xsd:int ;
+                  :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_9_5900X
+:AMD_Ryzen_9_5900X rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :compatibleCPU :X570_Taichi_Razer_Edition ;
+                   :L2 "10"^^xsd:int ;
+                   :L3 "20"^^xsd:int ;
+                   :PCIe "4"^^xsd:int ;
+                   :baseClock "3700"^^xsd:int ;
+                   :cpuMemorySpeed "3200"^^xsd:int ;
+                   :ddrType "4"^^xsd:int ;
+                   :logicalCores "24"^^xsd:int ;
+                   :maxTemp "110"^^xsd:int ;
+                   :physicalCores "12"^^xsd:int ;
+                   :socket "AM4"^^xsd:string ;
+                   :tdp "105"^^xsd:int ;
+                   :technology "7"^^xsd:int ;
+                   :turboBoost "4800"^^xsd:int ;
+                   :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_9_PRO_6950H
+:AMD_Ryzen_9_PRO_6950H rdf:type owl:NamedIndividual ,
+                                :CPU ;
+                       :compatibleCPU :X570_Taichi_Razer_Edition ;
+                       :L2 "10"^^xsd:int ;
+                       :L3 "20"^^xsd:int ;
+                       :PCIe "4"^^xsd:int ;
+                       :baseClock "3700"^^xsd:int ;
+                       :cpuMemorySpeed "3200"^^xsd:int ;
+                       :ddrType "4"^^xsd:int ;
+                       :logicalCores "24"^^xsd:int ;
+                       :maxTemp "110"^^xsd:int ;
+                       :physicalCores "12"^^xsd:int ;
+                       :socket "AM4"^^xsd:string ;
+                       :tdp "105"^^xsd:int ;
+                       :technology "7"^^xsd:int ;
+                       :turboBoost "4800"^^xsd:int ;
+                       :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_9_PRO_6950HS
+:AMD_Ryzen_9_PRO_6950HS rdf:type owl:NamedIndividual ,
+                                 :CPU ;
+                        :compatibleCPU :X570_Taichi_Razer_Edition ;
+                        :L2 "10"^^xsd:int ;
+                        :L3 "20"^^xsd:int ;
+                        :PCIe "4"^^xsd:int ;
+                        :baseClock "3700"^^xsd:int ;
+                        :cpuMemorySpeed "3200"^^xsd:int ;
+                        :ddrType "4"^^xsd:int ;
+                        :logicalCores "24"^^xsd:int ;
+                        :maxTemp "110"^^xsd:int ;
+                        :physicalCores "12"^^xsd:int ;
+                        :socket "AM4"^^xsd:string ;
+                        :tdp "105"^^xsd:int ;
+                        :technology "7"^^xsd:int ;
+                        :turboBoost "4800"^^xsd:int ;
+                        :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_Embedded_V2516
+:AMD_Ryzen_Embedded_V2516 rdf:type owl:NamedIndividual ,
+                                   :CPU ;
+                          :compatibleCPU :X570_Taichi_Razer_Edition ;
+                          :L2 "10"^^xsd:int ;
+                          :L3 "20"^^xsd:int ;
+                          :PCIe "4"^^xsd:int ;
+                          :baseClock "3700"^^xsd:int ;
+                          :cpuMemorySpeed "3200"^^xsd:int ;
+                          :ddrType "4"^^xsd:int ;
+                          :logicalCores "24"^^xsd:int ;
+                          :maxTemp "110"^^xsd:int ;
+                          :physicalCores "12"^^xsd:int ;
+                          :socket "AM4"^^xsd:string ;
+                          :tdp "105"^^xsd:int ;
+                          :technology "7"^^xsd:int ;
+                          :turboBoost "4800"^^xsd:int ;
+                          :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_Threadripper_1920X
+:AMD_Ryzen_Threadripper_1920X rdf:type owl:NamedIndividual ,
+                                       :CPU ;
+                              :compatibleCPU :X570_Taichi_Razer_Edition ;
+                              :L2 "10"^^xsd:int ;
+                              :L3 "20"^^xsd:int ;
+                              :PCIe "4"^^xsd:int ;
+                              :baseClock "3700"^^xsd:int ;
+                              :cpuMemorySpeed "3200"^^xsd:int ;
+                              :ddrType "4"^^xsd:int ;
+                              :logicalCores "24"^^xsd:int ;
+                              :maxTemp "110"^^xsd:int ;
+                              :physicalCores "12"^^xsd:int ;
+                              :socket "AM4"^^xsd:string ;
+                              :tdp "105"^^xsd:int ;
+                              :technology "7"^^xsd:int ;
+                              :turboBoost "4800"^^xsd:int ;
+                              :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_Threadripper_PRO_5955WX
+:AMD_Ryzen_Threadripper_PRO_5955WX rdf:type owl:NamedIndividual ,
+                                            :CPU ;
+                                   :compatibleCPU :X570_Taichi_Razer_Edition ;
+                                   :L2 "10"^^xsd:int ;
+                                   :L3 "20"^^xsd:int ;
+                                   :PCIe "4"^^xsd:int ;
+                                   :baseClock "3700"^^xsd:int ;
+                                   :cpuMemorySpeed "3200"^^xsd:int ;
+                                   :ddrType "4"^^xsd:int ;
+                                   :logicalCores "24"^^xsd:int ;
+                                   :maxTemp "110"^^xsd:int ;
+                                   :physicalCores "12"^^xsd:int ;
+                                   :socket "AM4"^^xsd:string ;
+                                   :tdp "105"^^xsd:int ;
+                                   :technology "7"^^xsd:int ;
+                                   :turboBoost "4800"^^xsd:int ;
+                                   :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AMD_Ryzen_Threadripper_PRO_5995WX
+:AMD_Ryzen_Threadripper_PRO_5995WX rdf:type owl:NamedIndividual ,
+                                            :CPU ;
+                                   :compatibleCPU :X570_Taichi_Razer_Edition ;
+                                   :L2 "10"^^xsd:int ;
+                                   :L3 "20"^^xsd:int ;
+                                   :PCIe "4"^^xsd:int ;
+                                   :baseClock "3700"^^xsd:int ;
+                                   :cpuMemorySpeed "3200"^^xsd:int ;
+                                   :ddrType "4"^^xsd:int ;
+                                   :logicalCores "24"^^xsd:int ;
+                                   :maxTemp "110"^^xsd:int ;
+                                   :physicalCores "12"^^xsd:int ;
+                                   :socket "AM4"^^xsd:string ;
+                                   :tdp "105"^^xsd:int ;
+                                   :technology "7"^^xsd:int ;
+                                   :turboBoost "4800"^^xsd:int ;
+                                   :unlockedOverclocking "true"^^xsd:boolean .
+
+
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ANTEC_NX410
 :ANTEC_NX410 rdf:type owl:NamedIndividual ,
                       :Case ;
              :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
-             :caseATXSupport "false"^^xsd:boolean ;
+             :caseATXSupport "true"^^xsd:boolean ;
+             :caseHeight "70cm"^^xsd:string ;
+             :caseLength "30cm"^^xsd:string ;
+             :caseRGB "true"^^xsd:boolean ;
+             :caseWidth "25cm"^^xsd:string ;
              :caseeATXSupport "false"^^xsd:boolean ;
              :casemATXSupport "true"^^xsd:boolean ;
              :caseminiITXSupport "true"^^xsd:boolean .
@@ -944,70 +1870,564 @@
 :ARMAGGEDDON_KAGAMI_K-5 rdf:type owl:NamedIndividual ,
                                  :Case ;
                         :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
-                        :caseATXSupport "false"^^xsd:boolean ;
+                        :caseATXSupport "true"^^xsd:boolean ;
+                        :caseHeight "70cm"^^xsd:string ;
+                        :caseLength "30cm"^^xsd:string ;
+                        :caseRGB "true"^^xsd:boolean ;
+                        :caseWidth "25cm"^^xsd:string ;
                         :caseeATXSupport "false"^^xsd:boolean ;
-                        :casemATXSupport "false"^^xsd:boolean ;
-                        :caseminiITXSupport "false"^^xsd:boolean .
+                        :casemATXSupport "true"^^xsd:boolean ;
+                        :caseminiITXSupport "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ASROCK_Z590_TAICHI_WI-FI
+:ASROCK_Z590_TAICHI_WI-FI rdf:type owl:NamedIndividual ,
+                                   :Motherboard ;
+                          :motheboardChipset "600"^^xsd:string ;
+                          :motherboardFormFactor "ATX"^^xsd:string ;
+                          :motherboardHasWiFi "true"^^xsd:boolean ;
+                          :motherboardIsRGB "true"^^xsd:boolean ;
+                          :motherboardLAN "10"^^xsd:string ;
+                          :motherboardRAMModules "4"^^xsd:int ;
+                          :motherboardRamMaxSpeed "4500"^^xsd:int ;
+                          :motherboardSocket "LGA1700"^^xsd:string ;
+                          :motherboardUSBPorts "10"^^xsd:int ;
+                          :motherboardWiFiVersion "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ASRock_Z490_AQUA
+:ASRock_Z490_AQUA rdf:type owl:NamedIndividual ,
+                           :Motherboard ;
+                  :motheboardChipset "600"^^xsd:string ;
+                  :motherboardFormFactor "ATX"^^xsd:string ;
+                  :motherboardHasWiFi "true"^^xsd:boolean ;
+                  :motherboardIsRGB "true"^^xsd:boolean ;
+                  :motherboardLAN "10"^^xsd:string ;
+                  :motherboardRAMModules "4"^^xsd:int ;
+                  :motherboardRamMaxSpeed "4500"^^xsd:int ;
+                  :motherboardSocket "LGA1700"^^xsd:string ;
+                  :motherboardUSBPorts "10"^^xsd:int ;
+                  :motherboardWiFiVersion "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ASUS_BW-16D1X-U
+:ASUS_BW-16D1X-U rdf:type owl:NamedIndividual ,
+                          :OpticalDrive ;
+                 :opticalDriveIntegratedCardReader "true"^^xsd:boolean ;
+                 :opticalDriveType "1"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ASUS_PRIME_Z590-A
+:ASUS_PRIME_Z590-A rdf:type owl:NamedIndividual ,
+                            :Motherboard ;
+                   :motheboardChipset "600"^^xsd:string ;
+                   :motherboardFormFactor "ATX"^^xsd:string ;
+                   :motherboardHasWiFi "true"^^xsd:boolean ;
+                   :motherboardIsRGB "true"^^xsd:boolean ;
+                   :motherboardLAN "10"^^xsd:string ;
+                   :motherboardRAMModules "4"^^xsd:int ;
+                   :motherboardRamMaxSpeed "4500"^^xsd:int ;
+                   :motherboardSocket "LGA1700"^^xsd:string ;
+                   :motherboardUSBPorts "10"^^xsd:int ;
+                   :motherboardWiFiVersion "6"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ASUS_ROG_Z11
 :ASUS_ROG_Z11 rdf:type owl:NamedIndividual ,
                        :Case ;
               :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
-              :caseATXSupport "false"^^xsd:boolean ;
+              :caseATXSupport "true"^^xsd:boolean ;
+              :caseHeight "70cm"^^xsd:string ;
+              :caseLength "30cm"^^xsd:string ;
+              :caseRGB "true"^^xsd:boolean ;
+              :caseWidth "25cm"^^xsd:string ;
               :caseeATXSupport "false"^^xsd:boolean ;
-              :casemATXSupport "false"^^xsd:boolean ;
-              :caseminiITXSupport "false"^^xsd:boolean .
+              :casemATXSupport "true"^^xsd:boolean ;
+              :caseminiITXSupport "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ASUS_XG-C100C
+:ASUS_XG-C100C rdf:type owl:NamedIndividual ,
+                        :Networking ;
+               :networkingBluetooth "5"^^xsd:string ;
+               :networkingLan "5"^^xsd:string ;
+               :networkingWiFi "5"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Acer_-_GM7000
+:Acer_-_GM7000 rdf:type owl:NamedIndividual ,
+                        :SSD ;
+               :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+               :memoryCapacity "4"^^xsd:string ;
+               :memoryExternal "false"^^xsd:boolean ;
+               :memoryFormat "M.2"^^xsd:string ;
+               :memoryInterface "NVME"^^xsd:string ;
+               :memoryReadSpeed "500"^^xsd:string ;
+               :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Addlink_-_S95
+:Addlink_-_S95 rdf:type owl:NamedIndividual ,
+                        :SSD ;
+               :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+               :memoryCapacity "4"^^xsd:string ;
+               :memoryExternal "false"^^xsd:boolean ;
+               :memoryFormat "M.2"^^xsd:string ;
+               :memoryInterface "NVME"^^xsd:string ;
+               :memoryReadSpeed "500"^^xsd:string ;
+               :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Alexander_Weiss_C903
+:Alexander_Weiss_C903 rdf:type owl:NamedIndividual ,
+                               :Case ;
+                      :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
+                      :caseATXSupport "true"^^xsd:boolean ;
+                      :caseHeight "70cm"^^xsd:string ;
+                      :caseLength "30cm"^^xsd:string ;
+                      :caseRGB "true"^^xsd:boolean ;
+                      :caseWidth "25cm"^^xsd:string ;
+                      :caseeATXSupport "false"^^xsd:boolean ;
+                      :casemATXSupport "true"^^xsd:boolean ;
+                      :caseminiITXSupport "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Apacer_-_AS2280Q4
+:Apacer_-_AS2280Q4 rdf:type owl:NamedIndividual ,
+                            :SSD ;
+                   :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+                   :memoryCapacity "2"^^xsd:string ;
+                   :memoryExternal "false"^^xsd:boolean ;
+                   :memoryFormat "M.2"^^xsd:string ;
+                   :memoryInterface "NVME"^^xsd:string ;
+                   :memoryReadSpeed "500"^^xsd:string ;
+                   :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Apple_A12X_Bionic
+:Apple_A12X_Bionic rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :compatibleCPU :X570_Taichi_Razer_Edition ;
+                   :L2 "10"^^xsd:int ;
+                   :L3 "20"^^xsd:int ;
+                   :PCIe "4"^^xsd:int ;
+                   :baseClock "3700"^^xsd:int ;
+                   :cpuMemorySpeed "3200"^^xsd:int ;
+                   :ddrType "4"^^xsd:int ;
+                   :logicalCores "24"^^xsd:int ;
+                   :maxTemp "110"^^xsd:int ;
+                   :physicalCores "12"^^xsd:int ;
+                   :socket "LGA1700"^^xsd:string ;
+                   :tdp "105"^^xsd:int ;
+                   :technology "7"^^xsd:int ;
+                   :turboBoost "4800"^^xsd:int ;
+                   :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Apple_M1_8_Core_3200_MHz
+:Apple_M1_8_Core_3200_MHz rdf:type owl:NamedIndividual ,
+                                   :CPU ;
+                          :compatibleCPU :X570_Taichi_Razer_Edition ;
+                          :L2 "10"^^xsd:int ;
+                          :L3 "20"^^xsd:int ;
+                          :PCIe "4"^^xsd:int ;
+                          :baseClock "3700"^^xsd:int ;
+                          :cpuMemorySpeed "3200"^^xsd:int ;
+                          :ddrType "4"^^xsd:int ;
+                          :logicalCores "24"^^xsd:int ;
+                          :maxTemp "110"^^xsd:int ;
+                          :physicalCores "12"^^xsd:int ;
+                          :socket "LGA1700"^^xsd:string ;
+                          :tdp "105"^^xsd:int ;
+                          :technology "7"^^xsd:int ;
+                          :turboBoost "4800"^^xsd:int ;
+                          :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Apple_M1_Pro_8_Core_3200_MHz
+:Apple_M1_Pro_8_Core_3200_MHz rdf:type owl:NamedIndividual ,
+                                       :CPU ;
+                              :compatibleCPU :X570_Taichi_Razer_Edition ;
+                              :L2 "10"^^xsd:int ;
+                              :L3 "20"^^xsd:int ;
+                              :PCIe "4"^^xsd:int ;
+                              :baseClock "3700"^^xsd:int ;
+                              :cpuMemorySpeed "3200"^^xsd:int ;
+                              :ddrType "4"^^xsd:int ;
+                              :logicalCores "24"^^xsd:int ;
+                              :maxTemp "110"^^xsd:int ;
+                              :physicalCores "12"^^xsd:int ;
+                              :socket "LGA1700"^^xsd:string ;
+                              :tdp "105"^^xsd:int ;
+                              :technology "7"^^xsd:int ;
+                              :turboBoost "4800"^^xsd:int ;
+                              :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Apple_M1_Ultra_20_Core
+:Apple_M1_Ultra_20_Core rdf:type owl:NamedIndividual ,
+                                 :CPU ;
+                        :compatibleCPU :X570_Taichi_Razer_Edition ;
+                        :L2 "10"^^xsd:int ;
+                        :L3 "20"^^xsd:int ;
+                        :PCIe "4"^^xsd:int ;
+                        :baseClock "3700"^^xsd:int ;
+                        :cpuMemorySpeed "3200"^^xsd:int ;
+                        :ddrType "4"^^xsd:int ;
+                        :logicalCores "24"^^xsd:int ;
+                        :maxTemp "110"^^xsd:int ;
+                        :physicalCores "12"^^xsd:int ;
+                        :socket "LGA1700"^^xsd:string ;
+                        :tdp "105"^^xsd:int ;
+                        :technology "7"^^xsd:int ;
+                        :turboBoost "4800"^^xsd:int ;
+                        :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Asgard_-_AN4
+:Asgard_-_AN4 rdf:type owl:NamedIndividual ,
+                       :SSD ;
+              :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+              :memoryCapacity "2"^^xsd:string ;
+              :memoryExternal "false"^^xsd:boolean ;
+              :memoryFormat "M.2"^^xsd:string ;
+              :memoryInterface "NVME"^^xsd:string ;
+              :memoryReadSpeed "500"^^xsd:string ;
+              :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Asura_-_Genesis_Xtreme
+:Asura_-_Genesis_Xtreme rdf:type owl:NamedIndividual ,
+                                 :SSD ;
+                        :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+                        :memoryCapacity "2"^^xsd:string ;
+                        :memoryExternal "false"^^xsd:boolean ;
+                        :memoryFormat "M.2"^^xsd:string ;
+                        :memoryInterface "NVME"^^xsd:string ;
+                        :memoryReadSpeed "500"^^xsd:string ;
+                        :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Blue_Yeti_X
+:Blue_Yeti_X rdf:type owl:NamedIndividual ,
+                      :Microphone .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Bose_Companion_2_Series_III
+:Bose_Companion_2_Series_III rdf:type owl:NamedIndividual ,
+                                      :Speakers ;
+                             :audioConnectivity "3.5mm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Brother_HL-L2395DW
+:Brother_HL-L2395DW rdf:type owl:NamedIndividual ,
+                             :Printer ;
+                    :printerType "Laser"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CHIEFTEC_CW-01B-OP
 :CHIEFTEC_CW-01B-OP rdf:type owl:NamedIndividual ,
                              :Case ;
-                    :caseCompatibleWithMotherbaord :ROG_Crosshair_VIII_Dark_Hero ;
-                    :caseATXSupport "false"^^xsd:boolean ;
+                    :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
+                    :caseATXSupport "true"^^xsd:boolean ;
+                    :caseHeight "70cm"^^xsd:string ;
+                    :caseLength "30cm"^^xsd:string ;
+                    :caseRGB "true"^^xsd:boolean ;
+                    :caseWidth "25cm"^^xsd:string ;
                     :caseeATXSupport "false"^^xsd:boolean ;
-                    :casemATXSupport "false"^^xsd:boolean ;
-                    :caseminiITXSupport "false"^^xsd:boolean .
+                    :casemATXSupport "true"^^xsd:boolean ;
+                    :caseminiITXSupport "true"^^xsd:boolean .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#CORSAIR_iCUE_220T
 :CORSAIR_iCUE_220T rdf:type owl:NamedIndividual ,
                             :Case ;
-                   :caseCompatibleWithMotherbaord :ROG_Crosshair_VIII_Dark_Hero ;
+                   :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
                    :caseATXSupport "true"^^xsd:boolean ;
-                   :caseeATXSupport "true"^^xsd:boolean ;
-                   :casemATXSupport "false"^^xsd:boolean ;
+                   :caseHeight "70cm"^^xsd:string ;
+                   :caseLength "30cm"^^xsd:string ;
+                   :caseRGB "true"^^xsd:boolean ;
+                   :caseWidth "25cm"^^xsd:string ;
+                   :caseeATXSupport "false"^^xsd:boolean ;
+                   :casemATXSupport "true"^^xsd:boolean ;
                    :caseminiITXSupport "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Chieftec_UK-02W-OP
+:Chieftec_UK-02W-OP rdf:type owl:NamedIndividual ,
+                             :Case ;
+                    :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
+                    :caseATXSupport "true"^^xsd:boolean ;
+                    :caseHeight "70cm"^^xsd:string ;
+                    :caseLength "30cm"^^xsd:string ;
+                    :caseRGB "true"^^xsd:boolean ;
+                    :caseWidth "25cm"^^xsd:string ;
+                    :caseeATXSupport "false"^^xsd:boolean ;
+                    :casemATXSupport "true"^^xsd:boolean ;
+                    :caseminiITXSupport "true"^^xsd:boolean .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Cooler_Master_MB400L
 :Cooler_Master_MB400L rdf:type owl:NamedIndividual ,
                                :Case ;
-                      :caseCompatibleWithMotherbaord :ROG_Crosshair_VIII_Dark_Hero ;
-                      :caseATXSupport "false"^^xsd:boolean ;
+                      :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
+                      :caseATXSupport "true"^^xsd:boolean ;
+                      :caseHeight "70cm"^^xsd:string ;
+                      :caseLength "30cm"^^xsd:string ;
+                      :caseRGB "true"^^xsd:boolean ;
+                      :caseWidth "25cm"^^xsd:string ;
                       :caseeATXSupport "false"^^xsd:boolean ;
                       :casemATXSupport "true"^^xsd:boolean ;
-                      :caseminiITXSupport "false"^^xsd:boolean .
+                      :caseminiITXSupport "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Cooler_Master_MasterAir_MA410M
+:Cooler_Master_MasterAir_MA410M rdf:type owl:NamedIndividual ,
+                                         :Cooler ;
+                                :coolerCompatibleWithCPU :AMD_Ryzen_9_5900X ;
+                                :coolerConnector "4-Pin"^^xsd:string ;
+                                :coolerCurrent "0.26A"^^xsd:string ;
+                                :coolerFanSize "120"^^xsd:int ;
+                                :coolerFanSpeed "1200"^^xsd:int ;
+                                :coolerHeatPipes "4"^^xsd:int ;
+                                :coolerNoiseLevel "0.5"^^xsd:string ;
+                                :coolerSocket "AM4,LGA1700"^^xsd:string ;
+                                :coolerWarranty "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Cooler_Master_MasterAir_MA624_Stealth
+:Cooler_Master_MasterAir_MA624_Stealth rdf:type owl:NamedIndividual ,
+                                                :Cooler ;
+                                       :coolerCompatibleWithCPU :AMD_Ryzen_9_5900X ;
+                                       :coolerConnector "4-Pin"^^xsd:string ;
+                                       :coolerCurrent "0.26A"^^xsd:string ;
+                                       :coolerFanSize "120"^^xsd:int ;
+                                       :coolerFanSpeed "1200"^^xsd:int ;
+                                       :coolerHeatPipes "4"^^xsd:int ;
+                                       :coolerNoiseLevel "0.5"^^xsd:string ;
+                                       :coolerSocket "AM4,LGA1700"^^xsd:string ;
+                                       :coolerWarranty "6"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Cooler_Master_Masterbox_E500
 :Cooler_Master_Masterbox_E500 rdf:type owl:NamedIndividual ,
                                        :Case ;
-                              :caseCompatibleWithMotherbaord :ROG_Crosshair_VIII_Dark_Hero ;
+                              :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
                               :caseATXSupport "true"^^xsd:boolean ;
+                              :caseHeight "70cm"^^xsd:string ;
+                              :caseLength "30cm"^^xsd:string ;
+                              :caseRGB "true"^^xsd:boolean ;
+                              :caseWidth "25cm"^^xsd:string ;
                               :caseeATXSupport "false"^^xsd:boolean ;
-                              :casemATXSupport "false"^^xsd:boolean ;
+                              :casemATXSupport "true"^^xsd:boolean ;
                               :caseminiITXSupport "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Corsair_-_MP510
+:Corsair_-_MP510 rdf:type owl:NamedIndividual ,
+                          :SSD ;
+                 :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+                 :memoryCapacity "2"^^xsd:string ;
+                 :memoryExternal "false"^^xsd:boolean ;
+                 :memoryFormat "M.2"^^xsd:string ;
+                 :memoryInterface "NVME"^^xsd:string ;
+                 :memoryReadSpeed "500"^^xsd:string ;
+                 :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Corsair_-_MP600
+:Corsair_-_MP600 rdf:type owl:NamedIndividual ,
+                          :SSD ;
+                 :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+                 :memoryCapacity "2"^^xsd:string ;
+                 :memoryExternal "false"^^xsd:boolean ;
+                 :memoryFormat "M.2"^^xsd:string ;
+                 :memoryInterface "NVME"^^xsd:string ;
+                 :memoryReadSpeed "500"^^xsd:string ;
+                 :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Corsair_CX450
+:Corsair_CX450 rdf:type owl:NamedIndividual ,
+                        :PSU ;
+						                                                  :compatiblePSU :X570_Taichi_Razer_Edition ;
+                                                  :psu6PinConnectors "4"^^xsd:int ;
+                                                  :psu8PinConnectors "4"^^xsd:int ;
+                                                  :psuCertificate "GOLD"^^xsd:string ;
+                                                  :psuFormFactor "ATX"^^xsd:string ;
+                                                  :psuHasOCP "true"^^xsd:boolean ;
+                                                  :psuHasOPP "true"^^xsd:boolean ;
+                                                  :psuHasOTP "true"^^xsd:boolean ;
+                                                  :psuHasOVP "true"^^xsd:boolean ;
+                                                  :psuHasPFC "true"^^xsd:boolean ;
+                                                  :psuHasSCP "false"^^xsd:boolean ;
+                                                  :psuHasUVP "true"^^xsd:boolean ;
+                                                  :psuIsModular "true"^^xsd:boolean ;
+                                                  :psuMolexConnectors "6"^^xsd:int ;
+                                                  :psuPower "450"^^xsd:int ;
+                                                  :psuSATAConnectors "6"^^xsd:int .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Corsair_CX550F
+:Corsair_CX550F rdf:type owl:NamedIndividual ,
+                         :PSU ;
+						                                                   :compatiblePSU :X570_Taichi_Razer_Edition ;
+                                                  :psu6PinConnectors "4"^^xsd:int ;
+                                                  :psu8PinConnectors "4"^^xsd:int ;
+                                                  :psuCertificate "GOLD"^^xsd:string ;
+                                                  :psuFormFactor "ATX"^^xsd:string ;
+                                                  :psuHasOCP "true"^^xsd:boolean ;
+                                                  :psuHasOPP "true"^^xsd:boolean ;
+                                                  :psuHasOTP "true"^^xsd:boolean ;
+                                                  :psuHasOVP "true"^^xsd:boolean ;
+                                                  :psuHasPFC "true"^^xsd:boolean ;
+                                                  :psuHasSCP "false"^^xsd:boolean ;
+                                                  :psuHasUVP "true"^^xsd:boolean ;
+                                                  :psuIsModular "true"^^xsd:boolean ;
+                                                  :psuMolexConnectors "6"^^xsd:int ;
+                                                  :psuPower "550"^^xsd:int ;
+                                                  :psuSATAConnectors "6"^^xsd:int .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Corsair_Hydro_Series_H60_V2
+:Corsair_Hydro_Series_H60_V2 rdf:type owl:NamedIndividual ,
+                                      :Cooler ;
+                             :coolerCompatibleWithCPU :AMD_Ryzen_9_5900X ;
+                             :coolerConnector "4-Pin"^^xsd:string ;
+                             :coolerCurrent "0.26A"^^xsd:string ;
+                             :coolerFanSize "120"^^xsd:int ;
+                             :coolerFanSpeed "1200"^^xsd:int ;
+                             :coolerHeatPipes "4"^^xsd:int ;
+                             :coolerNoiseLevel "0.5"^^xsd:string ;
+                             :coolerSocket "AM4,LGA1700"^^xsd:string ;
+                             :coolerWarranty "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Corsair_RM550x
+:Corsair_RM550x rdf:type owl:NamedIndividual ,
+                         :PSU ;
+						                                                   :compatiblePSU :X570_Taichi_Razer_Edition ;
+                                                  :psu6PinConnectors "4"^^xsd:int ;
+                                                  :psu8PinConnectors "4"^^xsd:int ;
+                                                  :psuCertificate "GOLD"^^xsd:string ;
+                                                  :psuFormFactor "ATX"^^xsd:string ;
+                                                  :psuHasOCP "true"^^xsd:boolean ;
+                                                  :psuHasOPP "true"^^xsd:boolean ;
+                                                  :psuHasOTP "true"^^xsd:boolean ;
+                                                  :psuHasOVP "true"^^xsd:boolean ;
+                                                  :psuHasPFC "true"^^xsd:boolean ;
+                                                  :psuHasSCP "false"^^xsd:boolean ;
+                                                  :psuHasUVP "true"^^xsd:boolean ;
+                                                  :psuIsModular "true"^^xsd:boolean ;
+                                                  :psuMolexConnectors "6"^^xsd:int ;
+                                                  :psuPower "800"^^xsd:int ;
+                                                  :psuSATAConnectors "6"^^xsd:int .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Creative_Pebble_V3
+:Creative_Pebble_V3 rdf:type owl:NamedIndividual ,
+                             :Speakers ;
+                    :audioConnectivity "Bluetooth"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#DELL_Monitor_S2421HN
 :DELL_Monitor_S2421HN rdf:type owl:NamedIndividual ,
                                :Monitor ;
-                      :compatibleMonitor :ROG_Crosshair_VIII_Dark_Hero ;
+                      :compatibleMonitor :X570_Taichi_Razer_Edition ;
                       :monitorAspectRatio "16:9"^^xsd:string ;
-                      :monitorBrightness "400"^^xsd:int ;
-                      :monitorDiagonal "24"^^xsd:int ;
-                      :monitorHasAudio "false"^^xsd:boolean .
+                      :monitorBrightness "500"^^xsd:int ;
+                      :monitorDiagonal "27"^^xsd:int ;
+                      :monitorHasAudio "true"^^xsd:boolean ;
+                      :monitorHasDisplayPort "true"^^xsd:boolean ;
+                      :monitorHasFreeSync "true"^^xsd:boolean ;
+                      :monitorHasGSync "true"^^xsd:boolean ;
+                      :monitorHasTouchscreen "true"^^xsd:boolean ;
+                      :monitorHasVESA "true"^^xsd:boolean ;
+                      :monitorPanelType "VA"^^xsd:string ;
+                      :monitorRefreshRate "120 Hz"^^xsd:string ;
+                      :monitorResolution "4K"^^xsd:string ;
+                      :monitorResponseTime "1ms"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Deepcool_AS500_Plus
+:Deepcool_AS500_Plus rdf:type owl:NamedIndividual ,
+                              :Cooler ;
+                     :coolerCompatibleWithCPU :AMD_Ryzen_9_5900X ;
+                     :coolerConnector "4-Pin"^^xsd:string ;
+                     :coolerCurrent "0.26A"^^xsd:string ;
+                     :coolerFanSize "120"^^xsd:int ;
+                     :coolerFanSpeed "1200"^^xsd:int ;
+                     :coolerHeatPipes "4"^^xsd:int ;
+                     :coolerNoiseLevel "0.5"^^xsd:string ;
+                     :coolerSocket "AM4,LGA1700"^^xsd:string ;
+                     :coolerWarranty "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Deepcool_Assassin_III
+:Deepcool_Assassin_III rdf:type owl:NamedIndividual ,
+                                :Cooler ;
+                       :coolerCompatibleWithCPU :AMD_Ryzen_9_5900X ;
+                       :coolerConnector "4-Pin"^^xsd:string ;
+                       :coolerCurrent "0.26A"^^xsd:string ;
+                       :coolerFanSize "120"^^xsd:int ;
+                       :coolerFanSpeed "1200"^^xsd:int ;
+                       :coolerHeatPipes "4"^^xsd:int ;
+                       :coolerNoiseLevel "0.5"^^xsd:string ;
+                       :coolerSocket "AM4,LGA1700"^^xsd:string ;
+                       :coolerWarranty "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Deepcool_Gammaxx_L240_V2
+:Deepcool_Gammaxx_L240_V2 rdf:type owl:NamedIndividual ,
+                                   :Cooler ;
+                          :coolerCompatibleWithCPU :AMD_Ryzen_9_5900X ;
+                          :coolerConnector "4-Pin"^^xsd:string ;
+                          :coolerCurrent "0.26A"^^xsd:string ;
+                          :coolerFanSize "120"^^xsd:int ;
+                          :coolerFanSpeed "1200"^^xsd:int ;
+                          :coolerHeatPipes "4"^^xsd:int ;
+                          :coolerNoiseLevel "0.5"^^xsd:string ;
+                          :coolerSocket "AM4,LGA1700"^^xsd:string ;
+                          :coolerWarranty "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Dell_UltraSharp
+:Dell_UltraSharp rdf:type owl:NamedIndividual ,
+                          :Monitor ;
+                 :compatibleMonitor :X570_Taichi_Razer_Edition ;
+                 :monitorAspectRatio "16:9"^^xsd:string ;
+                 :monitorBrightness "500"^^xsd:int ;
+                 :monitorDiagonal "27"^^xsd:int ;
+                 :monitorHasAudio "true"^^xsd:boolean ;
+                 :monitorHasDisplayPort "true"^^xsd:boolean ;
+                 :monitorHasFreeSync "true"^^xsd:boolean ;
+                 :monitorHasGSync "true"^^xsd:boolean ;
+                 :monitorHasTouchscreen "true"^^xsd:boolean ;
+                 :monitorHasVESA "true"^^xsd:boolean ;
+                 :monitorPanelType "VA"^^xsd:string ;
+                 :monitorRefreshRate "60 Hz"^^xsd:string ;
+                 :monitorResolution "4K"^^xsd:string ;
+                 :monitorResponseTime "1ms"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#EK-AIO_Basic_240
+:EK-AIO_Basic_240 rdf:type owl:NamedIndividual ,
+                           :Cooler ;
+                  :coolerCompatibleWithCPU :AMD_Ryzen_9_5900X ;
+                  :coolerConnector "4-Pin"^^xsd:string ;
+                  :coolerCurrent "0.26A"^^xsd:string ;
+                  :coolerFanSize "120"^^xsd:int ;
+                  :coolerFanSpeed "1200"^^xsd:int ;
+                  :coolerHeatPipes "4"^^xsd:int ;
+                  :coolerNoiseLevel "0.5"^^xsd:string ;
+                  :coolerSocket "AM4,LGA1700"^^xsd:string ;
+                  :coolerWarranty "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Elgato_Facecam
+:Elgato_Facecam rdf:type owl:NamedIndividual ,
+                         :Camera ;
+                :cameraResolution "2K"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#FSP_CST350_PLUS
@@ -1015,29 +2435,60 @@
                           :Case ;
                  :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
                  :caseATXSupport "true"^^xsd:boolean ;
+                 :caseHeight "70cm"^^xsd:string ;
+                 :caseLength "30cm"^^xsd:string ;
+                 :caseRGB "true"^^xsd:boolean ;
+                 :caseWidth "25cm"^^xsd:string ;
                  :caseeATXSupport "false"^^xsd:boolean ;
-                 :casemATXSupport "false"^^xsd:boolean ;
-                 :caseminiITXSupport "false"^^xsd:boolean .
+                 :casemATXSupport "true"^^xsd:boolean ;
+                 :caseminiITXSupport "true"^^xsd:boolean .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#FSP_napajanje_HYDRO_PRO_Series_700W_-_PPA7004303
 :FSP_napajanje_HYDRO_PRO_Series_700W_-_PPA7004303 rdf:type owl:NamedIndividual ,
                                                            :PSU ;
                                                   :compatiblePSU :X570_Taichi_Razer_Edition ;
+                                                  :psu6PinConnectors "4"^^xsd:int ;
+                                                  :psu8PinConnectors "4"^^xsd:int ;
+                                                  :psuCertificate "GOLD"^^xsd:string ;
+                                                  :psuFormFactor "ATX"^^xsd:string ;
+                                                  :psuHasOCP "true"^^xsd:boolean ;
+                                                  :psuHasOPP "true"^^xsd:boolean ;
+                                                  :psuHasOTP "true"^^xsd:boolean ;
+                                                  :psuHasOVP "true"^^xsd:boolean ;
+                                                  :psuHasPFC "true"^^xsd:boolean ;
+                                                  :psuHasSCP "false"^^xsd:boolean ;
+                                                  :psuHasUVP "true"^^xsd:boolean ;
                                                   :psuIsModular "true"^^xsd:boolean ;
                                                   :psuMolexConnectors "6"^^xsd:int ;
-                                                  :psuPower "650"^^xsd:int ;
+                                                  :psuPower "700"^^xsd:int ;
                                                   :psuSATAConnectors "6"^^xsd:int .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Falcon_C903
 :Falcon_C903 rdf:type owl:NamedIndividual ,
                       :Case ;
-             :caseCompatibleWithMotherbaord :ROG_Crosshair_VIII_Dark_Hero ;
+             :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
              :caseATXSupport "true"^^xsd:boolean ;
-             :caseeATXSupport "true"^^xsd:boolean ;
+             :caseHeight "70cm"^^xsd:string ;
+             :caseLength "30cm"^^xsd:string ;
+             :caseRGB "true"^^xsd:boolean ;
+             :caseWidth "25cm"^^xsd:string ;
+             :caseeATXSupport "false"^^xsd:boolean ;
              :casemATXSupport "true"^^xsd:boolean ;
              :caseminiITXSupport "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#G.Skill_Trident_Z5
+:G.Skill_Trident_Z5 rdf:type owl:NamedIndividual ,
+                             :RAM ;
+                    :compatibleRAM :ROG_Crosshair_VIII_Dark_Hero ,
+                                   :X570_Taichi_Razer_Edition ;
+                    :ramCapacity "8"^^xsd:int ;
+                    :ramDDR "3"^^xsd:int ;
+                    :ramFrequency "2800"^^xsd:int ;
+                    :ramLatency "10"^^xsd:int ;
+                    :ramModulesNumber "2"^^xsd:int .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#G915_LIGHTSPEED
@@ -1062,32 +2513,339 @@
                      :ramModulesNumber "2"^^xsd:int .
 
 
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GIGABYTE_GC-WB1733D-I
+:GIGABYTE_GC-WB1733D-I rdf:type owl:NamedIndividual ,
+                                :Networking ;
+                       :networkingBluetooth "2"^^xsd:string ;
+                       :networkingLan "4"^^xsd:string ;
+                       :networkingWiFi "5"^^xsd:string .
+
+
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GIGABYTE_GeForce_RTX_3070
 :GIGABYTE_GeForce_RTX_3070 rdf:type owl:NamedIndividual ,
                                     :GPU ;
                            :compatibleGPU :X570_Taichi_Razer_Edition ;
+                           :gpu6PinConnectors "2"^^xsd:int ;
+                           :gpu8PinConnectors "0"^^xsd:int ;
+                           :gpuBus "5000"^^xsd:int ;
+                           :gpuCUDA "2480"^^xsd:int ;
                            :gpuDisplayPorts "2"^^xsd:int ;
                            :gpuHDMIPorts "2"^^xsd:int ;
+                           :gpuHeight "15cm"^^xsd:string ;
+                           :gpuLength "18cm"^^xsd:string ;
                            :gpuMemory "8"^^xsd:int ;
                            :gpuMemorySpeed "1000"^^xsd:int ;
                            :gpuMemoryType "GDDR5X"^^xsd:string ;
                            :gpuPCIe "4"^^xsd:int ;
-                           :gpuSpeed "10000"^^xsd:string .
+                           :gpuSpeed "10000"^^xsd:string ;
+                           :gpuTeraflops "12"^^xsd:int ;
+                           :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GIGABYTE_Z490_AORUS_MASTER
+:GIGABYTE_Z490_AORUS_MASTER rdf:type owl:NamedIndividual ,
+                                     :Motherboard ;
+                            :motheboardChipset "600"^^xsd:string ;
+                            :motherboardFormFactor "ATX"^^xsd:string ;
+                            :motherboardHasWiFi "true"^^xsd:boolean ;
+                            :motherboardIsRGB "true"^^xsd:boolean ;
+                            :motherboardLAN "10"^^xsd:string ;
+                            :motherboardRAMModules "4"^^xsd:int ;
+                            :motherboardRamMaxSpeed "4500"^^xsd:int ;
+                            :motherboardSocket "AM4"^^xsd:string ;
+                            :motherboardUSBPorts "10"^^xsd:int ;
+                            :motherboardWiFiVersion "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#GIGABYTE_Z590_VISION_G
+:GIGABYTE_Z590_VISION_G rdf:type owl:NamedIndividual ,
+                                 :Motherboard ;
+                        :motheboardChipset "600"^^xsd:string ;
+                        :motherboardFormFactor "ATX"^^xsd:string ;
+                        :motherboardHasWiFi "true"^^xsd:boolean ;
+                        :motherboardIsRGB "true"^^xsd:boolean ;
+                        :motherboardLAN "10"^^xsd:string ;
+                        :motherboardRAMModules "4"^^xsd:int ;
+                        :motherboardRamMaxSpeed "4500"^^xsd:int ;
+                        :motherboardSocket "LGA1700"^^xsd:string ;
+                        :motherboardUSBPorts "10"^^xsd:int ;
+                        :motherboardWiFiVersion "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Gigabyte_-_AORUS
+:Gigabyte_-_AORUS rdf:type owl:NamedIndividual ,
+                           :SSD ;
+                  :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+                  :memoryCapacity "2"^^xsd:string ;
+                  :memoryExternal "false"^^xsd:boolean ;
+                  :memoryFormat "M.2"^^xsd:string ;
+                  :memoryInterface "NVME"^^xsd:string ;
+                  :memoryReadSpeed "500"^^xsd:string ;
+                  :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HP-_EX920
+:HP-_EX920 rdf:type owl:NamedIndividual ,
+                    :SSD ;
+           :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+           :memoryCapacity "1"^^xsd:string ;
+           :memoryExternal "false"^^xsd:boolean ;
+           :memoryFormat "M.2"^^xsd:string ;
+           :memoryInterface "NVME"^^xsd:string ;
+           :memoryReadSpeed "500"^^xsd:string ;
+           :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HP_DeskJet_3755
+:HP_DeskJet_3755 rdf:type owl:NamedIndividual ,
+                          :Printer ;
+                 :printerType "LED"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#HP_LaserJet_Pro_M15
+:HP_LaserJet_Pro_M15 rdf:type owl:NamedIndividual ,
+                              :Printer ;
+                     :printerType "3D"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#INTEL_Core_i9-10900K
 :INTEL_Core_i9-10900K rdf:type owl:NamedIndividual ,
                                :CPU ;
-                      :compatibleCPU :ROG_Crosshair_VIII_Dark_Hero ;
-                      :baseClock "4000"^^xsd:int ;
-                      :cpuMemorySpeed "2800"^^xsd:int ;
-                      :logicalCores "20"^^xsd:int ;
-                      :physicalCores "10"^^xsd:int ;
-                      :socket "LGA1200"^^xsd:string ;
-                      :tdp "220"^^xsd:int ;
-                      :technology "9"^^xsd:int ;
-                      :turboBoost "5000"^^xsd:int ;
-                      :unlockedOverclocking "false"^^xsd:boolean .
+                      :compatibleCPU :X570_Taichi_Razer_Edition ;
+                      :L2 "5"^^xsd:int ;
+                      :L3 "10"^^xsd:int ;
+                      :PCIe "4"^^xsd:int ;
+                      :baseClock "5000"^^xsd:int ;
+                      :cpuMemorySpeed "3200"^^xsd:int ;
+                      :ddrType "4"^^xsd:int ;
+                      :logicalCores "24"^^xsd:int ;
+                      :maxTemp "110"^^xsd:int ;
+                      :physicalCores "12"^^xsd:int ;
+                      :socket "LGA1700"^^xsd:string ;
+                      :tdp "105"^^xsd:int ;
+                      :technology "7"^^xsd:int ;
+                      :turboBoost "4800"^^xsd:int ;
+                      :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Intel_Core_i5-12400
+:Intel_Core_i5-12400 rdf:type owl:NamedIndividual ,
+                              :CPU ;
+                     :compatibleCPU :X570_Taichi_Razer_Edition ;
+                     :L2 "10"^^xsd:int ;
+                     :L3 "20"^^xsd:int ;
+                     :PCIe "4"^^xsd:int ;
+                     :baseClock "3700"^^xsd:int ;
+                     :cpuMemorySpeed "3200"^^xsd:int ;
+                     :ddrType "4"^^xsd:int ;
+                     :logicalCores "24"^^xsd:int ;
+                     :maxTemp "110"^^xsd:int ;
+                     :physicalCores "12"^^xsd:int ;
+                     :socket "LGA1700"^^xsd:string ;
+                     :tdp "105"^^xsd:int ;
+                     :technology "7"^^xsd:int ;
+                     :turboBoost "4800"^^xsd:int ;
+                     :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Intel_Core_i5-12400F
+:Intel_Core_i5-12400F rdf:type owl:NamedIndividual ,
+                               :CPU ;
+                      :compatibleCPU :X570_Taichi_Razer_Edition ;
+                      :L2 "10"^^xsd:int ;
+                      :L3 "20"^^xsd:int ;
+                      :PCIe "4"^^xsd:int ;
+                      :baseClock "3700"^^xsd:int ;
+                      :cpuMemorySpeed "3200"^^xsd:int ;
+                      :ddrType "4"^^xsd:int ;
+                      :logicalCores "24"^^xsd:int ;
+                      :maxTemp "110"^^xsd:int ;
+                      :physicalCores "12"^^xsd:int ;
+                      :socket "LGA1700"^^xsd:string ;
+                      :tdp "105"^^xsd:int ;
+                      :technology "7"^^xsd:int ;
+                      :turboBoost "4800"^^xsd:int ;
+                      :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Intel_Core_i5-12600
+:Intel_Core_i5-12600 rdf:type owl:NamedIndividual ,
+                              :CPU ;
+                     :compatibleCPU :X570_Taichi_Razer_Edition ;
+                     :L2 "10"^^xsd:int ;
+                     :L3 "20"^^xsd:int ;
+                     :PCIe "4"^^xsd:int ;
+                     :baseClock "3700"^^xsd:int ;
+                     :cpuMemorySpeed "3200"^^xsd:int ;
+                     :ddrType "4"^^xsd:int ;
+                     :logicalCores "24"^^xsd:int ;
+                     :maxTemp "110"^^xsd:int ;
+                     :physicalCores "12"^^xsd:int ;
+                     :socket "LGA1700"^^xsd:string ;
+                     :tdp "105"^^xsd:int ;
+                     :technology "7"^^xsd:int ;
+                     :turboBoost "4800"^^xsd:int ;
+                     :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Intel_Core_i5-12600H
+:Intel_Core_i5-12600H rdf:type owl:NamedIndividual ,
+                               :CPU ;
+                      :compatibleCPU :X570_Taichi_Razer_Edition ;
+                      :L2 "10"^^xsd:int ;
+                      :L3 "20"^^xsd:int ;
+                      :PCIe "4"^^xsd:int ;
+                      :baseClock "3700"^^xsd:int ;
+                      :cpuMemorySpeed "3200"^^xsd:int ;
+                      :ddrType "4"^^xsd:int ;
+                      :logicalCores "24"^^xsd:int ;
+                      :maxTemp "110"^^xsd:int ;
+                      :physicalCores "12"^^xsd:int ;
+                      :socket "LGA1700"^^xsd:string ;
+                      :tdp "105"^^xsd:int ;
+                      :technology "7"^^xsd:int ;
+                      :turboBoost "4800"^^xsd:int ;
+                      :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Intel_Core_i5-12600K
+:Intel_Core_i5-12600K rdf:type owl:NamedIndividual ,
+                               :CPU ;
+                      :compatibleCPU :X570_Taichi_Razer_Edition ;
+                      :L2 "10"^^xsd:int ;
+                      :L3 "20"^^xsd:int ;
+                      :PCIe "4"^^xsd:int ;
+                      :baseClock "3700"^^xsd:int ;
+                      :cpuMemorySpeed "3200"^^xsd:int ;
+                      :ddrType "4"^^xsd:int ;
+                      :logicalCores "24"^^xsd:int ;
+                      :maxTemp "110"^^xsd:int ;
+                      :physicalCores "12"^^xsd:int ;
+                      :socket "LGA1700"^^xsd:string ;
+                      :tdp "105"^^xsd:int ;
+                      :technology "7"^^xsd:int ;
+                      :turboBoost "4800"^^xsd:int ;
+                      :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Intel_Core_i9-12900
+:Intel_Core_i9-12900 rdf:type owl:NamedIndividual ,
+                              :CPU ;
+                     :compatibleCPU :X570_Taichi_Razer_Edition ;
+                     :L2 "10"^^xsd:int ;
+                     :L3 "20"^^xsd:int ;
+                     :PCIe "4"^^xsd:int ;
+                     :baseClock "3700"^^xsd:int ;
+                     :cpuMemorySpeed "3200"^^xsd:int ;
+                     :ddrType "4"^^xsd:int ;
+                     :logicalCores "24"^^xsd:int ;
+                     :maxTemp "110"^^xsd:int ;
+                     :physicalCores "12"^^xsd:int ;
+                     :socket "LGA1700"^^xsd:string ;
+                     :tdp "105"^^xsd:int ;
+                     :technology "7"^^xsd:int ;
+                     :turboBoost "4800"^^xsd:int ;
+                     :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Intel_Core_i9-12900K
+:Intel_Core_i9-12900K rdf:type owl:NamedIndividual ,
+                               :CPU ;
+                      :compatibleCPU :X570_Taichi_Razer_Edition ;
+                      :L2 "10"^^xsd:int ;
+                      :L3 "20"^^xsd:int ;
+                      :PCIe "4"^^xsd:int ;
+                      :baseClock "3700"^^xsd:int ;
+                      :cpuMemorySpeed "3200"^^xsd:int ;
+                      :ddrType "4"^^xsd:int ;
+                      :logicalCores "24"^^xsd:int ;
+                      :maxTemp "110"^^xsd:int ;
+                      :physicalCores "12"^^xsd:int ;
+                      :socket "LGA1700"^^xsd:string ;
+                      :tdp "105"^^xsd:int ;
+                      :technology "7"^^xsd:int ;
+                      :turboBoost "4800"^^xsd:int ;
+                      :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Intel_Core_i9-12950HX
+:Intel_Core_i9-12950HX rdf:type owl:NamedIndividual ,
+                                :CPU ;
+                       :compatibleCPU :X570_Taichi_Razer_Edition ;
+                       :L2 "10"^^xsd:int ;
+                       :L3 "20"^^xsd:int ;
+                       :PCIe "4"^^xsd:int ;
+                       :baseClock "3700"^^xsd:int ;
+                       :cpuMemorySpeed "3200"^^xsd:int ;
+                       :ddrType "4"^^xsd:int ;
+                       :logicalCores "24"^^xsd:int ;
+                       :maxTemp "110"^^xsd:int ;
+                       :physicalCores "12"^^xsd:int ;
+                       :socket "LGA1700"^^xsd:string ;
+                       :tdp "105"^^xsd:int ;
+                       :technology "7"^^xsd:int ;
+                       :turboBoost "4800"^^xsd:int ;
+                       :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Intel_Core_i9-7960X
+:Intel_Core_i9-7960X rdf:type owl:NamedIndividual ,
+                              :CPU ;
+                     :compatibleCPU :X570_Taichi_Razer_Edition ;
+                     :L2 "10"^^xsd:int ;
+                     :L3 "20"^^xsd:int ;
+                     :PCIe "4"^^xsd:int ;
+                     :baseClock "3700"^^xsd:int ;
+                     :cpuMemorySpeed "3200"^^xsd:int ;
+                     :ddrType "4"^^xsd:int ;
+                     :logicalCores "24"^^xsd:int ;
+                     :maxTemp "110"^^xsd:int ;
+                     :physicalCores "12"^^xsd:int ;
+                     :socket "LGA1700"^^xsd:string ;
+                     :tdp "105"^^xsd:int ;
+                     :technology "7"^^xsd:int ;
+                     :turboBoost "4800"^^xsd:int ;
+                     :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Intel_Xeon_Gold_6154
+:Intel_Xeon_Gold_6154 rdf:type owl:NamedIndividual ,
+                               :CPU ;
+                      :compatibleCPU :X570_Taichi_Razer_Edition ;
+                      :L2 "10"^^xsd:int ;
+                      :L3 "20"^^xsd:int ;
+                      :PCIe "4"^^xsd:int ;
+                      :baseClock "3700"^^xsd:int ;
+                      :cpuMemorySpeed "3200"^^xsd:int ;
+                      :ddrType "4"^^xsd:int ;
+                      :logicalCores "24"^^xsd:int ;
+                      :maxTemp "110"^^xsd:int ;
+                      :physicalCores "12"^^xsd:int ;
+                      :socket "LGA1700"^^xsd:string ;
+                      :tdp "105"^^xsd:int ;
+                      :technology "7"^^xsd:int ;
+                      :turboBoost "4800"^^xsd:int ;
+                      :unlockedOverclocking "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Intel_Xeon_Gold_6314U
+:Intel_Xeon_Gold_6314U rdf:type owl:NamedIndividual ,
+                                :CPU ;
+                       :compatibleCPU :X570_Taichi_Razer_Edition ;
+                       :L2 "10"^^xsd:int ;
+                       :L3 "20"^^xsd:int ;
+                       :PCIe "4"^^xsd:int ;
+                       :baseClock "3700"^^xsd:int ;
+                       :cpuMemorySpeed "3200"^^xsd:int ;
+                       :ddrType "4"^^xsd:int ;
+                       :logicalCores "24"^^xsd:int ;
+                       :maxTemp "110"^^xsd:int ;
+                       :physicalCores "12"^^xsd:int ;
+                       :socket "LGA1700"^^xsd:string ;
+                       :tdp "105"^^xsd:int ;
+                       :technology "7"^^xsd:int ;
+                       :turboBoost "4800"^^xsd:int ;
+                       :unlockedOverclocking "true"^^xsd:boolean .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#KINGSTON_Fury_Beast_8GB_DDR5_5200MHz_CL40_-_KF552C40BB-8
@@ -1102,42 +2860,1118 @@
                                                           :ramModulesNumber "2"^^xsd:int .
 
 
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Klipsch_ProMedia_2.1_THX
+:Klipsch_ProMedia_2.1_THX rdf:type owl:NamedIndividual ,
+                                   :Speakers ;
+                          :audioConnectivity "Bluetooth"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Klipsch_T5
+:Klipsch_T5 rdf:type owl:NamedIndividual ,
+                     :Earphones ;
+            :audioConnectivity "Bluetooth"^^xsd:string .
+
+
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#LC_POWER_705MB
 :LC_POWER_705MB rdf:type owl:NamedIndividual ,
                          :Case ;
                 :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
                 :caseATXSupport "true"^^xsd:boolean ;
-                :caseeATXSupport "true"^^xsd:boolean ;
+                :caseHeight "70cm"^^xsd:string ;
+                :caseLength "30cm"^^xsd:string ;
+                :caseRGB "true"^^xsd:boolean ;
+                :caseWidth "25cm"^^xsd:string ;
+                :caseeATXSupport "false"^^xsd:boolean ;
                 :casemATXSupport "true"^^xsd:boolean ;
-                :caseminiITXSupport "false"^^xsd:boolean .
+                :caseminiITXSupport "true"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#MSI_GeForce_RTX_3080_Ti_GAMING_X_TRIO
-:MSI_GeForce_RTX_3080_Ti_GAMING_X_TRIO rdf:type owl:NamedIndividual ,
-                                                :GPU ;
-                                       :compatibleGPU :ROG_Crosshair_VIII_Dark_Hero ;
-                                       :gpuDisplayPorts "3"^^xsd:int ;
-                                       :gpuHDMIPorts "3"^^xsd:int ;
-                                       :gpuMemory "12"^^xsd:int ;
-                                       :gpuMemorySpeed "1200"^^xsd:int ;
-                                       :gpuMemoryType "GDDR6"^^xsd:string ;
-                                       :gpuPCIe "4"^^xsd:int ;
-                                       :gpuSpeed "11000"^^xsd:string .
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#LG_GP65NB60
+:LG_GP65NB60 rdf:type owl:NamedIndividual ,
+                      :OpticalDrive ;
+             :opticalDriveIntegratedCardReader "false"^^xsd:boolean ;
+             :opticalDriveType "2"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Logitech_C920
+:Logitech_C920 rdf:type owl:NamedIndividual ,
+                        :Camera ;
+               :cameraResolution "4K"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Logitech_G502_Lightspeed
+:Logitech_G502_Lightspeed rdf:type owl:NamedIndividual ,
+                                   :Mouse ;
+                          :mouseConnection "Bluetooth"^^xsd:string ;
+                          :mouseDPI "8000"^^xsd:int ;
+                          :mouseIsRGB "true"^^xsd:boolean ;
+                          :mouseMass "200"^^xsd:int ;
+                          :mousePoolingRate "3"^^xsd:string ,
+                                            "3000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Logitech_H390
+:Logitech_H390 rdf:type owl:NamedIndividual ,
+                        :Earphones ;
+               :audioConnectivity "3.5mm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#MSI_-_M480
+:MSI_-_M480 rdf:type owl:NamedIndividual ,
+                     :SSD ;
+            :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+            :memoryCapacity "1"^^xsd:string ;
+            :memoryExternal "false"^^xsd:boolean ;
+            :memoryFormat "M.2"^^xsd:string ;
+            :memoryInterface "NVME"^^xsd:string ;
+            :memoryReadSpeed "500"^^xsd:string ;
+            :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#MSI_MAG_Z490_TOMAHAWK
+:MSI_MAG_Z490_TOMAHAWK rdf:type owl:NamedIndividual ,
+                                :Motherboard ;
+                       :motheboardChipset "600"^^xsd:string ;
+                       :motherboardFormFactor "ATX"^^xsd:string ;
+                       :motherboardHasWiFi "true"^^xsd:boolean ;
+                       :motherboardIsRGB "true"^^xsd:boolean ;
+                       :motherboardLAN "10"^^xsd:string ;
+                       :motherboardRAMModules "4"^^xsd:int ;
+                       :motherboardRamMaxSpeed "4500"^^xsd:int ;
+                       :motherboardSocket "AM4"^^xsd:string ;
+                       :motherboardUSBPorts "10"^^xsd:int ;
+                       :motherboardWiFiVersion "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#MSI_MPG_Z590_CARBON_EK_X
+:MSI_MPG_Z590_CARBON_EK_X rdf:type owl:NamedIndividual ,
+                                   :Motherboard ;
+                          :motheboardChipset "600"^^xsd:string ;
+                          :motherboardFormFactor "ATX"^^xsd:string ;
+                          :motherboardHasWiFi "true"^^xsd:boolean ;
+                          :motherboardIsRGB "true"^^xsd:boolean ;
+                          :motherboardLAN "10"^^xsd:string ;
+                          :motherboardRAMModules "4"^^xsd:int ;
+                          :motherboardRamMaxSpeed "4500"^^xsd:int ;
+                          :motherboardSocket "AM4"^^xsd:string ;
+                          :motherboardUSBPorts "10"^^xsd:int ;
+                          :motherboardWiFiVersion "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#MS_Aquarius_Pro_Gaming
+:MS_Aquarius_Pro_Gaming rdf:type owl:NamedIndividual ,
+                                 :Case ;
+                        :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
+                        :caseATXSupport "true"^^xsd:boolean ;
+                        :caseHeight "70cm"^^xsd:string ;
+                        :caseLength "30cm"^^xsd:string ;
+                        :caseRGB "true"^^xsd:boolean ;
+                        :caseWidth "25cm"^^xsd:string ;
+                        :caseeATXSupport "false"^^xsd:boolean ;
+                        :casemATXSupport "true"^^xsd:boolean ;
+                        :caseminiITXSupport "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#MS_Industrial_Cyclops_V
+:MS_Industrial_Cyclops_V rdf:type owl:NamedIndividual ,
+                                  :Case ;
+                         :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
+                         :caseATXSupport "true"^^xsd:boolean ;
+                         :caseHeight "70cm"^^xsd:string ;
+                         :caseLength "30cm"^^xsd:string ;
+                         :caseRGB "true"^^xsd:boolean ;
+                         :caseWidth "25cm"^^xsd:string ;
+                         :caseeATXSupport "false"^^xsd:boolean ;
+                         :casemATXSupport "true"^^xsd:boolean ;
+                         :caseminiITXSupport "true"^^xsd:boolean .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#MS_Industrial_Winston
 :MS_Industrial_Winston rdf:type owl:NamedIndividual ,
-                                :Case .
+                                :Case ;
+                       :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
+                       :caseATXSupport "true"^^xsd:boolean ;
+                       :caseHeight "70cm"^^xsd:string ;
+                       :caseLength "30cm"^^xsd:string ;
+                       :caseRGB "true"^^xsd:boolean ;
+                       :caseWidth "25cm"^^xsd:string ;
+                       :caseeATXSupport "false"^^xsd:boolean ;
+                       :casemATXSupport "true"^^xsd:boolean ;
+                       :caseminiITXSupport "true"^^xsd:boolean .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#MS_Raider
 :MS_Raider rdf:type owl:NamedIndividual ,
-                    :Case .
+                    :Case ;
+           :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
+           :caseATXSupport "true"^^xsd:boolean ;
+           :caseHeight "70cm"^^xsd:string ;
+           :caseLength "30cm"^^xsd:string ;
+           :caseRGB "true"^^xsd:boolean ;
+           :caseWidth "25cm"^^xsd:string ;
+           :caseeATXSupport "false"^^xsd:boolean ;
+           :casemATXSupport "true"^^xsd:boolean ;
+           :caseminiITXSupport "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_3060_Ti_LHR
+:NVIDIA_GeForce_3060_Ti_LHR rdf:type owl:NamedIndividual ,
+                                     :GPU ;
+                            :compatibleGPU :X570_Taichi_Razer_Edition ;
+                            :gpu6PinConnectors "2"^^xsd:int ;
+                            :gpu8PinConnectors "0"^^xsd:int ;
+                            :gpuBus "5000"^^xsd:int ;
+                            :gpuCUDA "2480"^^xsd:int ;
+                            :gpuDisplayPorts "2"^^xsd:int ;
+                            :gpuHDMIPorts "2"^^xsd:int ;
+                            :gpuHeight "15cm"^^xsd:string ;
+                            :gpuLength "18cm"^^xsd:string ;
+                            :gpuMemory "8"^^xsd:int ;
+                            :gpuMemorySpeed "1000"^^xsd:int ;
+                            :gpuMemoryType "GDDR5X"^^xsd:string ;
+                            :gpuPCIe "4"^^xsd:int ;
+                            :gpuSpeed "10000"^^xsd:string ;
+                            :gpuTeraflops "10"^^xsd:int ;
+                            :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_3070_LHR
+:NVIDIA_GeForce_3070_LHR rdf:type owl:NamedIndividual ,
+                                  :GPU ;
+                         :compatibleGPU :X570_Taichi_Razer_Edition ;
+                         :gpu6PinConnectors "2"^^xsd:int ;
+                         :gpu8PinConnectors "0"^^xsd:int ;
+                         :gpuBus "5000"^^xsd:int ;
+                         :gpuCUDA "2480"^^xsd:int ;
+                         :gpuDisplayPorts "2"^^xsd:int ;
+                         :gpuHDMIPorts "2"^^xsd:int ;
+                         :gpuHeight "15cm"^^xsd:string ;
+                         :gpuLength "18cm"^^xsd:string ;
+                         :gpuMemory "8"^^xsd:int ;
+                         :gpuMemorySpeed "1000"^^xsd:int ;
+                         :gpuMemoryType "GDDR5X"^^xsd:string ;
+                         :gpuPCIe "4"^^xsd:int ;
+                         :gpuSpeed "10000"^^xsd:string ;
+                         :gpuTeraflops "12"^^xsd:int ;
+                         :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_3080_LHR
+:NVIDIA_GeForce_3080_LHR rdf:type owl:NamedIndividual ,
+                                  :GPU ;
+                         :compatibleGPU :X570_Taichi_Razer_Edition ;
+                         :gpu6PinConnectors "2"^^xsd:int ;
+                         :gpu8PinConnectors "0"^^xsd:int ;
+                         :gpuBus "5000"^^xsd:int ;
+                         :gpuCUDA "2480"^^xsd:int ;
+                         :gpuDisplayPorts "2"^^xsd:int ;
+                         :gpuHDMIPorts "2"^^xsd:int ;
+                         :gpuHeight "15cm"^^xsd:string ;
+                         :gpuLength "18cm"^^xsd:string ;
+                         :gpuMemory "8"^^xsd:int ;
+                         :gpuMemorySpeed "1000"^^xsd:int ;
+                         :gpuMemoryType "GDDR5X"^^xsd:string ;
+                         :gpuPCIe "4"^^xsd:int ;
+                         :gpuSpeed "10000"^^xsd:string ;
+                         :gpuTeraflops "13"^^xsd:int ;
+                         :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_GTX_1070
+:NVIDIA_GeForce_GTX_1070 rdf:type owl:NamedIndividual ,
+                                  :GPU ;
+                         :compatibleGPU :X570_Taichi_Razer_Edition ;
+                         :gpu6PinConnectors "2"^^xsd:int ;
+                         :gpu8PinConnectors "0"^^xsd:int ;
+                         :gpuBus "5000"^^xsd:int ;
+                         :gpuCUDA "2480"^^xsd:int ;
+                         :gpuDisplayPorts "2"^^xsd:int ;
+                         :gpuHDMIPorts "2"^^xsd:int ;
+                         :gpuHeight "15cm"^^xsd:string ;
+                         :gpuLength "18cm"^^xsd:string ;
+                         :gpuMemory "8"^^xsd:int ;
+                         :gpuMemorySpeed "1000"^^xsd:int ;
+                         :gpuMemoryType "GDDR5X"^^xsd:string ;
+                         :gpuPCIe "4"^^xsd:int ;
+                         :gpuSpeed "10000"^^xsd:string ;
+                         :gpuTeraflops "7"^^xsd:int ;
+                         :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_GTX_1070_Ti
+:NVIDIA_GeForce_GTX_1070_Ti rdf:type owl:NamedIndividual ,
+                                     :GPU ;
+                            :compatibleGPU :X570_Taichi_Razer_Edition ;
+                            :gpu6PinConnectors "2"^^xsd:int ;
+                            :gpu8PinConnectors "0"^^xsd:int ;
+                            :gpuBus "5000"^^xsd:int ;
+                            :gpuCUDA "2480"^^xsd:int ;
+                            :gpuDisplayPorts "2"^^xsd:int ;
+                            :gpuHDMIPorts "2"^^xsd:int ;
+                            :gpuHeight "15cm"^^xsd:string ;
+                            :gpuLength "18cm"^^xsd:string ;
+                            :gpuMemory "8"^^xsd:int ;
+                            :gpuMemorySpeed "1000"^^xsd:int ;
+                            :gpuMemoryType "GDDR5X"^^xsd:string ;
+                            :gpuPCIe "4"^^xsd:int ;
+                            :gpuSpeed "10000"^^xsd:string ;
+                            :gpuTeraflops "12"^^xsd:int ;
+                            :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_GTX_1080
+:NVIDIA_GeForce_GTX_1080 rdf:type owl:NamedIndividual ,
+                                  :GPU ;
+                         :compatibleGPU :X570_Taichi_Razer_Edition ;
+                         :gpu6PinConnectors "2"^^xsd:int ;
+                         :gpu8PinConnectors "0"^^xsd:int ;
+                         :gpuBus "5000"^^xsd:int ;
+                         :gpuCUDA "2480"^^xsd:int ;
+                         :gpuDisplayPorts "2"^^xsd:int ;
+                         :gpuHDMIPorts "2"^^xsd:int ;
+                         :gpuHeight "15cm"^^xsd:string ;
+                         :gpuLength "18cm"^^xsd:string ;
+                         :gpuMemory "8"^^xsd:int ;
+                         :gpuMemorySpeed "1000"^^xsd:int ;
+                         :gpuMemoryType "GDDR5X"^^xsd:string ;
+                         :gpuPCIe "4"^^xsd:int ;
+                         :gpuSpeed "10000"^^xsd:string ;
+                         :gpuTeraflops "8"^^xsd:int ;
+                         :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_GTX_1080_Max-Q
+:NVIDIA_GeForce_GTX_1080_Max-Q rdf:type owl:NamedIndividual ,
+                                        :GPU ;
+                               :compatibleGPU :X570_Taichi_Razer_Edition ;
+                               :gpu6PinConnectors "2"^^xsd:int ;
+                               :gpu8PinConnectors "0"^^xsd:int ;
+                               :gpuBus "5000"^^xsd:int ;
+                               :gpuCUDA "2480"^^xsd:int ;
+                               :gpuDisplayPorts "2"^^xsd:int ;
+                               :gpuHDMIPorts "2"^^xsd:int ;
+                               :gpuHeight "15cm"^^xsd:string ;
+                               :gpuLength "18cm"^^xsd:string ;
+                               :gpuMemory "8"^^xsd:int ;
+                               :gpuMemorySpeed "1000"^^xsd:int ;
+                               :gpuMemoryType "GDDR5X"^^xsd:string ;
+                               :gpuPCIe "4"^^xsd:int ;
+                               :gpuSpeed "10000"^^xsd:string ;
+                               :gpuTeraflops "9"^^xsd:int ;
+                               :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_GTX_1080_Ti
+:NVIDIA_GeForce_GTX_1080_Ti rdf:type owl:NamedIndividual ,
+                                     :GPU ;
+                            :compatibleGPU :X570_Taichi_Razer_Edition ;
+                            :gpu6PinConnectors "2"^^xsd:int ;
+                            :gpu8PinConnectors "0"^^xsd:int ;
+                            :gpuBus "5000"^^xsd:int ;
+                            :gpuCUDA "2480"^^xsd:int ;
+                            :gpuDisplayPorts "2"^^xsd:int ;
+                            :gpuHDMIPorts "2"^^xsd:int ;
+                            :gpuHeight "15cm"^^xsd:string ;
+                            :gpuLength "18cm"^^xsd:string ;
+                            :gpuMemory "8"^^xsd:int ;
+                            :gpuMemorySpeed "1000"^^xsd:int ;
+                            :gpuMemoryType "GDDR5X"^^xsd:string ;
+                            :gpuPCIe "4"^^xsd:int ;
+                            :gpuSpeed "10000"^^xsd:string ;
+                            :gpuTeraflops "9"^^xsd:int ;
+                            :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_GTX_1660_SUPER
+:NVIDIA_GeForce_GTX_1660_SUPER rdf:type owl:NamedIndividual ,
+                                        :GPU ;
+                               :compatibleGPU :X570_Taichi_Razer_Edition ;
+                               :gpu6PinConnectors "2"^^xsd:int ;
+                               :gpu8PinConnectors "0"^^xsd:int ;
+                               :gpuBus "5000"^^xsd:int ;
+                               :gpuCUDA "2480"^^xsd:int ;
+                               :gpuDisplayPorts "2"^^xsd:int ;
+                               :gpuHDMIPorts "2"^^xsd:int ;
+                               :gpuHeight "15cm"^^xsd:string ;
+                               :gpuLength "18cm"^^xsd:string ;
+                               :gpuMemory "8"^^xsd:int ;
+                               :gpuMemorySpeed "1000"^^xsd:int ;
+                               :gpuMemoryType "GDDR5X"^^xsd:string ;
+                               :gpuPCIe "4"^^xsd:int ;
+                               :gpuSpeed "10000"^^xsd:string ;
+                               :gpuTeraflops "7"^^xsd:int ;
+                               :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_GTX_1660_Ti
+:NVIDIA_GeForce_GTX_1660_Ti rdf:type owl:NamedIndividual ,
+                                     :GPU ;
+                            :compatibleGPU :X570_Taichi_Razer_Edition ;
+                            :gpu6PinConnectors "2"^^xsd:int ;
+                            :gpu8PinConnectors "0"^^xsd:int ;
+                            :gpuBus "5000"^^xsd:int ;
+                            :gpuCUDA "2480"^^xsd:int ;
+                            :gpuDisplayPorts "2"^^xsd:int ;
+                            :gpuHDMIPorts "2"^^xsd:int ;
+                            :gpuHeight "15cm"^^xsd:string ;
+                            :gpuLength "18cm"^^xsd:string ;
+                            :gpuMemory "8"^^xsd:int ;
+                            :gpuMemorySpeed "1000"^^xsd:int ;
+                            :gpuMemoryType "GDDR5X"^^xsd:string ;
+                            :gpuPCIe "4"^^xsd:int ;
+                            :gpuSpeed "10000"^^xsd:string ;
+                            :gpuTeraflops "7"^^xsd:int ;
+                            :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_GTX_980_Ti
+:NVIDIA_GeForce_GTX_980_Ti rdf:type owl:NamedIndividual ,
+                                    :GPU ;
+                           :compatibleGPU :X570_Taichi_Razer_Edition ;
+                           :gpu6PinConnectors "2"^^xsd:int ;
+                           :gpu8PinConnectors "0"^^xsd:int ;
+                           :gpuBus "5000"^^xsd:int ;
+                           :gpuCUDA "2480"^^xsd:int ;
+                           :gpuDisplayPorts "2"^^xsd:int ;
+                           :gpuHDMIPorts "2"^^xsd:int ;
+                           :gpuHeight "15cm"^^xsd:string ;
+                           :gpuLength "18cm"^^xsd:string ;
+                           :gpuMemory "8"^^xsd:int ;
+                           :gpuMemorySpeed "1000"^^xsd:int ;
+                           :gpuMemoryType "GDDR5X"^^xsd:string ;
+                           :gpuPCIe "4"^^xsd:int ;
+                           :gpuSpeed "10000"^^xsd:string ;
+                           :gpuTeraflops "5"^^xsd:int ;
+                           :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_2060
+:NVIDIA_GeForce_RTX_2060 rdf:type owl:NamedIndividual ,
+                                  :GPU ;
+                         :compatibleGPU :X570_Taichi_Razer_Edition ;
+                         :gpu6PinConnectors "2"^^xsd:int ;
+                         :gpu8PinConnectors "0"^^xsd:int ;
+                         :gpuBus "5000"^^xsd:int ;
+                         :gpuCUDA "2480"^^xsd:int ;
+                         :gpuDisplayPorts "2"^^xsd:int ;
+                         :gpuHDMIPorts "2"^^xsd:int ;
+                         :gpuHeight "15cm"^^xsd:string ;
+                         :gpuLength "18cm"^^xsd:string ;
+                         :gpuMemory "8"^^xsd:int ;
+                         :gpuMemorySpeed "1000"^^xsd:int ;
+                         :gpuMemoryType "GDDR5X"^^xsd:string ;
+                         :gpuPCIe "4"^^xsd:int ;
+                         :gpuSpeed "10000"^^xsd:string ;
+                         :gpuTeraflops "10"^^xsd:int ;
+                         :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_2060_12GB
+:NVIDIA_GeForce_RTX_2060_12GB rdf:type owl:NamedIndividual ,
+                                       :GPU ;
+                              :compatibleGPU :X570_Taichi_Razer_Edition ;
+                              :gpu6PinConnectors "2"^^xsd:int ;
+                              :gpu8PinConnectors "0"^^xsd:int ;
+                              :gpuBus "5000"^^xsd:int ;
+                              :gpuCUDA "2480"^^xsd:int ;
+                              :gpuDisplayPorts "2"^^xsd:int ;
+                              :gpuHDMIPorts "2"^^xsd:int ;
+                              :gpuHeight "15cm"^^xsd:string ;
+                              :gpuLength "18cm"^^xsd:string ;
+                              :gpuMemory "8"^^xsd:int ;
+                              :gpuMemorySpeed "1000"^^xsd:int ;
+                              :gpuMemoryType "GDDR5X"^^xsd:string ;
+                              :gpuPCIe "4"^^xsd:int ;
+                              :gpuSpeed "10000"^^xsd:string ;
+                              :gpuTeraflops "11"^^xsd:int ;
+                              :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_2060_SUPER
+:NVIDIA_GeForce_RTX_2060_SUPER rdf:type owl:NamedIndividual ,
+                                        :GPU ;
+                               :compatibleGPU :X570_Taichi_Razer_Edition ;
+                               :gpu6PinConnectors "2"^^xsd:int ;
+                               :gpu8PinConnectors "0"^^xsd:int ;
+                               :gpuBus "5000"^^xsd:int ;
+                               :gpuCUDA "2480"^^xsd:int ;
+                               :gpuDisplayPorts "2"^^xsd:int ;
+                               :gpuHDMIPorts "2"^^xsd:int ;
+                               :gpuHeight "15cm"^^xsd:string ;
+                               :gpuLength "18cm"^^xsd:string ;
+                               :gpuMemory "8"^^xsd:int ;
+                               :gpuMemorySpeed "1000"^^xsd:int ;
+                               :gpuMemoryType "GDDR5X"^^xsd:string ;
+                               :gpuPCIe "4"^^xsd:int ;
+                               :gpuSpeed "10000"^^xsd:string ;
+                               :gpuTeraflops "11"^^xsd:int ;
+                               :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_2070
+:NVIDIA_GeForce_RTX_2070 rdf:type owl:NamedIndividual ,
+                                  :GPU ;
+                         :compatibleGPU :X570_Taichi_Razer_Edition ;
+                         :gpu6PinConnectors "2"^^xsd:int ;
+                         :gpu8PinConnectors "0"^^xsd:int ;
+                         :gpuBus "5000"^^xsd:int ;
+                         :gpuCUDA "2480"^^xsd:int ;
+                         :gpuDisplayPorts "2"^^xsd:int ;
+                         :gpuHDMIPorts "2"^^xsd:int ;
+                         :gpuHeight "15cm"^^xsd:string ;
+                         :gpuLength "18cm"^^xsd:string ;
+                         :gpuMemory "8"^^xsd:int ;
+                         :gpuMemorySpeed "1000"^^xsd:int ;
+                         :gpuMemoryType "GDDR5X"^^xsd:string ;
+                         :gpuPCIe "4"^^xsd:int ;
+                         :gpuSpeed "10000"^^xsd:string ;
+                         :gpuTeraflops "8"^^xsd:int ;
+                         :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_2070_Max-Q
+:NVIDIA_GeForce_RTX_2070_Max-Q rdf:type owl:NamedIndividual ,
+                                        :GPU ;
+                               :compatibleGPU :X570_Taichi_Razer_Edition ;
+                               :gpu6PinConnectors "2"^^xsd:int ;
+                               :gpu8PinConnectors "0"^^xsd:int ;
+                               :gpuBus "5000"^^xsd:int ;
+                               :gpuCUDA "2480"^^xsd:int ;
+                               :gpuDisplayPorts "2"^^xsd:int ;
+                               :gpuHDMIPorts "2"^^xsd:int ;
+                               :gpuHeight "15cm"^^xsd:string ;
+                               :gpuLength "18cm"^^xsd:string ;
+                               :gpuMemory "8"^^xsd:int ;
+                               :gpuMemorySpeed "1000"^^xsd:int ;
+                               :gpuMemoryType "GDDR5X"^^xsd:string ;
+                               :gpuPCIe "4"^^xsd:int ;
+                               :gpuSpeed "10000"^^xsd:string ;
+                               :gpuTeraflops "8"^^xsd:int ;
+                               :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_2070_SUPER
+:NVIDIA_GeForce_RTX_2070_SUPER rdf:type owl:NamedIndividual ,
+                                        :GPU ;
+                               :compatibleGPU :X570_Taichi_Razer_Edition ;
+                               :gpu6PinConnectors "2"^^xsd:int ;
+                               :gpu8PinConnectors "0"^^xsd:int ;
+                               :gpuBus "5000"^^xsd:int ;
+                               :gpuCUDA "2480"^^xsd:int ;
+                               :gpuDisplayPorts "2"^^xsd:int ;
+                               :gpuHDMIPorts "2"^^xsd:int ;
+                               :gpuHeight "15cm"^^xsd:string ;
+                               :gpuLength "18cm"^^xsd:string ;
+                               :gpuMemory "8"^^xsd:int ;
+                               :gpuMemorySpeed "1000"^^xsd:int ;
+                               :gpuMemoryType "GDDR5X"^^xsd:string ;
+                               :gpuPCIe "4"^^xsd:int ;
+                               :gpuSpeed "10000"^^xsd:string ;
+                               :gpuTeraflops "9"^^xsd:int ;
+                               :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_2080
+:NVIDIA_GeForce_RTX_2080 rdf:type owl:NamedIndividual ,
+                                  :GPU ;
+                         :compatibleGPU :X570_Taichi_Razer_Edition ;
+                         :gpu6PinConnectors "2"^^xsd:int ;
+                         :gpu8PinConnectors "0"^^xsd:int ;
+                         :gpuBus "5000"^^xsd:int ;
+                         :gpuCUDA "2480"^^xsd:int ;
+                         :gpuDisplayPorts "2"^^xsd:int ;
+                         :gpuHDMIPorts "2"^^xsd:int ;
+                         :gpuHeight "15cm"^^xsd:string ;
+                         :gpuLength "18cm"^^xsd:string ;
+                         :gpuMemory "8"^^xsd:int ;
+                         :gpuMemorySpeed "1000"^^xsd:int ;
+                         :gpuMemoryType "GDDR5X"^^xsd:string ;
+                         :gpuPCIe "4"^^xsd:int ;
+                         :gpuSpeed "10000"^^xsd:string ;
+                         :gpuTeraflops "9"^^xsd:int ;
+                         :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_2080_Max-Q
+:NVIDIA_GeForce_RTX_2080_Max-Q rdf:type owl:NamedIndividual ,
+                                        :GPU ;
+                               :compatibleGPU :X570_Taichi_Razer_Edition ;
+                               :gpu6PinConnectors "2"^^xsd:int ;
+                               :gpu8PinConnectors "0"^^xsd:int ;
+                               :gpuBus "5000"^^xsd:int ;
+                               :gpuCUDA "2480"^^xsd:int ;
+                               :gpuDisplayPorts "2"^^xsd:int ;
+                               :gpuHDMIPorts "2"^^xsd:int ;
+                               :gpuHeight "15cm"^^xsd:string ;
+                               :gpuLength "18cm"^^xsd:string ;
+                               :gpuMemory "8"^^xsd:int ;
+                               :gpuMemorySpeed "1000"^^xsd:int ;
+                               :gpuMemoryType "GDDR5X"^^xsd:string ;
+                               :gpuPCIe "4"^^xsd:int ;
+                               :gpuSpeed "10000"^^xsd:string ;
+                               :gpuTeraflops "9"^^xsd:int ;
+                               :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_2080_SUPER
+:NVIDIA_GeForce_RTX_2080_SUPER rdf:type owl:NamedIndividual ,
+                                        :GPU ;
+                               :compatibleGPU :X570_Taichi_Razer_Edition ;
+                               :gpu6PinConnectors "2"^^xsd:int ;
+                               :gpu8PinConnectors "0"^^xsd:int ;
+                               :gpuBus "5000"^^xsd:int ;
+                               :gpuCUDA "2480"^^xsd:int ;
+                               :gpuDisplayPorts "2"^^xsd:int ;
+                               :gpuHDMIPorts "2"^^xsd:int ;
+                               :gpuHeight "15cm"^^xsd:string ;
+                               :gpuLength "18cm"^^xsd:string ;
+                               :gpuMemory "8"^^xsd:int ;
+                               :gpuMemorySpeed "1000"^^xsd:int ;
+                               :gpuMemoryType "GDDR5X"^^xsd:string ;
+                               :gpuPCIe "4"^^xsd:int ;
+                               :gpuSpeed "10000"^^xsd:string ;
+                               :gpuTeraflops "9"^^xsd:int ;
+                               :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_2080_SUPER_Max-Q
+:NVIDIA_GeForce_RTX_2080_SUPER_Max-Q rdf:type owl:NamedIndividual ,
+                                              :GPU ;
+                                     :compatibleGPU :X570_Taichi_Razer_Edition ;
+                                     :gpu6PinConnectors "2"^^xsd:int ;
+                                     :gpu8PinConnectors "0"^^xsd:int ;
+                                     :gpuBus "5000"^^xsd:int ;
+                                     :gpuCUDA "2480"^^xsd:int ;
+                                     :gpuDisplayPorts "2"^^xsd:int ;
+                                     :gpuHDMIPorts "2"^^xsd:int ;
+                                     :gpuHeight "15cm"^^xsd:string ;
+                                     :gpuLength "18cm"^^xsd:string ;
+                                     :gpuMemory "8"^^xsd:int ;
+                                     :gpuMemorySpeed "1000"^^xsd:int ;
+                                     :gpuMemoryType "GDDR5X"^^xsd:string ;
+                                     :gpuPCIe "4"^^xsd:int ;
+                                     :gpuSpeed "10000"^^xsd:string ;
+                                     :gpuTeraflops "9"^^xsd:int ;
+                                     :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_2080_Ti
+:NVIDIA_GeForce_RTX_2080_Ti rdf:type owl:NamedIndividual ,
+                                     :GPU ;
+                            :compatibleGPU :X570_Taichi_Razer_Edition ;
+                            :gpu6PinConnectors "2"^^xsd:int ;
+                            :gpu8PinConnectors "0"^^xsd:int ;
+                            :gpuBus "5000"^^xsd:int ;
+                            :gpuCUDA "2480"^^xsd:int ;
+                            :gpuDisplayPorts "2"^^xsd:int ;
+                            :gpuHDMIPorts "2"^^xsd:int ;
+                            :gpuHeight "15cm"^^xsd:string ;
+                            :gpuLength "18cm"^^xsd:string ;
+                            :gpuMemory "8"^^xsd:int ;
+                            :gpuMemorySpeed "1000"^^xsd:int ;
+                            :gpuMemoryType "GDDR5X"^^xsd:string ;
+                            :gpuPCIe "4"^^xsd:int ;
+                            :gpuSpeed "10000"^^xsd:string ;
+                            :gpuTeraflops "9"^^xsd:int ;
+                            :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_3050
+:NVIDIA_GeForce_RTX_3050 rdf:type owl:NamedIndividual ,
+                                  :GPU ;
+                         :compatibleGPU :X570_Taichi_Razer_Edition ;
+                         :gpu6PinConnectors "2"^^xsd:int ;
+                         :gpu8PinConnectors "0"^^xsd:int ;
+                         :gpuBus "5000"^^xsd:int ;
+                         :gpuCUDA "2480"^^xsd:int ;
+                         :gpuDisplayPorts "2"^^xsd:int ;
+                         :gpuHDMIPorts "2"^^xsd:int ;
+                         :gpuHeight "15cm"^^xsd:string ;
+                         :gpuLength "18cm"^^xsd:string ;
+                         :gpuMemory "8"^^xsd:int ;
+                         :gpuMemorySpeed "1000"^^xsd:int ;
+                         :gpuMemoryType "GDDR5X"^^xsd:string ;
+                         :gpuPCIe "4"^^xsd:int ;
+                         :gpuSpeed "10000"^^xsd:string ;
+                         :gpuTeraflops "9"^^xsd:int ;
+                         :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_3060
+:NVIDIA_GeForce_RTX_3060 rdf:type owl:NamedIndividual ,
+                                  :GPU ;
+                         :compatibleGPU :X570_Taichi_Razer_Edition ;
+                         :gpu6PinConnectors "2"^^xsd:int ;
+                         :gpu8PinConnectors "0"^^xsd:int ;
+                         :gpuBus "5000"^^xsd:int ;
+                         :gpuCUDA "2480"^^xsd:int ;
+                         :gpuDisplayPorts "2"^^xsd:int ;
+                         :gpuHDMIPorts "2"^^xsd:int ;
+                         :gpuHeight "15cm"^^xsd:string ;
+                         :gpuLength "18cm"^^xsd:string ;
+                         :gpuMemory "8"^^xsd:int ;
+                         :gpuMemorySpeed "1000"^^xsd:int ;
+                         :gpuMemoryType "GDDR5X"^^xsd:string ;
+                         :gpuPCIe "4"^^xsd:int ;
+                         :gpuSpeed "10000"^^xsd:string ;
+                         :gpuTeraflops "9"^^xsd:int ;
+                         :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_3060_GA104
+:NVIDIA_GeForce_RTX_3060_GA104 rdf:type owl:NamedIndividual ,
+                                        :GPU ;
+                               :compatibleGPU :X570_Taichi_Razer_Edition ;
+                               :gpu6PinConnectors "2"^^xsd:int ;
+                               :gpu8PinConnectors "0"^^xsd:int ;
+                               :gpuBus "5000"^^xsd:int ;
+                               :gpuCUDA "2480"^^xsd:int ;
+                               :gpuDisplayPorts "2"^^xsd:int ;
+                               :gpuHDMIPorts "2"^^xsd:int ;
+                               :gpuHeight "15cm"^^xsd:string ;
+                               :gpuLength "18cm"^^xsd:string ;
+                               :gpuMemory "8"^^xsd:int ;
+                               :gpuMemorySpeed "1000"^^xsd:int ;
+                               :gpuMemoryType "GDDR5X"^^xsd:string ;
+                               :gpuPCIe "4"^^xsd:int ;
+                               :gpuSpeed "10000"^^xsd:string ;
+                               :gpuTeraflops "9"^^xsd:int ;
+                               :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_3060_Ti
+:NVIDIA_GeForce_RTX_3060_Ti rdf:type owl:NamedIndividual ,
+                                     :GPU ;
+                            :compatibleGPU :X570_Taichi_Razer_Edition ;
+                            :gpu6PinConnectors "2"^^xsd:int ;
+                            :gpu8PinConnectors "0"^^xsd:int ;
+                            :gpuBus "5000"^^xsd:int ;
+                            :gpuCUDA "2480"^^xsd:int ;
+                            :gpuDisplayPorts "2"^^xsd:int ;
+                            :gpuHDMIPorts "2"^^xsd:int ;
+                            :gpuHeight "15cm"^^xsd:string ;
+                            :gpuLength "18cm"^^xsd:string ;
+                            :gpuMemory "8"^^xsd:int ;
+                            :gpuMemorySpeed "1000"^^xsd:int ;
+                            :gpuMemoryType "GDDR5X"^^xsd:string ;
+                            :gpuPCIe "4"^^xsd:int ;
+                            :gpuSpeed "10000"^^xsd:string ;
+                            :gpuTeraflops "9"^^xsd:int ;
+                            :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_3070_Ti
+:NVIDIA_GeForce_RTX_3070_Ti rdf:type owl:NamedIndividual ,
+                                     :GPU ;
+                            :compatibleGPU :X570_Taichi_Razer_Edition ;
+                            :gpu6PinConnectors "2"^^xsd:int ;
+                            :gpu8PinConnectors "0"^^xsd:int ;
+                            :gpuBus "5000"^^xsd:int ;
+                            :gpuCUDA "2480"^^xsd:int ;
+                            :gpuDisplayPorts "2"^^xsd:int ;
+                            :gpuHDMIPorts "2"^^xsd:int ;
+                            :gpuHeight "15cm"^^xsd:string ;
+                            :gpuLength "18cm"^^xsd:string ;
+                            :gpuMemory "8"^^xsd:int ;
+                            :gpuMemorySpeed "1000"^^xsd:int ;
+                            :gpuMemoryType "GDDR5X"^^xsd:string ;
+                            :gpuPCIe "4"^^xsd:int ;
+                            :gpuSpeed "10000"^^xsd:string ;
+                            :gpuTeraflops "9"^^xsd:int ;
+                            :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_3080
+:NVIDIA_GeForce_RTX_3080 rdf:type owl:NamedIndividual ,
+                                  :GPU ;
+                         :compatibleGPU :X570_Taichi_Razer_Edition ;
+                         :gpu6PinConnectors "2"^^xsd:int ;
+                         :gpu8PinConnectors "0"^^xsd:int ;
+                         :gpuBus "5000"^^xsd:int ;
+                         :gpuCUDA "2480"^^xsd:int ;
+                         :gpuDisplayPorts "2"^^xsd:int ;
+                         :gpuHDMIPorts "2"^^xsd:int ;
+                         :gpuHeight "15cm"^^xsd:string ;
+                         :gpuLength "18cm"^^xsd:string ;
+                         :gpuMemory "8"^^xsd:int ;
+                         :gpuMemorySpeed "1000"^^xsd:int ;
+                         :gpuMemoryType "GDDR5X"^^xsd:string ;
+                         :gpuPCIe "4"^^xsd:int ;
+                         :gpuSpeed "10000"^^xsd:string ;
+                         :gpuTeraflops "9"^^xsd:int ;
+                         :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_3080_12GB
+:NVIDIA_GeForce_RTX_3080_12GB rdf:type owl:NamedIndividual ,
+                                       :GPU ;
+                              :compatibleGPU :X570_Taichi_Razer_Edition ;
+                              :gpu6PinConnectors "2"^^xsd:int ;
+                              :gpu8PinConnectors "0"^^xsd:int ;
+                              :gpuBus "5000"^^xsd:int ;
+                              :gpuCUDA "2480"^^xsd:int ;
+                              :gpuDisplayPorts "2"^^xsd:int ;
+                              :gpuHDMIPorts "2"^^xsd:int ;
+                              :gpuHeight "15cm"^^xsd:string ;
+                              :gpuLength "18cm"^^xsd:string ;
+                              :gpuMemory "8"^^xsd:int ;
+                              :gpuMemorySpeed "1000"^^xsd:int ;
+                              :gpuMemoryType "GDDR5X"^^xsd:string ;
+                              :gpuPCIe "4"^^xsd:int ;
+                              :gpuSpeed "10000"^^xsd:string ;
+                              :gpuTeraflops "9"^^xsd:int ;
+                              :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_3080_Ti
+:NVIDIA_GeForce_RTX_3080_Ti rdf:type owl:NamedIndividual ,
+                                     :GPU ;
+                            :compatibleGPU :X570_Taichi_Razer_Edition ;
+                            :gpu6PinConnectors "2"^^xsd:int ;
+                            :gpu8PinConnectors "0"^^xsd:int ;
+                            :gpuBus "5000"^^xsd:int ;
+                            :gpuCUDA "2480"^^xsd:int ;
+                            :gpuDisplayPorts "2"^^xsd:int ;
+                            :gpuHDMIPorts "2"^^xsd:int ;
+                            :gpuHeight "15cm"^^xsd:string ;
+                            :gpuLength "18cm"^^xsd:string ;
+                            :gpuMemory "8"^^xsd:int ;
+                            :gpuMemorySpeed "1000"^^xsd:int ;
+                            :gpuMemoryType "GDDR5X"^^xsd:string ;
+                            :gpuPCIe "4"^^xsd:int ;
+                            :gpuSpeed "10000"^^xsd:string ;
+                            :gpuTeraflops "9"^^xsd:int ;
+                            :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_3090
+:NVIDIA_GeForce_RTX_3090 rdf:type owl:NamedIndividual ,
+                                  :GPU ;
+                         :compatibleGPU :X570_Taichi_Razer_Edition ;
+                         :gpu6PinConnectors "2"^^xsd:int ;
+                         :gpu8PinConnectors "0"^^xsd:int ;
+                         :gpuBus "5000"^^xsd:int ;
+                         :gpuCUDA "2480"^^xsd:int ;
+                         :gpuDisplayPorts "2"^^xsd:int ;
+                         :gpuHDMIPorts "2"^^xsd:int ;
+                         :gpuHeight "15cm"^^xsd:string ;
+                         :gpuLength "18cm"^^xsd:string ;
+                         :gpuMemory "8"^^xsd:int ;
+                         :gpuMemorySpeed "1000"^^xsd:int ;
+                         :gpuMemoryType "GDDR5X"^^xsd:string ;
+                         :gpuPCIe "4"^^xsd:int ;
+                         :gpuSpeed "10000"^^xsd:string ;
+                         :gpuTeraflops "9"^^xsd:int ;
+                         :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_GeForce_RTX_3090_Ti
+:NVIDIA_GeForce_RTX_3090_Ti rdf:type owl:NamedIndividual ,
+                                     :GPU ;
+                            :compatibleGPU :X570_Taichi_Razer_Edition ;
+                            :gpu6PinConnectors "2"^^xsd:int ;
+                            :gpu8PinConnectors "0"^^xsd:int ;
+                            :gpuBus "5000"^^xsd:int ;
+                            :gpuCUDA "2480"^^xsd:int ;
+                            :gpuDisplayPorts "2"^^xsd:int ;
+                            :gpuHDMIPorts "2"^^xsd:int ;
+                            :gpuHeight "15cm"^^xsd:string ;
+                            :gpuLength "18cm"^^xsd:string ;
+                            :gpuMemory "8"^^xsd:int ;
+                            :gpuMemorySpeed "1000"^^xsd:int ;
+                            :gpuMemoryType "GDDR5X"^^xsd:string ;
+                            :gpuPCIe "4"^^xsd:int ;
+                            :gpuSpeed "10000"^^xsd:string ;
+                            :gpuTeraflops "9"^^xsd:int ;
+                            :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_Quadro_P5000
+:NVIDIA_Quadro_P5000 rdf:type owl:NamedIndividual ,
+                              :GPU ;
+                     :compatibleGPU :X570_Taichi_Razer_Edition ;
+                     :gpu6PinConnectors "2"^^xsd:int ;
+                     :gpu8PinConnectors "0"^^xsd:int ;
+                     :gpuBus "5000"^^xsd:int ;
+                     :gpuCUDA "2480"^^xsd:int ;
+                     :gpuDisplayPorts "2"^^xsd:int ;
+                     :gpuHDMIPorts "2"^^xsd:int ;
+                     :gpuHeight "15cm"^^xsd:string ;
+                     :gpuLength "18cm"^^xsd:string ;
+                     :gpuMemory "8"^^xsd:int ;
+                     :gpuMemorySpeed "1000"^^xsd:int ;
+                     :gpuMemoryType "GDDR5X"^^xsd:string ;
+                     :gpuPCIe "4"^^xsd:int ;
+                     :gpuSpeed "10000"^^xsd:string ;
+                     :gpuTeraflops "9"^^xsd:int ;
+                     :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_Quadro_RTX_4000
+:NVIDIA_Quadro_RTX_4000 rdf:type owl:NamedIndividual ,
+                                 :GPU ;
+                        :compatibleGPU :X570_Taichi_Razer_Edition ;
+                        :gpu6PinConnectors "2"^^xsd:int ;
+                        :gpu8PinConnectors "0"^^xsd:int ;
+                        :gpuBus "5000"^^xsd:int ;
+                        :gpuCUDA "2480"^^xsd:int ;
+                        :gpuDisplayPorts "2"^^xsd:int ;
+                        :gpuHDMIPorts "2"^^xsd:int ;
+                        :gpuHeight "15cm"^^xsd:string ;
+                        :gpuLength "18cm"^^xsd:string ;
+                        :gpuMemory "8"^^xsd:int ;
+                        :gpuMemorySpeed "1000"^^xsd:int ;
+                        :gpuMemoryType "GDDR5X"^^xsd:string ;
+                        :gpuPCIe "4"^^xsd:int ;
+                        :gpuSpeed "10000"^^xsd:string ;
+                        :gpuTeraflops "9"^^xsd:int ;
+                        :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_Quadro_RTX_5000
+:NVIDIA_Quadro_RTX_5000 rdf:type owl:NamedIndividual ,
+                                 :GPU ;
+                        :compatibleGPU :X570_Taichi_Razer_Edition ;
+                        :gpu6PinConnectors "2"^^xsd:int ;
+                        :gpu8PinConnectors "0"^^xsd:int ;
+                        :gpuBus "5000"^^xsd:int ;
+                        :gpuCUDA "2480"^^xsd:int ;
+                        :gpuDisplayPorts "2"^^xsd:int ;
+                        :gpuHDMIPorts "2"^^xsd:int ;
+                        :gpuHeight "15cm"^^xsd:string ;
+                        :gpuLength "18cm"^^xsd:string ;
+                        :gpuMemory "8"^^xsd:int ;
+                        :gpuMemorySpeed "1000"^^xsd:int ;
+                        :gpuMemoryType "GDDR5X"^^xsd:string ;
+                        :gpuPCIe "4"^^xsd:int ;
+                        :gpuSpeed "10000"^^xsd:string ;
+                        :gpuTeraflops "9"^^xsd:int ;
+                        :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_Quadro_RTX_A6000
+:NVIDIA_Quadro_RTX_A6000 rdf:type owl:NamedIndividual ,
+                                  :GPU ;
+                         :compatibleGPU :X570_Taichi_Razer_Edition ;
+                         :gpu6PinConnectors "2"^^xsd:int ;
+                         :gpu8PinConnectors "0"^^xsd:int ;
+                         :gpuBus "5000"^^xsd:int ;
+                         :gpuCUDA "2480"^^xsd:int ;
+                         :gpuDisplayPorts "2"^^xsd:int ;
+                         :gpuHDMIPorts "2"^^xsd:int ;
+                         :gpuHeight "15cm"^^xsd:string ;
+                         :gpuLength "18cm"^^xsd:string ;
+                         :gpuMemory "8"^^xsd:int ;
+                         :gpuMemorySpeed "1000"^^xsd:int ;
+                         :gpuMemoryType "GDDR5X"^^xsd:string ;
+                         :gpuPCIe "4"^^xsd:int ;
+                         :gpuSpeed "10000"^^xsd:string ;
+                         :gpuTeraflops "9"^^xsd:int ;
+                         :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_RTX_A4000
+:NVIDIA_RTX_A4000 rdf:type owl:NamedIndividual ,
+                           :GPU ;
+                  :compatibleGPU :X570_Taichi_Razer_Edition ;
+                  :gpu6PinConnectors "2"^^xsd:int ;
+                  :gpu8PinConnectors "0"^^xsd:int ;
+                  :gpuBus "5000"^^xsd:int ;
+                  :gpuCUDA "2480"^^xsd:int ;
+                  :gpuDisplayPorts "2"^^xsd:int ;
+                  :gpuHDMIPorts "2"^^xsd:int ;
+                  :gpuHeight "15cm"^^xsd:string ;
+                  :gpuLength "18cm"^^xsd:string ;
+                  :gpuMemory "8"^^xsd:int ;
+                  :gpuMemorySpeed "1000"^^xsd:int ;
+                  :gpuMemoryType "GDDR5X"^^xsd:string ;
+                  :gpuPCIe "4"^^xsd:int ;
+                  :gpuSpeed "10000"^^xsd:string ;
+                  :gpuTeraflops "9"^^xsd:int ;
+                  :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_RTX_A5000
+:NVIDIA_RTX_A5000 rdf:type owl:NamedIndividual ,
+                           :GPU ;
+                  :compatibleGPU :X570_Taichi_Razer_Edition ;
+                  :gpu6PinConnectors "2"^^xsd:int ;
+                  :gpu8PinConnectors "0"^^xsd:int ;
+                  :gpuBus "5000"^^xsd:int ;
+                  :gpuCUDA "2480"^^xsd:int ;
+                  :gpuDisplayPorts "2"^^xsd:int ;
+                  :gpuHDMIPorts "2"^^xsd:int ;
+                  :gpuHeight "15cm"^^xsd:string ;
+                  :gpuLength "18cm"^^xsd:string ;
+                  :gpuMemory "8"^^xsd:int ;
+                  :gpuMemorySpeed "1000"^^xsd:int ;
+                  :gpuMemoryType "GDDR5X"^^xsd:string ;
+                  :gpuPCIe "4"^^xsd:int ;
+                  :gpuSpeed "10000"^^xsd:string ;
+                  :gpuTeraflops "9"^^xsd:int ;
+                  :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_Titan_RTX
+:NVIDIA_Titan_RTX rdf:type owl:NamedIndividual ,
+                           :GPU ;
+                  :compatibleGPU :X570_Taichi_Razer_Edition ;
+                  :gpu6PinConnectors "2"^^xsd:int ;
+                  :gpu8PinConnectors "0"^^xsd:int ;
+                  :gpuBus "5000"^^xsd:int ;
+                  :gpuCUDA "2480"^^xsd:int ;
+                  :gpuDisplayPorts "2"^^xsd:int ;
+                  :gpuHDMIPorts "2"^^xsd:int ;
+                  :gpuHeight "15cm"^^xsd:string ;
+                  :gpuLength "18cm"^^xsd:string ;
+                  :gpuMemory "8"^^xsd:int ;
+                  :gpuMemorySpeed "1000"^^xsd:int ;
+                  :gpuMemoryType "GDDR5X"^^xsd:string ;
+                  :gpuPCIe "4"^^xsd:int ;
+                  :gpuSpeed "10000"^^xsd:string ;
+                  :gpuTeraflops "9"^^xsd:int ;
+                  :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_Titan_X_Pascal
+:NVIDIA_Titan_X_Pascal rdf:type owl:NamedIndividual ,
+                                :GPU ;
+                       :compatibleGPU :X570_Taichi_Razer_Edition ;
+                       :gpu6PinConnectors "2"^^xsd:int ;
+                       :gpu8PinConnectors "0"^^xsd:int ;
+                       :gpuBus "5000"^^xsd:int ;
+                       :gpuCUDA "2480"^^xsd:int ;
+                       :gpuDisplayPorts "2"^^xsd:int ;
+                       :gpuHDMIPorts "2"^^xsd:int ;
+                       :gpuHeight "15cm"^^xsd:string ;
+                       :gpuLength "18cm"^^xsd:string ;
+                       :gpuMemory "8"^^xsd:int ;
+                       :gpuMemorySpeed "1000"^^xsd:int ;
+                       :gpuMemoryType "GDDR5X"^^xsd:string ;
+                       :gpuPCIe "4"^^xsd:int ;
+                       :gpuSpeed "10000"^^xsd:string ;
+                       :gpuTeraflops "9"^^xsd:int ;
+                       :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_Titan_Xp
+:NVIDIA_Titan_Xp rdf:type owl:NamedIndividual ,
+                          :GPU ;
+                 :compatibleGPU :X570_Taichi_Razer_Edition ;
+                 :gpu6PinConnectors "2"^^xsd:int ;
+                 :gpu8PinConnectors "0"^^xsd:int ;
+                 :gpuBus "5000"^^xsd:int ;
+                 :gpuCUDA "2480"^^xsd:int ;
+                 :gpuDisplayPorts "2"^^xsd:int ;
+                 :gpuHDMIPorts "2"^^xsd:int ;
+                 :gpuHeight "15cm"^^xsd:string ;
+                 :gpuLength "18cm"^^xsd:string ;
+                 :gpuMemory "8"^^xsd:int ;
+                 :gpuMemorySpeed "1000"^^xsd:int ;
+                 :gpuMemoryType "GDDR5X"^^xsd:string ;
+                 :gpuPCIe "4"^^xsd:int ;
+                 :gpuSpeed "10000"^^xsd:string ;
+                 :gpuTeraflops "9"^^xsd:int ;
+                 :gpuWidth "10cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Noctua_NH-D15_Chromax_Black
+:Noctua_NH-D15_Chromax_Black rdf:type owl:NamedIndividual ,
+                                      :Cooler ;
+                             :coolerCompatibleWithCPU :AMD_Ryzen_9_5900X ;
+                             :coolerConnector "4-Pin"^^xsd:string ;
+                             :coolerCurrent "0.26A"^^xsd:string ;
+                             :coolerFanSize "120"^^xsd:int ;
+                             :coolerFanSpeed "1200"^^xsd:int ;
+                             :coolerHeatPipes "4"^^xsd:int ;
+                             :coolerNoiseLevel "0.5"^^xsd:string ;
+                             :coolerSocket "LGA1700"^^xsd:string ;
+                             :coolerWarranty "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Noctua_NH-P1
+:Noctua_NH-P1 rdf:type owl:NamedIndividual ,
+                       :Cooler ;
+              :coolerCompatibleWithCPU :AMD_Ryzen_9_5900X ;
+              :coolerConnector "4-Pin"^^xsd:string ;
+              :coolerCurrent "0.26A"^^xsd:string ;
+              :coolerFanSize "120"^^xsd:int ;
+              :coolerFanSpeed "1200"^^xsd:int ;
+              :coolerHeatPipes "4"^^xsd:int ;
+              :coolerNoiseLevel "0.5"^^xsd:string ;
+              :coolerSocket "LGA1700"^^xsd:string ;
+              :coolerWarranty "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Noctua_NH-U14S
+:Noctua_NH-U14S rdf:type owl:NamedIndividual ,
+                         :Cooler ;
+                :coolerCompatibleWithCPU :AMD_Ryzen_9_5900X ;
+                :coolerConnector "4-Pin"^^xsd:string ;
+                :coolerCurrent "0.26A"^^xsd:string ;
+                :coolerFanSize "120"^^xsd:int ;
+                :coolerFanSpeed "1200"^^xsd:int ;
+                :coolerHeatPipes "4"^^xsd:int ;
+                :coolerNoiseLevel "0.5"^^xsd:string ;
+                :coolerSocket "LGA1700"^^xsd:string ;
+                :coolerWarranty "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#OWC_Mercury_Pro
+:OWC_Mercury_Pro rdf:type owl:NamedIndividual ,
+                          :OpticalDrive ;
+                 :opticalDriveIntegratedCardReader "true"^^xsd:boolean ;
+                 :opticalDriveType "3"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PNY_-_CS3030
+:PNY_-_CS3030 rdf:type owl:NamedIndividual ,
+                       :SSD ;
+              :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+              :memoryCapacity "1"^^xsd:string ;
+              :memoryExternal "false"^^xsd:boolean ;
+              :memoryFormat "M.2"^^xsd:string ;
+              :memoryInterface "NVME"^^xsd:string ;
+              :memoryReadSpeed "500"^^xsd:string ;
+              :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#PNY_-_CS3140
+:PNY_-_CS3140 rdf:type owl:NamedIndividual ,
+                       :SSD ;
+              :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+              :memoryCapacity "1"^^xsd:string ;
+              :memoryExternal "false"^^xsd:boolean ;
+              :memoryFormat "M.2"^^xsd:string ;
+              :memoryInterface "NVME"^^xsd:string ;
+              :memoryReadSpeed "500"^^xsd:string ;
+              :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Patriot_-_Viper_VP4300
+:Patriot_-_Viper_VP4300 rdf:type owl:NamedIndividual ,
+                                 :SSD ;
+                        :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+                        :memoryCapacity "1"^^xsd:string ;
+                        :memoryExternal "false"^^xsd:boolean ;
+                        :memoryFormat "M.2"^^xsd:string ;
+                        :memoryInterface "NVME"^^xsd:string ;
+                        :memoryReadSpeed "500"^^xsd:string ;
+                        :memoryWriteSpeed "1000"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#REDDRAGON_GC-601
 :REDDRAGON_GC-601 rdf:type owl:NamedIndividual ,
-                           :Case .
+                           :Case ;
+                  :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
+                  :caseATXSupport "true"^^xsd:boolean ;
+                  :caseHeight "70cm"^^xsd:string ;
+                  :caseLength "30cm"^^xsd:string ;
+                  :caseRGB "true"^^xsd:boolean ;
+                  :caseWidth "25cm"^^xsd:string ;
+                  :caseeATXSupport "false"^^xsd:boolean ;
+                  :casemATXSupport "true"^^xsd:boolean ;
+                  :caseminiITXSupport "true"^^xsd:boolean .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ROG_Crosshair_VIII_Dark_Hero
@@ -1155,9 +3989,75 @@
                               :motherboardWiFiVersion "6"^^xsd:string .
 
 
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#ROG_MAXIMUS_XIII_APEX
+:ROG_MAXIMUS_XIII_APEX rdf:type owl:NamedIndividual ,
+                                :Motherboard ;
+                       :motheboardChipset "600"^^xsd:string ;
+                       :motherboardFormFactor "ATX"^^xsd:string ;
+                       :motherboardHasWiFi "true"^^xsd:boolean ;
+                       :motherboardIsRGB "true"^^xsd:boolean ;
+                       :motherboardLAN "10"^^xsd:string ;
+                       :motherboardRAMModules "4"^^xsd:int ;
+                       :motherboardRamMaxSpeed "4500"^^xsd:int ;
+                       :motherboardSocket "AM4"^^xsd:string ;
+                       :motherboardUSBPorts "10"^^xsd:int ;
+                       :motherboardWiFiVersion "6"^^xsd:string .
+
+
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Raidmax_F03
 :Raidmax_F03 rdf:type owl:NamedIndividual ,
-                      :Case .
+                      :Case ;
+             :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
+             :caseATXSupport "true"^^xsd:boolean ;
+             :caseHeight "70cm"^^xsd:string ;
+             :caseLength "30cm"^^xsd:string ;
+             :caseRGB "true"^^xsd:boolean ;
+             :caseWidth "25cm"^^xsd:string ;
+             :caseeATXSupport "false"^^xsd:boolean ;
+             :casemATXSupport "true"^^xsd:boolean ;
+             :caseminiITXSupport "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Raidmax_F03_ARGB
+:Raidmax_F03_ARGB rdf:type owl:NamedIndividual ,
+                           :Case ;
+                  :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
+                  :caseATXSupport "true"^^xsd:boolean ;
+                  :caseHeight "70cm"^^xsd:string ;
+                  :caseLength "30cm"^^xsd:string ;
+                  :caseRGB "true"^^xsd:boolean ;
+                  :caseWidth "25cm"^^xsd:string ;
+                  :caseeATXSupport "false"^^xsd:boolean ;
+                  :casemATXSupport "true"^^xsd:boolean ;
+                  :caseminiITXSupport "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Razer_Basilisk_V3
+:Razer_Basilisk_V3 rdf:type owl:NamedIndividual ,
+                            :Mouse ;
+                   :mouseConnection "USB"^^xsd:string ;
+                   :mouseDPI "10000"^^xsd:int ;
+                   :mouseIsRGB "true"^^xsd:boolean ;
+                   :mouseMass "200"^^xsd:int ;
+                   :mousePoolingRate "3"^^xsd:string ,
+                                     "3000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Razer_DeathAdder_V2_Pro
+:Razer_DeathAdder_V2_Pro rdf:type owl:NamedIndividual ,
+                                  :Mouse ;
+                         :mouseConnection "Bluetooth"^^xsd:string ;
+                         :mouseDPI "12000"^^xsd:int ;
+                         :mouseIsRGB "true"^^xsd:boolean ;
+                         :mouseMass "200"^^xsd:int ;
+                         :mousePoolingRate "3"^^xsd:string ,
+                                           "3000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Razer_Kiyo_Pro
+:Razer_Kiyo_Pro rdf:type owl:NamedIndividual ,
+                         :Camera ;
+                :cameraResolution "1K"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#SCORPION_KG916
@@ -1174,11 +4074,279 @@
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#SEASONIC_FOCUS_GX-650
 :SEASONIC_FOCUS_GX-650 rdf:type owl:NamedIndividual ,
                                 :PSU ;
-                       :compatiblePSU :ROG_Crosshair_VIII_Dark_Hero ;
-                       :psuIsModular "false"^^xsd:boolean ;
-                       :psuMolexConnectors "6"^^xsd:int ;
-                       :psuPower "700"^^xsd:int ;
-                       :psuSATAConnectors "8"^^xsd:int .
+                                                  :compatiblePSU :X570_Taichi_Razer_Edition ;
+                                                  :psu6PinConnectors "4"^^xsd:int ;
+                                                  :psu8PinConnectors "4"^^xsd:int ;
+                                                  :psuCertificate "GOLD"^^xsd:string ;
+                                                  :psuFormFactor "ATX"^^xsd:string ;
+                                                  :psuHasOCP "true"^^xsd:boolean ;
+                                                  :psuHasOPP "true"^^xsd:boolean ;
+                                                  :psuHasOTP "true"^^xsd:boolean ;
+                                                  :psuHasOVP "true"^^xsd:boolean ;
+                                                  :psuHasPFC "true"^^xsd:boolean ;
+                                                  :psuHasSCP "false"^^xsd:boolean ;
+                                                  :psuHasUVP "true"^^xsd:boolean ;
+                                                  :psuIsModular "true"^^xsd:boolean ;
+                                                  :psuMolexConnectors "6"^^xsd:int ;
+                                                  :psuPower "650"^^xsd:int ;
+                                                  :psuSATAConnectors "6"^^xsd:int .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Samsung_-_970_Pro
+:Samsung_-_970_Pro rdf:type owl:NamedIndividual ,
+                            :SSD ;
+                   :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+                   :memoryCapacity "1"^^xsd:string ;
+                   :memoryExternal "false"^^xsd:boolean ;
+                   :memoryFormat "M.2"^^xsd:string ;
+                   :memoryInterface "NVME"^^xsd:string ;
+                   :memoryReadSpeed "500"^^xsd:string ;
+                   :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Samsung_-_980_Pro
+:Samsung_-_980_Pro rdf:type owl:NamedIndividual ,
+                            :SSD ;
+                   :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+                   :memoryCapacity "1"^^xsd:string ;
+                   :memoryExternal "false"^^xsd:boolean ;
+                   :memoryFormat "M.2"^^xsd:string ;
+                   :memoryInterface "NVME"^^xsd:string ;
+                   :memoryReadSpeed "500"^^xsd:string ;
+                   :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Samsung_DDR5-4800
+:Samsung_DDR5-4800 rdf:type owl:NamedIndividual ,
+                            :RAM ;
+                   :compatibleRAM :ROG_Crosshair_VIII_Dark_Hero ,
+                                  :X570_Taichi_Razer_Edition ;
+                   :ramCapacity "8"^^xsd:int ;
+                   :ramDDR "5"^^xsd:int ;
+                   :ramFrequency "2800"^^xsd:int ;
+                   :ramLatency "10"^^xsd:int ;
+                   :ramModulesNumber "2"^^xsd:int .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Seagate_-_FireCuda_520
+:Seagate_-_FireCuda_520 rdf:type owl:NamedIndividual ,
+                                 :SSD ;
+                        :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+                        :memoryCapacity "2"^^xsd:string ;
+                        :memoryExternal "false"^^xsd:boolean ;
+                        :memoryFormat "M.2"^^xsd:string ;
+                        :memoryInterface "NVME"^^xsd:string ;
+                        :memoryReadSpeed "500"^^xsd:string ;
+                        :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Seagate_-_FireCuda_530
+:Seagate_-_FireCuda_530 rdf:type owl:NamedIndividual ,
+                                 :SSD ;
+                        :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+                        :memoryCapacity "4"^^xsd:string ;
+                        :memoryExternal "false"^^xsd:boolean ;
+                        :memoryFormat "M.2"^^xsd:string ;
+                        :memoryInterface "NVME"^^xsd:string ;
+                        :memoryReadSpeed "500"^^xsd:string ;
+                        :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Seagate_Barracuda_1TB
+:Seagate_Barracuda_1TB rdf:type owl:NamedIndividual ,
+                                :HDD ;
+                       :compatibleHDD :X570_Taichi_Razer_Edition ;
+                       :memoryCapacity "1"^^xsd:string ;
+                       :memoryExternal "false"^^xsd:boolean ;
+                       :memoryFormat "3.5"^^xsd:string ;
+                       :memoryInterface "SATA"^^xsd:string ;
+                       :memoryReadSpeed "200"^^xsd:string ;
+                       :memoryWriteSpeed "150"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Seagate_Barracuda_2TB
+:Seagate_Barracuda_2TB rdf:type owl:NamedIndividual ,
+                                :HDD ;
+                       :compatibleHDD :X570_Taichi_Razer_Edition ;
+                       :memoryCapacity "2"^^xsd:string ;
+                       :memoryExternal "false"^^xsd:boolean ;
+                       :memoryFormat "3.5"^^xsd:string ;
+                       :memoryInterface "SATA"^^xsd:string ;
+                       :memoryReadSpeed "200"^^xsd:string ;
+                       :memoryWriteSpeed "150"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Seagate_Barracuda_3TB
+:Seagate_Barracuda_3TB rdf:type owl:NamedIndividual ,
+                                :HDD ;
+                       :compatibleHDD :X570_Taichi_Razer_Edition ;
+                       :memoryCapacity "3"^^xsd:string ;
+                       :memoryExternal "false"^^xsd:boolean ;
+                       :memoryFormat "3.5"^^xsd:string ;
+                       :memoryInterface "SATA"^^xsd:string ;
+                       :memoryReadSpeed "200"^^xsd:string ;
+                       :memoryWriteSpeed "150"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Seagate_Barracuda_7200.14_1TB
+:Seagate_Barracuda_7200.14_1TB rdf:type owl:NamedIndividual ,
+                                        :HDD ;
+                               :compatibleHDD :X570_Taichi_Razer_Edition ;
+                               :memoryCapacity "1"^^xsd:string ;
+                               :memoryExternal "false"^^xsd:boolean ;
+                               :memoryFormat "3.5"^^xsd:string ;
+                               :memoryInterface "SATA"^^xsd:string ;
+                               :memoryReadSpeed "200"^^xsd:string ;
+                               :memoryWriteSpeed "150"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Sennheiser_HD280_Pro
+:Sennheiser_HD280_Pro rdf:type owl:NamedIndividual ,
+                               :Earphones ;
+                      :audioConnectivity "USB"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Shure_MV7
+:Shure_MV7 rdf:type owl:NamedIndividual ,
+                    :Microphone .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Silicon_Power_-_US70
+:Silicon_Power_-_US70 rdf:type owl:NamedIndividual ,
+                               :SSD ;
+                      :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+                      :memoryCapacity "8"^^xsd:string ;
+                      :memoryExternal "false"^^xsd:boolean ;
+                      :memoryFormat "M.2"^^xsd:string ;
+                      :memoryInterface "NVME"^^xsd:string ;
+                      :memoryReadSpeed "500"^^xsd:string ;
+                      :memoryWriteSpeed "1000"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#TP-Link_AC1300
+:TP-Link_AC1300 rdf:type owl:NamedIndividual ,
+                         :Networking ;
+                :networkingBluetooth "2"^^xsd:string ;
+                :networkingLan "1"^^xsd:string ;
+                :networkingWiFi "1"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#TP-Link_WiFi_6_AX3000
+:TP-Link_WiFi_6_AX3000 rdf:type owl:NamedIndividual ,
+                                :Networking ;
+                       :networkingBluetooth "1"^^xsd:string ;
+                       :networkingLan "2"^^xsd:string ;
+                       :networkingWiFi "3"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Thermaltake_Commander
+:Thermaltake_Commander rdf:type owl:NamedIndividual ,
+                                :Case ;
+                       :caseCompatibleWithMotherbaord :X570_Taichi_Razer_Edition ;
+                       :caseATXSupport "true"^^xsd:boolean ;
+                       :caseHeight "70cm"^^xsd:string ;
+                       :caseLength "30cm"^^xsd:string ;
+                       :caseRGB "true"^^xsd:boolean ;
+                       :caseWidth "25cm"^^xsd:string ;
+                       :caseeATXSupport "false"^^xsd:boolean ;
+                       :casemATXSupport "true"^^xsd:boolean ;
+                       :caseminiITXSupport "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Toshiba_DT01ACA300_3TB
+:Toshiba_DT01ACA300_3TB rdf:type owl:NamedIndividual ,
+                                 :HDD ;
+                        :compatibleHDD :X570_Taichi_Razer_Edition ;
+                        :memoryCapacity "3"^^xsd:string ;
+                        :memoryExternal "false"^^xsd:boolean ;
+                        :memoryFormat "3.5"^^xsd:string ;
+                        :memoryInterface "SATA"^^xsd:string ;
+                        :memoryReadSpeed "200"^^xsd:string ;
+                        :memoryWriteSpeed "150"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Toshiba_MD04ACA400_4TB
+:Toshiba_MD04ACA400_4TB rdf:type owl:NamedIndividual ,
+                                 :HDD ;
+                        :compatibleHDD :X570_Taichi_Razer_Edition ;
+                        :memoryCapacity "4"^^xsd:string ;
+                        :memoryExternal "false"^^xsd:boolean ;
+                        :memoryFormat "3.5"^^xsd:string ;
+                        :memoryInterface "SATA"^^xsd:string ;
+                        :memoryReadSpeed "200"^^xsd:string ;
+                        :memoryWriteSpeed "150"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Toshiba_P300_2TB
+:Toshiba_P300_2TB rdf:type owl:NamedIndividual ,
+                           :HDD ;
+                  :compatibleHDD :X570_Taichi_Razer_Edition ;
+                  :memoryCapacity "2"^^xsd:string ;
+                  :memoryExternal "false"^^xsd:boolean ;
+                  :memoryFormat "3.5"^^xsd:string ;
+                  :memoryInterface "SATA"^^xsd:string ;
+                  :memoryReadSpeed "200"^^xsd:string ;
+                  :memoryWriteSpeed "150"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Toshiba_P300_3TB
+:Toshiba_P300_3TB rdf:type owl:NamedIndividual ,
+                           :HDD ;
+                  :compatibleHDD :X570_Taichi_Razer_Edition ;
+                  :memoryCapacity "3"^^xsd:string ;
+                  :memoryExternal "false"^^xsd:boolean ;
+                  :memoryFormat "3.5"^^xsd:string ;
+                  :memoryInterface "SATA"^^xsd:string ;
+                  :memoryReadSpeed "200"^^xsd:string ;
+                  :memoryWriteSpeed "150"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#WD_Black_1TB
+:WD_Black_1TB rdf:type owl:NamedIndividual ,
+                       :HDD ;
+              :compatibleHDD :X570_Taichi_Razer_Edition ;
+              :memoryCapacity "1"^^xsd:string ;
+              :memoryExternal "false"^^xsd:boolean ;
+              :memoryFormat "3.5"^^xsd:string ;
+              :memoryInterface "SATA"^^xsd:string ;
+              :memoryReadSpeed "200"^^xsd:string ;
+              :memoryWriteSpeed "150"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#WD_Blue_1TB
+:WD_Blue_1TB rdf:type owl:NamedIndividual ,
+                      :HDD ;
+             :compatibleHDD :X570_Taichi_Razer_Edition ;
+             :memoryCapacity "1"^^xsd:string ;
+             :memoryExternal "false"^^xsd:boolean ;
+             :memoryFormat "3.5"^^xsd:string ;
+             :memoryInterface "SATA"^^xsd:string ;
+             :memoryReadSpeed "200"^^xsd:string ;
+             :memoryWriteSpeed "150"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#WD_VelociRaptor_1TB
+:WD_VelociRaptor_1TB rdf:type owl:NamedIndividual ,
+                              :HDD ;
+                     :compatibleHDD :X570_Taichi_Razer_Edition ;
+                     :memoryCapacity "1"^^xsd:string ;
+                     :memoryExternal "false"^^xsd:boolean ;
+                     :memoryFormat "3.5"^^xsd:string ;
+                     :memoryInterface "SATA"^^xsd:string ;
+                     :memoryReadSpeed "200"^^xsd:string ;
+                     :memoryWriteSpeed "150"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Western_Digital_-_Black_SN850
+:Western_Digital_-_Black_SN850 rdf:type owl:NamedIndividual ,
+                                        :SSD ;
+                               :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
+                               :memoryCapacity "8"^^xsd:string ;
+                               :memoryExternal "false"^^xsd:boolean ;
+                               :memoryFormat "M.2"^^xsd:string ;
+                               :memoryInterface "NVME"^^xsd:string ;
+                               :memoryReadSpeed "500"^^xsd:string ;
+                               :memoryWriteSpeed "1000"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#X570_Taichi_Razer_Edition
@@ -1196,6 +4364,20 @@
                            :motherboardWiFiVersion "4"^^xsd:string .
 
 
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Zalman_CNPS10x_Performa_Black
+:Zalman_CNPS10x_Performa_Black rdf:type owl:NamedIndividual ,
+                                        :Cooler ;
+                               :coolerCompatibleWithCPU :AMD_Ryzen_9_5900X ;
+                               :coolerConnector "4-Pin"^^xsd:string ;
+                               :coolerCurrent "0.26A"^^xsd:string ;
+                               :coolerFanSize "120"^^xsd:int ;
+                               :coolerFanSpeed "1200"^^xsd:int ;
+                               :coolerHeatPipes "4"^^xsd:int ;
+                               :coolerNoiseLevel "0.5"^^xsd:string ;
+                               :coolerSocket "LGA1700"^^xsd:string ;
+                               :coolerWarranty "6"^^xsd:string .
+
+
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#arctic_freezer_34_esports_duo
 :arctic_freezer_34_esports_duo rdf:type owl:NamedIndividual ,
                                         :Cooler ;
@@ -1206,20 +4388,22 @@
                                :coolerFanSpeed "1200"^^xsd:int ;
                                :coolerHeatPipes "4"^^xsd:int ;
                                :coolerNoiseLevel "0.5"^^xsd:string ;
+                               :coolerSocket "LGA1700"^^xsd:string ;
                                :coolerWarranty "6"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#noctua_nh-d15
 :noctua_nh-d15 rdf:type owl:NamedIndividual ,
                         :Cooler ;
-               :coolerCompatibleWithCPU :INTEL_Core_i9-10900K ;
-               :coolerConnector "3-Pin"^^xsd:string ;
+               :coolerCompatibleWithCPU :AMD_Ryzen_9_5900X ;
+               :coolerConnector "4-Pin"^^xsd:string ;
                :coolerCurrent "0.26A"^^xsd:string ;
-               :coolerFanSize "130"^^xsd:int ;
-               :coolerFanSpeed "1300"^^xsd:int ;
-               :coolerHeatPipes "6"^^xsd:int ;
-               :coolerNoiseLevel "0.4"^^xsd:string ;
-               :coolerWarranty "10"^^xsd:string .
+               :coolerFanSize "120"^^xsd:int ;
+               :coolerFanSpeed "1200"^^xsd:int ;
+               :coolerHeatPipes "4"^^xsd:int ;
+               :coolerNoiseLevel "0.5"^^xsd:string ;
+               :coolerSocket "AM4"^^xsd:string ;
+               :coolerWarranty "6"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#18_TB_Western_Digital_WD181PURP
@@ -1237,36 +4421,13 @@
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#4_TB_Seagate_ST4000NM000B
 <http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#4_TB_Seagate_ST4000NM000B> rdf:type owl:NamedIndividual ,
                                                                                                             :HDD ;
-                                                                                                   :memoryCapacity "4TB"^^xsd:string ;
-                                                                                                   :memoryExternal "true"^^xsd:boolean ;
-                                                                                                   :memoryFormat ""^^xsd:string ;
+                                                                                                   :compatibleHDD :X570_Taichi_Razer_Edition ;
+                                                                                                   :memoryCapacity "4"^^xsd:string ;
+                                                                                                   :memoryExternal "false"^^xsd:boolean ;
+                                                                                                   :memoryFormat "3.5"^^xsd:string ;
                                                                                                    :memoryInterface "SATA"^^xsd:string ;
-                                                                                                   :memoryReadSpeed "100"^^xsd:string ;
+                                                                                                   :memoryReadSpeed "200"^^xsd:string ;
                                                                                                    :memoryWriteSpeed "150"^^xsd:string .
-
-
-###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#512_GB_Apacer_AS2280P4U_PRO
-<http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#512_GB_Apacer_AS2280P4U_PRO> rdf:type owl:NamedIndividual ,
-                                                                                                              :SSD ;
-                                                                                                     :compatibleSSD :ROG_Crosshair_VIII_Dark_Hero ;
-                                                                                                     :memoryCapacity "1"^^xsd:string ;
-                                                                                                     :memoryExternal "false"^^xsd:boolean ;
-                                                                                                     :memoryFormat "M.2"^^xsd:string ;
-                                                                                                     :memoryInterface "NVME"^^xsd:string ;
-                                                                                                     :memoryReadSpeed "500"^^xsd:string ;
-                                                                                                     :memoryWriteSpeed "1000"^^xsd:string .
-
-
-###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#960_GB_Samsung_MZ7L3960HCJR-00A07
-<http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#960_GB_Samsung_MZ7L3960HCJR-00A07> rdf:type owl:NamedIndividual ,
-                                                                                                                    :SSD ;
-                                                                                                           :compatibleSSD :X570_Taichi_Razer_Edition ;
-                                                                                                           :memoryCapacity "2"^^xsd:string ;
-                                                                                                           :memoryExternal "true"^^xsd:boolean ;
-                                                                                                           :memoryFormat "2.5"^^xsd:string ;
-                                                                                                           :memoryInterface "SATA"^^xsd:string ;
-                                                                                                           :memoryReadSpeed "1000"^^xsd:string ;
-                                                                                                           :memoryWriteSpeed "2000"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#AOC_Monitor_27G2U/BK
@@ -1276,7 +4437,51 @@
                                                                                               :monitorAspectRatio "16:9"^^xsd:string ;
                                                                                               :monitorBrightness "500"^^xsd:int ;
                                                                                               :monitorDiagonal "27"^^xsd:int ;
-                                                                                              :monitorHasAudio "true"^^xsd:boolean .
+                                                                                              :monitorHasAudio "true"^^xsd:boolean ;
+                                                                                              :monitorHasDisplayPort "true"^^xsd:boolean ;
+                                                                                              :monitorHasFreeSync "true"^^xsd:boolean ;
+                                                                                              :monitorHasGSync "true"^^xsd:boolean ;
+                                                                                              :monitorHasTouchscreen "true"^^xsd:boolean ;
+                                                                                              :monitorHasVESA "true"^^xsd:boolean ;
+                                                                                              :monitorPanelType "VA"^^xsd:string ;
+                                                                                              :monitorRefreshRate "175 Hz"^^xsd:string ;
+                                                                                              :monitorResolution "4K"^^xsd:string ;
+                                                                                              :monitorResponseTime "1ms"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Be_Quiet!_Pure_Rock_2
+<http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Be_Quiet!_Pure_Rock_2> rdf:type owl:NamedIndividual ,
+                                                                                                        :Cooler ;
+                                                                                               :coolerCompatibleWithCPU :AMD_Ryzen_9_5900X ;
+                                                                                               :coolerConnector "4-Pin"^^xsd:string ;
+                                                                                               :coolerCurrent "0.26A"^^xsd:string ;
+                                                                                               :coolerFanSize "120"^^xsd:int ;
+                                                                                               :coolerFanSpeed "1200"^^xsd:int ;
+                                                                                               :coolerHeatPipes "4"^^xsd:int ;
+                                                                                               :coolerNoiseLevel "0.5"^^xsd:string ;
+                                                                                               :coolerSocket "AM4"^^xsd:string ;
+                                                                                               :coolerWarranty "6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_Titan_Xp_Collector's_Edition
+<http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#NVIDIA_Titan_Xp_Collector's_Edition> rdf:type owl:NamedIndividual ,
+                                                                                                                      :GPU ;
+                                                                                                             :compatibleGPU :X570_Taichi_Razer_Edition ;
+                                                                                                             :gpu6PinConnectors "2"^^xsd:int ;
+                                                                                                             :gpu8PinConnectors "0"^^xsd:int ;
+                                                                                                             :gpuBus "5000"^^xsd:int ;
+                                                                                                             :gpuCUDA "2480"^^xsd:int ;
+                                                                                                             :gpuDisplayPorts "2"^^xsd:int ;
+                                                                                                             :gpuHDMIPorts "2"^^xsd:int ;
+                                                                                                             :gpuHeight "15cm"^^xsd:string ;
+                                                                                                             :gpuLength "18cm"^^xsd:string ;
+                                                                                                             :gpuMemory "8"^^xsd:int ;
+                                                                                                             :gpuMemorySpeed "1000"^^xsd:int ;
+                                                                                                             :gpuMemoryType "GDDR5X"^^xsd:string ;
+                                                                                                             :gpuPCIe "4"^^xsd:int ;
+                                                                                                             :gpuSpeed "10000"^^xsd:string ;
+                                                                                                             :gpuTeraflops "9"^^xsd:int ;
+                                                                                                             :gpuWidth "10cm"^^xsd:string .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
