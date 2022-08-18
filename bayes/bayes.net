@@ -1,0 +1,574 @@
+net
+{
+     node_size = (0 0);
+     name = "New BN";
+     tree = "(C1,C2,C3,C4,C5,C6,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C20,C21,C22,C23,C24,C25,C26,C27,C28,C29,C31,C33,C34,C35,C36,C37,C38,C39,C40,C41,C42,C43,C44,C45,C47,C48,C49,C50,C51)";
+     UnBBayes_Color_Probabilistic_Description = "-256";
+     UnBBayes_Color_Probabilistic_Explanation = "-16711936";
+}
+
+node hard_disk_disconnected
+{
+     label = "C1";
+     position = (302 234);
+     states = ("no" "yes");
+}
+
+node ram_disconnected
+{
+     label = "C2";
+     position = (220 161);
+     states = ("no" "yes");
+}
+
+node bios_problem
+{
+     label = "C3";
+     position = (139 153);
+     states = ("yes" "no");
+}
+
+node driver_problem
+{
+     label = "C4";
+     position = (239 271);
+     states = ("yes" "no");
+}
+
+node virus
+{
+     label = "C5";
+     position = (361 267);
+     states = ("yes" "no");
+}
+
+node not_starting
+{
+     label = "C6";
+     position = (48 377);
+     states = ("yes" "no");
+}
+
+node not_booting
+{
+     label = "C10";
+     position = (164 379);
+     states = ("yes" "no");
+}
+
+node bsod
+{
+     label = "C11";
+     position = (291 334);
+     states = ("yes" "no");
+}
+
+node restart
+{
+     label = "C12";
+     position = (402 377);
+     states = ("State 0");
+}
+
+node no_display_output
+{
+     label = "C13";
+     position = (495 378);
+     states = ("State 0");
+}
+
+node keyboard_not_working
+{
+     label = "C14";
+     position = (573 376);
+     states = ("State 0");
+}
+
+node mouse_not_working
+{
+     label = "C15";
+     position = (676 381);
+     states = ("State 0");
+}
+
+node frozen_screen
+{
+     label = "C16";
+     position = (773 378);
+     states = ("State 0");
+}
+
+node slow_internet
+{
+     label = "C17";
+     position = (857 372);
+     states = ("State 0");
+}
+
+node no_internet
+{
+     label = "C18";
+     position = (945 372);
+     states = ("State 0");
+}
+
+node program_not_responding
+{
+     label = "C19";
+     position = (78 437);
+     states = ("State 0");
+}
+
+node monitor_not_working
+{
+     label = "C20";
+     position = (173 437);
+     states = ("State 0");
+}
+
+node printer_not_working
+{
+     label = "C21";
+     position = (294 439);
+     states = ("State 0");
+}
+
+node microphone_not_working
+{
+     label = "C22";
+     position = (406 435);
+     states = ("State 0");
+}
+
+node camera_not_working
+{
+     label = "C23";
+     position = (506 437);
+     states = ("State 0");
+}
+
+node speakers_not_working
+{
+     label = "C24";
+     position = (584 433);
+     states = ("State 0");
+}
+
+node loud_noise
+{
+     label = "C25";
+     position = (683 442);
+     states = ("State 0");
+}
+
+node overheating
+{
+     label = "C26";
+     position = (771 433);
+     states = ("State 0");
+}
+
+node battery_draining
+{
+     label = "C27";
+     position = (849 436);
+     states = ("State 0");
+}
+
+node hard_disk_not_working
+{
+     label = "C28";
+     position = (954 432);
+     states = ("State 0");
+}
+
+node cable_disconnected
+{
+     label = "C29";
+     position = (99 212);
+     states = ("yes" "no");
+}
+
+node insufficient_power
+{
+     label = "C31";
+     position = (24 215);
+     states = ("yes" "no");
+}
+
+node os_problem
+{
+     label = "C33";
+     position = (439 150);
+     states = ("yes" "no");
+}
+
+node motherboard_battery
+{
+     label = "C34";
+     position = (511 149);
+     states = ("yes" "no");
+}
+
+node fans_problem
+{
+     label = "C35";
+     position = (584 152);
+     states = ("yes" "no");
+}
+
+node cpu_overheating
+{
+     label = "C36";
+     position = (664 154);
+     states = ("yes" "no");
+}
+
+node cpu_throttle
+{
+     label = "C37";
+     position = (733 157);
+     states = ("yes" "no");
+}
+
+node printer_stuck
+{
+     label = "C38";
+     position = (815 154);
+     states = ("yes" "no");
+}
+
+node battery_problem
+{
+     label = "C39";
+     position = (897 170);
+     states = ("yes" "no");
+}
+
+node antifirus_problem
+{
+     label = "C40";
+     position = (976 156);
+     states = ("yes" "no");
+}
+
+node storage_corrupted
+{
+     label = "C41";
+     position = (447 204);
+     states = ("yes" "no");
+}
+
+node dusty_case
+{
+     label = "C42";
+     position = (537 206);
+     states = ("yes" "no");
+}
+
+node mouse_malfunction
+{
+     label = "C43";
+     position = (452 254);
+     states = ("yes" "no");
+}
+
+node printer_malfunction
+{
+     label = "C44";
+     position = (518 255);
+     states = ("yes" "no");
+}
+
+node keyboard_malfunction
+{
+     label = "C45";
+     position = (585 254);
+     states = ("yes" "no");
+}
+
+node microphone_malfunction
+{
+     label = "C47";
+     position = (655 254);
+     states = ("yes" "no");
+}
+
+node camera_malfunction
+{
+     label = "C48";
+     position = (724 255);
+     states = ("yes" "no");
+}
+
+node speaker_malfunction
+{
+     label = "C49";
+     position = (794 254);
+     states = ("yes" "no");
+}
+
+node old_thermal_paste
+{
+     label = "C50";
+     position = (877 252);
+     states = ("yes" "no");
+}
+
+node router_malfunction
+{
+     label = "C51";
+     position = (955 251);
+     states = ("yes" "no");
+}
+
+potential (hard_disk_disconnected)
+{
+ data = ( 0.98 0.02 );
+}
+
+potential (ram_disconnected)
+{
+ data = ( 0.02 0.98 );
+}
+
+potential (bios_problem)
+{
+ data = ( 0.02 0.98 );
+}
+
+potential (driver_problem)
+{
+ data = ( 0.01 0.99 );
+}
+
+potential (virus)
+{
+ data = ( 0.05 0.95 );
+}
+
+potential (not_starting | cable_disconnected insufficient_power)
+{
+ data = ((( 0.95 0.05 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.2 0.8 )));
+}
+
+potential (not_booting | bios_problem ram_disconnected cable_disconnected insufficient_power)
+{
+ data = ((((( 0.96 0.04 )
+( 0.93 0.07 ))
+(( 0.93 0.07 )
+( 0.89 0.11 )))
+((( 0.98 0.02 )
+( 0.96 0.04 ))
+(( 0.96 0.04 )
+( 0.93 0.07 ))))
+(((( 0.93 0.07 )
+( 0.89 0.11 ))
+(( 0.89 0.11 )
+( 0.1 0.9 )))
+((( 0.96 0.04 )
+( 0.93 0.07 ))
+(( 0.93 0.07 )
+( 0.89 0.0 )))));
+}
+
+potential (bsod | virus hard_disk_disconnected driver_problem)
+{
+ data = (((( 0.95 0.05 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.2 0.8 )))
+((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.2 0.8 ))));
+}
+
+potential (restart)
+{
+ data = ( 1.0 );
+}
+
+potential (no_display_output)
+{
+ data = ( 1.0 );
+}
+
+potential (keyboard_not_working)
+{
+ data = ( 1.0 );
+}
+
+potential (mouse_not_working)
+{
+ data = ( 1.0 );
+}
+
+potential (frozen_screen)
+{
+ data = ( 1.0 );
+}
+
+potential (slow_internet)
+{
+ data = ( 1.0 );
+}
+
+potential (no_internet)
+{
+ data = ( 1.0 );
+}
+
+potential (program_not_responding)
+{
+ data = ( 1.0 );
+}
+
+potential (monitor_not_working)
+{
+ data = ( 1.0 );
+}
+
+potential (printer_not_working)
+{
+ data = ( 1.0 );
+}
+
+potential (microphone_not_working)
+{
+ data = ( 1.0 );
+}
+
+potential (camera_not_working)
+{
+ data = ( 1.0 );
+}
+
+potential (speakers_not_working)
+{
+ data = ( 1.0 );
+}
+
+potential (loud_noise)
+{
+ data = ( 1.0 );
+}
+
+potential (overheating)
+{
+ data = ( 1.0 );
+}
+
+potential (battery_draining)
+{
+ data = ( 1.0 );
+}
+
+potential (hard_disk_not_working)
+{
+ data = ( 1.0 );
+}
+
+potential (cable_disconnected)
+{
+ data = ( 0.04 0.96 );
+}
+
+potential (insufficient_power)
+{
+ data = ( 0.05 0.95 );
+}
+
+potential (os_problem)
+{
+ data = ( 0.03 0.97 );
+}
+
+potential (motherboard_battery)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (fans_problem)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (cpu_overheating)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (cpu_throttle)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (printer_stuck)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (battery_problem)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (antifirus_problem)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (storage_corrupted)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (dusty_case)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (mouse_malfunction)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (printer_malfunction)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (keyboard_malfunction)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (microphone_malfunction)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (camera_malfunction)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (speaker_malfunction)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (old_thermal_paste)
+{
+ data = ( 1.0 0.0 );
+}
+
+potential (router_malfunction)
+{
+ data = ( 1.0 0.0 );
+}
+

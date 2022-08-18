@@ -1093,7 +1093,8 @@
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#KINGSTON_Fury_Beast_8GB_DDR5_5200MHz_CL40_-_KF552C40BB-8
 :KINGSTON_Fury_Beast_8GB_DDR5_5200MHz_CL40_-_KF552C40BB-8 rdf:type owl:NamedIndividual ,
                                                                    :RAM ;
-                                                          :compatibleRAM :ROG_Crosshair_VIII_Dark_Hero ;
+                                                          :compatibleRAM :ROG_Crosshair_VIII_Dark_Hero ,
+                                                                         :X570_Taichi_Razer_Edition ;
                                                           :ramCapacity "8"^^xsd:int ;
                                                           :ramDDR "4"^^xsd:int ;
                                                           :ramFrequency "2800"^^xsd:int ;
