@@ -1,6 +1,7 @@
 package com.example.demo.services;
 
 import com.example.demo.dtos.cpuDTO;
+import com.example.demo.dtos.gpuDTO;
 import com.example.demo.dtos.ramDTO;
 import org.apache.jena.query.QuerySolution;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -114,6 +115,13 @@ public class QueryService {
         System.out.println(rams);
         return rams;
     }
+
+
+    public List<gpuDTO> upgradeGPU(String selectedGPU)
+    {
+      return null;
+    }
+
     public List<cpuDTO> upgradeCPU(String selectedMotherboard, String selectedCPU) {
         List<QuerySolution> results = service.executeQuery(queryGetAllCompatibleCPU(selectedMotherboard));
        List<QuerySolution> cpu = service.executeQuery(queryGetSelectedCpu(selectedCPU));
@@ -140,6 +148,13 @@ public class QueryService {
                 "SELECT ?turboBoost \n" +
                 "WHERE {\n" +
                 ":"+selectedCpu+" :turboBoost ?turboBoost .\n" +
+                "}\n";
+    }
+    private String queryGetSelectedGpu(String selectedGpu) {
+        return service.getQuery() +
+                "SELECT ?gpuTeraflops \n" +
+                "WHERE {\n" +
+                ":"+selectedGpu+" :gpuTeraflops ?gpuTeraflops .\n" +
                 "}\n";
     }
     private String queryGetAllMotherboards() {

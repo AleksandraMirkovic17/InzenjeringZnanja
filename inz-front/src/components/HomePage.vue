@@ -18,12 +18,33 @@
     <select class="form-control" id="exampleFormControlSelect1"  v-model="selectedCPU">
       <option v-for="m in cpus" v-bind:value="m" :key="m"> {{m}}</option>
     </select>
+    <br>
+
+      <label for="exampleFormControlSelect1"> Select HDD</label>
+    <select class="form-control" id="exampleFormControlSelect1"  v-model="selectedHDD">
+      <option v-for="m in hdds" v-bind:value="m" :key="m"> {{m}}</option>
+    </select>
+    <br>
+
+      <label for="exampleFormControlSelect1"> Select GPU</label>
+    <select class="form-control" id="exampleFormControlSelect1"  v-model="selectedGPU">
+      <option v-for="m in gpus" v-bind:value="m" :key="m"> {{m}}</option>
+    </select>
+    <br>
+
+      <label for="exampleFormControlSelect1"> Select SSD</label>
+    <select class="form-control" id="exampleFormControlSelect1"  v-model="selectedSSD">
+      <option v-for="m in ssds" v-bind:value="m" :key="m"> {{m}}</option>
+    </select>
   
     <br>
     <label for="exampleFormControlSelect1">Select upgrade</label>
     <select class="form-control" id="exampleFormControlSelect1" v-model="selectedUpgrade">
       <option>CPU</option>
       <option>RAM</option>
+      <option>HDD</option>
+      <option>GPU</option>
+      <option>SSD</option>
     </select>
     <br>
     <br>
@@ -90,14 +111,24 @@ import axios from "axios";
 export default{
    data(){
         return{
-            selectedMotherboard: '',
+             selectedMotherboard: '',
              motherboards : new Array(),
              selectedUpgrade: '',
              view : false,
              allRams: new Array(),
              allCpus: new Array(),
              selectedCPU: '',
-             cpus: new Array()
+             cpus: new Array(),
+             selectedHDD: '',
+             hdds: new Array(),
+             allHdds: new Array(),
+             selectedSSD: '',
+             ssds: new Array(),
+             allSsds: new Array(),
+             selectedGPU: '',
+             gpus: new Array(),
+             allGpus: new Array()
+
         }
     },
     mounted(){
@@ -125,7 +156,41 @@ export default{
     console.log(error.response)
           })
 
+          axios.get('http://localhost:8081/query/getAllHDD')
+          .then(response1 => {
+            console.log("hdds", response1.data)
+            this.hdds = response1.data;
+            if(this.hdds.length>0){
+              this.selectedHDD = this.hdds[0];
+            }
 
+          }).catch(error => {
+    console.log(error.response)
+          })
+
+          axios.get('http://localhost:8081/query/getAllGPU')
+          .then(response1 => {
+            console.log("gpus", response1.data)
+            this.gpus = response1.data;
+            if(this.gpus.length>0){
+              this.selectedGPU = this.gpus[0];
+            }
+
+          }).catch(error => {
+    console.log(error.response)
+          })
+
+          axios.get('http://localhost:8081/query/getAllSSD')
+          .then(response1 => {
+            console.log("ssd", response1.data)
+            this.ssds = response1.data;
+            if(this.ssds.length>0){
+              this.selectedSSD = this.ssds[0];
+            }
+
+          }).catch(error => {
+    console.log(error.response)
+          })
     },
     methods:
     {
