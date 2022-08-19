@@ -36,14 +36,6 @@ public class OntologyServices {
     }
 
 
-    public void executeTestQuery(String query) {
-        QueryExecution qe = QueryExecutionFactory.create(QueryFactory.create(query), model);
-        ResultSet rs = qe.execSelect();
-        while (rs.hasNext()) {
-            QuerySolution qs = rs.nextSolution();
-            System.out.println(qs.toString());
-        }
-    }
 
     public List<QuerySolution> executeQuery(String query) {
         List<QuerySolution> retVal = new ArrayList<>();
@@ -63,15 +55,5 @@ public class OntologyServices {
                 "prefix xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
                 "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n";
     }
-    public void test()
-    {
-        List<QuerySolution> querySolutions=executeQuery(getQuery());
-        for(QuerySolution q : querySolutions)
-        {
-            System.out.println(q.toString());
-        }
-    }
-
-
 
 }

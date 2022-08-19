@@ -2,22 +2,22 @@ package com.example.demo.dtos;
 
 public class cpuDTO {
 
-    public int baseClock;
+    public int turboBoost;
     public int cpuMemorySpeed;
     public int logicalCores;
     public String socket;
     public String name;
 
 
-    public cpuDTO(int baseClock, int cpuMemorySpeed, String socket, String name) {
-        this.baseClock = baseClock;
+    public cpuDTO(int turboBoost, int cpuMemorySpeed, String socket, String name) {
+        this.turboBoost = turboBoost;
         this.cpuMemorySpeed = cpuMemorySpeed;
         this.socket = socket;
         this.name = name;
     }
 
-    public int getBaseClock() {
-        return baseClock;
+    public int getTurboBoost() {
+        return turboBoost;
     }
 
     public String getName() {
@@ -28,8 +28,8 @@ public class cpuDTO {
         this.name = name;
     }
 
-    public void setBaseClock(int baseClock) {
-        this.baseClock = baseClock;
+    public void setTurboBoost(int turboBoost) {
+        this.turboBoost = turboBoost;
     }
 
     public int getCpuMemorySpeed() {

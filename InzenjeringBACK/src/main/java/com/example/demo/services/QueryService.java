@@ -24,6 +24,67 @@ public class QueryService {
         return allMotherboards;
     }
 
+    public List<String> getAllCPU() {
+        List<QuerySolution> results = service.executeQuery(queryGetAllCPU());
+
+        List<String> allCPU = new ArrayList<>();
+        for (QuerySolution qs : results) {
+            String name = qs.get("name").asResource().getLocalName();
+            if(!name.equals(""))
+                allCPU.add(name);
+        }
+        return allCPU;
+    }
+
+    public List<String> getAllRAM() {
+        List<QuerySolution> results = service.executeQuery(queryGetAllRAM());
+
+        List<String> allRAM = new ArrayList<>();
+        for (QuerySolution qs : results) {
+            String name = qs.get("name").asResource().getLocalName();
+            if(!name.equals(""))
+                allRAM.add(name);
+        }
+        return allRAM;
+    }
+
+    public List<String> getAllGPU() {
+        List<QuerySolution> results = service.executeQuery(queryGetAllGPU());
+
+        List<String> allGPU = new ArrayList<>();
+        for (QuerySolution qs : results) {
+            String name = qs.get("name").asResource().getLocalName();
+            if(!name.equals(""))
+                allGPU.add(name);
+        }
+        return allGPU;
+    }
+
+
+    public List<String> getAllHDD() {
+        List<QuerySolution> results = service.executeQuery(queryGetAllHDD());
+
+        List<String> allHDD = new ArrayList<>();
+        for (QuerySolution qs : results) {
+            String name = qs.get("name").asResource().getLocalName();
+            if(!name.equals(""))
+                allHDD.add(name);
+        }
+        return allHDD;
+    }
+
+    public List<String> getAllSSD() {
+        List<QuerySolution> results = service.executeQuery(queryGetAllSSD());
+
+        List<String> allSSD = new ArrayList<>();
+        for (QuerySolution qs : results) {
+            String name = qs.get("name").asResource().getLocalName();
+            if(!name.equals(""))
+                allSSD.add(name);
+        }
+        return allSSD;
+    }
+
     public List<String> addInListMotherboards(List<QuerySolution> results)
     {
         List<String> allMotherboards = new ArrayList<>();
@@ -53,30 +114,76 @@ public class QueryService {
         System.out.println(rams);
         return rams;
     }
-    public List<cpuDTO> upgradeCPU(String selectedMotherboard) {
+    public List<cpuDTO> upgradeCPU(String selectedMotherboard, String selectedCPU) {
         List<QuerySolution> results = service.executeQuery(queryGetAllCompatibleCPU(selectedMotherboard));
+       List<QuerySolution> cpu = service.executeQuery(queryGetSelectedCpu(selectedCPU));
+        int turboBoostSelectedCPU=0;
+        for (QuerySolution qs : cpu){
+            turboBoostSelectedCPU=qs.get("turboBoost").asLiteral().getInt();
+        }
         System.out.println("***********************************");
         List<cpuDTO> rams = new ArrayList<>();
         for (QuerySolution qs : results) {
             String name = qs.get("name").asResource().getLocalName();
             String socket = qs.get("socket").asLiteral().getValue().toString();
-            int baseClock = qs.get("baseClock").asLiteral().getInt();
+            int turboBoost = qs.get("turboBoost").asLiteral().getInt();
             int cpuMemorySpeed = qs.get("cpuMemorySpeed").asLiteral().getInt();
-            if(!name.equals(""))
-                rams.add(new cpuDTO(baseClock, cpuMemorySpeed, socket,name));
+            if(!name.equals("") && turboBoost >=turboBoostSelectedCPU)
+                rams.add(new cpuDTO(turboBoost, cpuMemorySpeed, socket,name));
         }
         System.out.println(rams);
         return rams;
-
-
     }
 
-
+    private String queryGetSelectedCpu(String selectedCpu) {
+        return service.getQuery() +
+                "SELECT ?turboBoost \n" +
+                "WHERE {\n" +
+                ":"+selectedCpu+" :turboBoost ?turboBoost .\n" +
+                "}\n";
+    }
     private String queryGetAllMotherboards() {
         return service.getQuery() +
                 "SELECT ?name \n" +
                 "WHERE {\n" +
                 "?name rdf:type :Motherboard .\n" +
+                "}\n";
+    }
+    private String queryGetAllCPU() {
+        return service.getQuery() +
+                "SELECT ?name \n" +
+                "WHERE {\n" +
+                "?name rdf:type :CPU .\n" +
+                "}\n";
+    }
+    private String queryGetAllGPU() {
+        return service.getQuery() +
+                "SELECT ?name \n" +
+                "WHERE {\n" +
+                "?name rdf:type :GPU .\n" +
+                "}\n";
+    }
+    private String queryGetAllRAM() {
+        return service.getQuery() +
+                "SELECT ?name \n" +
+                "WHERE {\n" +
+                "?name rdf:type :RAM .\n" +
+                "}\n";
+    }
+
+    private String queryGetAllSSD() {
+        return service.getQuery() +
+                "SELECT ?name \n" +
+                "WHERE {\n" +
+                "?name rdf:type :SSD .\n" +
+                "}\n";
+    }
+
+    private String queryGetAllHDD() {
+        return service.getQuery() +
+                "SELECT ?name \n" +
+                "WHERE {\n" +
+                "?name rdf:type :HDD .\n" +
                 "}\n";
     }
 
@@ -95,13 +202,14 @@ public class QueryService {
     private String queryGetAllCompatibleCPU(String nameMotherboard)
     {
         return service.getQuery() +
-                "SELECT ?name ?baseClock ?cpuMemorySpeed ?socket\n" +
+                "SELECT ?name ?turboBoost ?cpuMemorySpeed ?socket\n" +
                 "WHERE {\n" +
+                ":"+nameMotherboard+" :motherboardSocket ?socket .\n" +
                 "?name rdf:type :CPU .\n" +
-                "?name :compatibleCPU "+nameMotherboard+" .\n" +
+                "?name :socket ?socket.\n" +
                 "?name :baseClock ?baseClock .\n"+
                 "?name :cpuMemorySpeed ?cpuMemorySpeed .\n"+
-                "?name :socket ?socket .\n"+
+                "?name :turboBoost ?turboBoost .\n"+
                 "}\n";
     }
 

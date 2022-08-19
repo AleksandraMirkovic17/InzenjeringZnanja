@@ -13,6 +13,13 @@
     </select>
   
     <br>
+
+      <label for="exampleFormControlSelect1"> Select CPU</label>
+    <select class="form-control" id="exampleFormControlSelect1"  v-model="selectedCPU">
+      <option v-for="m in cpus" v-bind:value="m" :key="m"> {{m}}</option>
+    </select>
+  
+    <br>
     <label for="exampleFormControlSelect1">Select upgrade</label>
     <select class="form-control" id="exampleFormControlSelect1" v-model="selectedUpgrade">
       <option>CPU</option>
@@ -52,7 +59,7 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
-      <th scope="col">Base clock</th>
+      <th scope="col">Turbo boost</th>
       <th scope="col">Cpu memory speed</th>
       <th scope="col">Socket</th>
     </tr>
@@ -61,7 +68,7 @@
     <tr v-for="(cpu, index) in allCpus" :key="cpu.id">
       <th scope="row">{{index+1}}</th>
       <td>{{cpu.name}}</td>
-      <td>{{cpu.baseClock}}</td>
+      <td>{{cpu.turboBoost}}</td>
       <td>{{cpu.cpuMemorySpeed}}</td>
        <td>{{cpu.socket}}</td>
     </tr>
@@ -88,7 +95,9 @@ export default{
              selectedUpgrade: '',
              view : false,
              allRams: new Array(),
-             allCpus: new Array()
+             allCpus: new Array(),
+             selectedCPU: '',
+             cpus: new Array()
         }
     },
     mounted(){
@@ -98,6 +107,18 @@ export default{
             this.motherboards = response1.data;
             if(this.motherboards.length>0){
               this.selectedMotherboard = this.motherboards[0];
+            }
+
+          }).catch(error => {
+    console.log(error.response)
+          })
+
+          axios.get('http://localhost:8081/query/getAllCPU')
+          .then(response1 => {
+            console.log("cpus", response1.data)
+            this.cpus = response1.data;
+            if(this.cpus.length>0){
+              this.selectedCPU = this.cpus[0];
             }
 
           }).catch(error => {
@@ -132,7 +153,7 @@ export default{
       if(this.selectedUpgrade == 'CPU')
         {
          
-        axios.get('http://localhost:8081/query/CPU/:'+this.selectedMotherboard)
+        axios.get('http://localhost:8081/query/CPU/'+this.selectedMotherboard+'/'+this.selectedCPU)
         .then(response =>{
           this.allCpus=response.data;
           this.view=true;

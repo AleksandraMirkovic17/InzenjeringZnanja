@@ -27,15 +27,44 @@ public class QueryController {
         return new ResponseEntity<>(queryService.getAllMotherboards(), HttpStatus.OK);
     }
 
+    @GetMapping("/getAllCPU")
+    public ResponseEntity<List<String>> getAllCPU() {
+        return new ResponseEntity<>(queryService.getAllCPU(), HttpStatus.OK);
+    }
+
+    @GetMapping("/getAllRAM")
+    public ResponseEntity<List<String>> getAllRAM() {
+        return new ResponseEntity<>(queryService.getAllRAM(), HttpStatus.OK);
+    }
+
+    @GetMapping("/getAllGPU")
+    public ResponseEntity<List<String>> getAllGPU() {
+        return new ResponseEntity<>(queryService.getAllGPU(), HttpStatus.OK);
+    }
+
+    @GetMapping("/getAllHDD")
+    public ResponseEntity<List<String>> getAllHDD() {
+        return new ResponseEntity<>(queryService.getAllHDD(), HttpStatus.OK);
+    }
+
+    @GetMapping("/getAllSSD")
+    public ResponseEntity<List<String>> getAllSSD() {
+        return new ResponseEntity<>(queryService.getAllSSD(), HttpStatus.OK);
+    }
+
     @GetMapping("/RAM/{selectedMotherboard}")
     @ResponseBody
     public ResponseEntity<List<ramDTO>> getAllCompatibileRams(@PathVariable String selectedMotherboard) {
         return new ResponseEntity<>(queryService.upgradeRAM(selectedMotherboard), HttpStatus.OK);
     }
 
-    @GetMapping("/CPU/{selectedMotherboard}")
+    @GetMapping("/CPU/{selectedMotherboard}/{selectedCPU}")
     @ResponseBody
-    public ResponseEntity<List<cpuDTO>> getAllCompatibileCpus(@PathVariable String selectedMotherboard) {
-        return new ResponseEntity<>(queryService.upgradeCPU(selectedMotherboard), HttpStatus.OK);
+    public ResponseEntity<List<cpuDTO>> getAllCompatibileCpus(@PathVariable String selectedMotherboard, @PathVariable String selectedCPU) {
+        System.out.println(selectedCPU);
+        System.out.println("***********************************************************");
+
+        System.out.println(selectedMotherboard);
+        return new ResponseEntity<>(queryService.upgradeCPU(selectedMotherboard, selectedCPU), HttpStatus.OK);
     }
 }
