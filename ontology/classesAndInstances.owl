@@ -510,6 +510,12 @@
                    rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardDDR
+:motherboardDDR rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Motherboard ;
+                rdfs:range xsd:int .
+
+
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#motherboardFormFactor
 :motherboardFormFactor rdf:type owl:DatatypeProperty ;
                        rdfs:domain :Motherboard ;
@@ -972,7 +978,7 @@
                :socket "AM4"^^xsd:string ;
                :tdp "105"^^xsd:int ;
                :technology "7"^^xsd:int ;
-               :turboBoost "4800"^^xsd:int ;
+               :turboBoost "5000"^^xsd:int ;
                :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1012,7 +1018,7 @@
                          :socket "AM4"^^xsd:string ;
                          :tdp "105"^^xsd:int ;
                          :technology "7"^^xsd:int ;
-                         :turboBoost "4800"^^xsd:int ;
+                         :turboBoost "4700"^^xsd:int ;
                          :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1368,7 +1374,7 @@
                    :socket "AM4"^^xsd:string ;
                    :tdp "105"^^xsd:int ;
                    :technology "7"^^xsd:int ;
-                   :turboBoost "4800"^^xsd:int ;
+                   :turboBoost "4650"^^xsd:int ;
                    :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1408,7 +1414,7 @@
                    :socket "AM4"^^xsd:string ;
                    :tdp "105"^^xsd:int ;
                    :technology "7"^^xsd:int ;
-                   :turboBoost "4800"^^xsd:int ;
+                   :turboBoost "4200"^^xsd:int ;
                    :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1428,7 +1434,7 @@
                    :socket "AM4"^^xsd:string ;
                    :tdp "105"^^xsd:int ;
                    :technology "7"^^xsd:int ;
-                   :turboBoost "4800"^^xsd:int ;
+                   :turboBoost "5200"^^xsd:int ;
                    :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1448,7 +1454,7 @@
                    :socket "AM4"^^xsd:string ;
                    :tdp "105"^^xsd:int ;
                    :technology "7"^^xsd:int ;
-                   :turboBoost "4800"^^xsd:int ;
+                   :turboBoost "3000"^^xsd:int ;
                    :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1468,7 +1474,7 @@
                        :socket "AM4"^^xsd:string ;
                        :tdp "105"^^xsd:int ;
                        :technology "7"^^xsd:int ;
-                       :turboBoost "4800"^^xsd:int ;
+                       :turboBoost "2500"^^xsd:int ;
                        :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1488,7 +1494,7 @@
                        :socket "AM4"^^xsd:string ;
                        :tdp "105"^^xsd:int ;
                        :technology "7"^^xsd:int ;
-                       :turboBoost "4800"^^xsd:int ;
+                       :turboBoost "3600"^^xsd:int ;
                        :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1508,7 +1514,7 @@
                   :socket "AM4"^^xsd:string ;
                   :tdp "105"^^xsd:int ;
                   :technology "7"^^xsd:int ;
-                  :turboBoost "4800"^^xsd:int ;
+                  :turboBoost "3100"^^xsd:int ;
                   :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1528,7 +1534,7 @@
                    :socket "AM4"^^xsd:string ;
                    :tdp "105"^^xsd:int ;
                    :technology "7"^^xsd:int ;
-                   :turboBoost "4800"^^xsd:int ;
+                   :turboBoost "3900"^^xsd:int ;
                    :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1548,7 +1554,7 @@
                    :socket "AM4"^^xsd:string ;
                    :tdp "105"^^xsd:int ;
                    :technology "7"^^xsd:int ;
-                   :turboBoost "4800"^^xsd:int ;
+                   :turboBoost "3650"^^xsd:int ;
                    :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1568,7 +1574,7 @@
                      :socket "AM4"^^xsd:string ;
                      :tdp "105"^^xsd:int ;
                      :technology "7"^^xsd:int ;
-                     :turboBoost "4800"^^xsd:int ;
+                     :turboBoost "3900"^^xsd:int ;
                      :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1588,7 +1594,7 @@
                    :socket "AM4"^^xsd:string ;
                    :tdp "105"^^xsd:int ;
                    :technology "7"^^xsd:int ;
-                   :turboBoost "4800"^^xsd:int ;
+                   :turboBoost "3700"^^xsd:int ;
                    :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1608,7 +1614,7 @@
                    :socket "AM4"^^xsd:string ;
                    :tdp "105"^^xsd:int ;
                    :technology "7"^^xsd:int ;
-                   :turboBoost "4800"^^xsd:int ;
+                   :turboBoost "3500"^^xsd:int ;
                    :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1628,7 +1634,7 @@
                        :socket "AM4"^^xsd:string ;
                        :tdp "105"^^xsd:int ;
                        :technology "7"^^xsd:int ;
-                       :turboBoost "4800"^^xsd:int ;
+                       :turboBoost "2900"^^xsd:int ;
                        :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1648,7 +1654,7 @@
                        :socket "AM4"^^xsd:string ;
                        :tdp "105"^^xsd:int ;
                        :technology "7"^^xsd:int ;
-                       :turboBoost "4800"^^xsd:int ;
+                       :turboBoost "2900"^^xsd:int ;
                        :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1668,7 +1674,7 @@
                    :socket "AM4"^^xsd:string ;
                    :tdp "105"^^xsd:int ;
                    :technology "7"^^xsd:int ;
-                   :turboBoost "4800"^^xsd:int ;
+                   :turboBoost "4000"^^xsd:int ;
                    :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1688,7 +1694,7 @@
                    :socket "AM4"^^xsd:string ;
                    :tdp "105"^^xsd:int ;
                    :technology "7"^^xsd:int ;
-                   :turboBoost "4800"^^xsd:int ;
+                   :turboBoost "4300"^^xsd:int ;
                    :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1728,7 +1734,7 @@
                    :socket "AM4"^^xsd:string ;
                    :tdp "105"^^xsd:int ;
                    :technology "7"^^xsd:int ;
-                   :turboBoost "4800"^^xsd:int ;
+                   :turboBoost "4200"^^xsd:int ;
                    :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1748,7 +1754,7 @@
                        :socket "AM4"^^xsd:string ;
                        :tdp "105"^^xsd:int ;
                        :technology "7"^^xsd:int ;
-                       :turboBoost "4800"^^xsd:int ;
+                       :turboBoost "4100"^^xsd:int ;
                        :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1768,7 +1774,7 @@
                         :socket "AM4"^^xsd:string ;
                         :tdp "105"^^xsd:int ;
                         :technology "7"^^xsd:int ;
-                        :turboBoost "4800"^^xsd:int ;
+                        :turboBoost "3950"^^xsd:int ;
                         :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1788,7 +1794,7 @@
                           :socket "AM4"^^xsd:string ;
                           :tdp "105"^^xsd:int ;
                           :technology "7"^^xsd:int ;
-                          :turboBoost "4800"^^xsd:int ;
+                          :turboBoost "3650"^^xsd:int ;
                           :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1808,7 +1814,7 @@
                               :socket "AM4"^^xsd:string ;
                               :tdp "105"^^xsd:int ;
                               :technology "7"^^xsd:int ;
-                              :turboBoost "4800"^^xsd:int ;
+                              :turboBoost "4250"^^xsd:int ;
                               :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1828,7 +1834,7 @@
                                    :socket "AM4"^^xsd:string ;
                                    :tdp "105"^^xsd:int ;
                                    :technology "7"^^xsd:int ;
-                                   :turboBoost "4800"^^xsd:int ;
+                                   :turboBoost "4000"^^xsd:int ;
                                    :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1848,7 +1854,7 @@
                                    :socket "AM4"^^xsd:string ;
                                    :tdp "105"^^xsd:int ;
                                    :technology "7"^^xsd:int ;
-                                   :turboBoost "4800"^^xsd:int ;
+                                   :turboBoost "4500"^^xsd:int ;
                                    :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -1884,6 +1890,7 @@
 :ASROCK_Z590_TAICHI_WI-FI rdf:type owl:NamedIndividual ,
                                    :Motherboard ;
                           :motheboardChipset "600"^^xsd:string ;
+                          :motherboardDDR "5"^^xsd:int ;
                           :motherboardFormFactor "ATX"^^xsd:string ;
                           :motherboardHasWiFi "true"^^xsd:boolean ;
                           :motherboardIsRGB "true"^^xsd:boolean ;
@@ -1899,6 +1906,7 @@
 :ASRock_Z490_AQUA rdf:type owl:NamedIndividual ,
                            :Motherboard ;
                   :motheboardChipset "600"^^xsd:string ;
+                  :motherboardDDR "4"^^xsd:int ;
                   :motherboardFormFactor "ATX"^^xsd:string ;
                   :motherboardHasWiFi "true"^^xsd:boolean ;
                   :motherboardIsRGB "true"^^xsd:boolean ;
@@ -1921,6 +1929,7 @@
 :ASUS_PRIME_Z590-A rdf:type owl:NamedIndividual ,
                             :Motherboard ;
                    :motheboardChipset "600"^^xsd:string ;
+                   :motherboardDDR "3"^^xsd:int ;
                    :motherboardFormFactor "ATX"^^xsd:string ;
                    :motherboardHasWiFi "true"^^xsd:boolean ;
                    :motherboardIsRGB "true"^^xsd:boolean ;
@@ -2020,7 +2029,7 @@
                    :socket "LGA1700"^^xsd:string ;
                    :tdp "105"^^xsd:int ;
                    :technology "7"^^xsd:int ;
-                   :turboBoost "4800"^^xsd:int ;
+                   :turboBoost "5200"^^xsd:int ;
                    :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2040,7 +2049,7 @@
                           :socket "LGA1700"^^xsd:string ;
                           :tdp "105"^^xsd:int ;
                           :technology "7"^^xsd:int ;
-                          :turboBoost "4800"^^xsd:int ;
+                          :turboBoost "4350"^^xsd:int ;
                           :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2060,7 +2069,7 @@
                               :socket "LGA1700"^^xsd:string ;
                               :tdp "105"^^xsd:int ;
                               :technology "7"^^xsd:int ;
-                              :turboBoost "4800"^^xsd:int ;
+                              :turboBoost "4850"^^xsd:int ;
                               :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2080,7 +2089,7 @@
                         :socket "LGA1700"^^xsd:string ;
                         :tdp "105"^^xsd:int ;
                         :technology "7"^^xsd:int ;
-                        :turboBoost "4800"^^xsd:int ;
+                        :turboBoost "3800"^^xsd:int ;
                         :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2250,43 +2259,43 @@
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Corsair_CX450
 :Corsair_CX450 rdf:type owl:NamedIndividual ,
                         :PSU ;
-						                                                  :compatiblePSU :X570_Taichi_Razer_Edition ;
-                                                  :psu6PinConnectors "4"^^xsd:int ;
-                                                  :psu8PinConnectors "4"^^xsd:int ;
-                                                  :psuCertificate "GOLD"^^xsd:string ;
-                                                  :psuFormFactor "ATX"^^xsd:string ;
-                                                  :psuHasOCP "true"^^xsd:boolean ;
-                                                  :psuHasOPP "true"^^xsd:boolean ;
-                                                  :psuHasOTP "true"^^xsd:boolean ;
-                                                  :psuHasOVP "true"^^xsd:boolean ;
-                                                  :psuHasPFC "true"^^xsd:boolean ;
-                                                  :psuHasSCP "false"^^xsd:boolean ;
-                                                  :psuHasUVP "true"^^xsd:boolean ;
-                                                  :psuIsModular "true"^^xsd:boolean ;
-                                                  :psuMolexConnectors "6"^^xsd:int ;
-                                                  :psuPower "450"^^xsd:int ;
-                                                  :psuSATAConnectors "6"^^xsd:int .
+               :compatiblePSU :X570_Taichi_Razer_Edition ;
+               :psu6PinConnectors "4"^^xsd:int ;
+               :psu8PinConnectors "4"^^xsd:int ;
+               :psuCertificate "GOLD"^^xsd:string ;
+               :psuFormFactor "ATX"^^xsd:string ;
+               :psuHasOCP "true"^^xsd:boolean ;
+               :psuHasOPP "true"^^xsd:boolean ;
+               :psuHasOTP "true"^^xsd:boolean ;
+               :psuHasOVP "true"^^xsd:boolean ;
+               :psuHasPFC "true"^^xsd:boolean ;
+               :psuHasSCP "false"^^xsd:boolean ;
+               :psuHasUVP "true"^^xsd:boolean ;
+               :psuIsModular "true"^^xsd:boolean ;
+               :psuMolexConnectors "6"^^xsd:int ;
+               :psuPower "450"^^xsd:int ;
+               :psuSATAConnectors "6"^^xsd:int .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Corsair_CX550F
 :Corsair_CX550F rdf:type owl:NamedIndividual ,
                          :PSU ;
-						                                                   :compatiblePSU :X570_Taichi_Razer_Edition ;
-                                                  :psu6PinConnectors "4"^^xsd:int ;
-                                                  :psu8PinConnectors "4"^^xsd:int ;
-                                                  :psuCertificate "GOLD"^^xsd:string ;
-                                                  :psuFormFactor "ATX"^^xsd:string ;
-                                                  :psuHasOCP "true"^^xsd:boolean ;
-                                                  :psuHasOPP "true"^^xsd:boolean ;
-                                                  :psuHasOTP "true"^^xsd:boolean ;
-                                                  :psuHasOVP "true"^^xsd:boolean ;
-                                                  :psuHasPFC "true"^^xsd:boolean ;
-                                                  :psuHasSCP "false"^^xsd:boolean ;
-                                                  :psuHasUVP "true"^^xsd:boolean ;
-                                                  :psuIsModular "true"^^xsd:boolean ;
-                                                  :psuMolexConnectors "6"^^xsd:int ;
-                                                  :psuPower "550"^^xsd:int ;
-                                                  :psuSATAConnectors "6"^^xsd:int .
+                :compatiblePSU :X570_Taichi_Razer_Edition ;
+                :psu6PinConnectors "4"^^xsd:int ;
+                :psu8PinConnectors "4"^^xsd:int ;
+                :psuCertificate "GOLD"^^xsd:string ;
+                :psuFormFactor "ATX"^^xsd:string ;
+                :psuHasOCP "true"^^xsd:boolean ;
+                :psuHasOPP "true"^^xsd:boolean ;
+                :psuHasOTP "true"^^xsd:boolean ;
+                :psuHasOVP "true"^^xsd:boolean ;
+                :psuHasPFC "true"^^xsd:boolean ;
+                :psuHasSCP "false"^^xsd:boolean ;
+                :psuHasUVP "true"^^xsd:boolean ;
+                :psuIsModular "true"^^xsd:boolean ;
+                :psuMolexConnectors "6"^^xsd:int ;
+                :psuPower "550"^^xsd:int ;
+                :psuSATAConnectors "6"^^xsd:int .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Corsair_Hydro_Series_H60_V2
@@ -2306,22 +2315,22 @@
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Corsair_RM550x
 :Corsair_RM550x rdf:type owl:NamedIndividual ,
                          :PSU ;
-						                                                   :compatiblePSU :X570_Taichi_Razer_Edition ;
-                                                  :psu6PinConnectors "4"^^xsd:int ;
-                                                  :psu8PinConnectors "4"^^xsd:int ;
-                                                  :psuCertificate "GOLD"^^xsd:string ;
-                                                  :psuFormFactor "ATX"^^xsd:string ;
-                                                  :psuHasOCP "true"^^xsd:boolean ;
-                                                  :psuHasOPP "true"^^xsd:boolean ;
-                                                  :psuHasOTP "true"^^xsd:boolean ;
-                                                  :psuHasOVP "true"^^xsd:boolean ;
-                                                  :psuHasPFC "true"^^xsd:boolean ;
-                                                  :psuHasSCP "false"^^xsd:boolean ;
-                                                  :psuHasUVP "true"^^xsd:boolean ;
-                                                  :psuIsModular "true"^^xsd:boolean ;
-                                                  :psuMolexConnectors "6"^^xsd:int ;
-                                                  :psuPower "800"^^xsd:int ;
-                                                  :psuSATAConnectors "6"^^xsd:int .
+                :compatiblePSU :X570_Taichi_Razer_Edition ;
+                :psu6PinConnectors "4"^^xsd:int ;
+                :psu8PinConnectors "4"^^xsd:int ;
+                :psuCertificate "GOLD"^^xsd:string ;
+                :psuFormFactor "ATX"^^xsd:string ;
+                :psuHasOCP "true"^^xsd:boolean ;
+                :psuHasOPP "true"^^xsd:boolean ;
+                :psuHasOTP "true"^^xsd:boolean ;
+                :psuHasOVP "true"^^xsd:boolean ;
+                :psuHasPFC "true"^^xsd:boolean ;
+                :psuHasSCP "false"^^xsd:boolean ;
+                :psuHasUVP "true"^^xsd:boolean ;
+                :psuIsModular "true"^^xsd:boolean ;
+                :psuMolexConnectors "6"^^xsd:int ;
+                :psuPower "800"^^xsd:int ;
+                :psuSATAConnectors "6"^^xsd:int .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Creative_Pebble_V3
@@ -2546,6 +2555,7 @@
 :GIGABYTE_Z490_AORUS_MASTER rdf:type owl:NamedIndividual ,
                                      :Motherboard ;
                             :motheboardChipset "600"^^xsd:string ;
+                            :motherboardDDR "3"^^xsd:int ;
                             :motherboardFormFactor "ATX"^^xsd:string ;
                             :motherboardHasWiFi "true"^^xsd:boolean ;
                             :motherboardIsRGB "true"^^xsd:boolean ;
@@ -2561,6 +2571,7 @@
 :GIGABYTE_Z590_VISION_G rdf:type owl:NamedIndividual ,
                                  :Motherboard ;
                         :motheboardChipset "600"^^xsd:string ;
+                        :motherboardDDR "4"^^xsd:int ;
                         :motherboardFormFactor "ATX"^^xsd:string ;
                         :motherboardHasWiFi "true"^^xsd:boolean ;
                         :motherboardIsRGB "true"^^xsd:boolean ;
@@ -2624,7 +2635,7 @@
                       :socket "LGA1700"^^xsd:string ;
                       :tdp "105"^^xsd:int ;
                       :technology "7"^^xsd:int ;
-                      :turboBoost "4800"^^xsd:int ;
+                      :turboBoost "4500"^^xsd:int ;
                       :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2644,7 +2655,7 @@
                      :socket "LGA1700"^^xsd:string ;
                      :tdp "105"^^xsd:int ;
                      :technology "7"^^xsd:int ;
-                     :turboBoost "4800"^^xsd:int ;
+                     :turboBoost "3000"^^xsd:int ;
                      :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2664,7 +2675,7 @@
                       :socket "LGA1700"^^xsd:string ;
                       :tdp "105"^^xsd:int ;
                       :technology "7"^^xsd:int ;
-                      :turboBoost "4800"^^xsd:int ;
+                      :turboBoost "4000"^^xsd:int ;
                       :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2684,7 +2695,7 @@
                      :socket "LGA1700"^^xsd:string ;
                      :tdp "105"^^xsd:int ;
                      :technology "7"^^xsd:int ;
-                     :turboBoost "4800"^^xsd:int ;
+                     :turboBoost "3500"^^xsd:int ;
                      :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2704,7 +2715,7 @@
                       :socket "LGA1700"^^xsd:string ;
                       :tdp "105"^^xsd:int ;
                       :technology "7"^^xsd:int ;
-                      :turboBoost "4800"^^xsd:int ;
+                      :turboBoost "3250"^^xsd:int ;
                       :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2724,7 +2735,7 @@
                       :socket "LGA1700"^^xsd:string ;
                       :tdp "105"^^xsd:int ;
                       :technology "7"^^xsd:int ;
-                      :turboBoost "4800"^^xsd:int ;
+                      :turboBoost "4000"^^xsd:int ;
                       :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2744,7 +2755,7 @@
                      :socket "LGA1700"^^xsd:string ;
                      :tdp "105"^^xsd:int ;
                      :technology "7"^^xsd:int ;
-                     :turboBoost "4800"^^xsd:int ;
+                     :turboBoost "4300"^^xsd:int ;
                      :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2764,7 +2775,7 @@
                       :socket "LGA1700"^^xsd:string ;
                       :tdp "105"^^xsd:int ;
                       :technology "7"^^xsd:int ;
-                      :turboBoost "4800"^^xsd:int ;
+                      :turboBoost "4300"^^xsd:int ;
                       :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2784,7 +2795,7 @@
                        :socket "LGA1700"^^xsd:string ;
                        :tdp "105"^^xsd:int ;
                        :technology "7"^^xsd:int ;
-                       :turboBoost "4800"^^xsd:int ;
+                       :turboBoost "4300"^^xsd:int ;
                        :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2804,7 +2815,7 @@
                      :socket "LGA1700"^^xsd:string ;
                      :tdp "105"^^xsd:int ;
                      :technology "7"^^xsd:int ;
-                     :turboBoost "4800"^^xsd:int ;
+                     :turboBoost "3600"^^xsd:int ;
                      :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2824,7 +2835,7 @@
                       :socket "LGA1700"^^xsd:string ;
                       :tdp "105"^^xsd:int ;
                       :technology "7"^^xsd:int ;
-                      :turboBoost "4800"^^xsd:int ;
+                      :turboBoost "3600"^^xsd:int ;
                       :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2844,7 +2855,7 @@
                        :socket "LGA1700"^^xsd:string ;
                        :tdp "105"^^xsd:int ;
                        :technology "7"^^xsd:int ;
-                       :turboBoost "4800"^^xsd:int ;
+                       :turboBoost "3300"^^xsd:int ;
                        :unlockedOverclocking "true"^^xsd:boolean .
 
 
@@ -2932,6 +2943,7 @@
 :MSI_MAG_Z490_TOMAHAWK rdf:type owl:NamedIndividual ,
                                 :Motherboard ;
                        :motheboardChipset "600"^^xsd:string ;
+                       :motherboardDDR "5"^^xsd:int ;
                        :motherboardFormFactor "ATX"^^xsd:string ;
                        :motherboardHasWiFi "true"^^xsd:boolean ;
                        :motherboardIsRGB "true"^^xsd:boolean ;
@@ -2947,6 +2959,7 @@
 :MSI_MPG_Z590_CARBON_EK_X rdf:type owl:NamedIndividual ,
                                    :Motherboard ;
                           :motheboardChipset "600"^^xsd:string ;
+                          :motherboardDDR "3"^^xsd:int ;
                           :motherboardFormFactor "ATX"^^xsd:string ;
                           :motherboardHasWiFi "true"^^xsd:boolean ;
                           :motherboardIsRGB "true"^^xsd:boolean ;
@@ -3978,6 +3991,7 @@
 :ROG_Crosshair_VIII_Dark_Hero rdf:type owl:NamedIndividual ,
                                        :Motherboard ;
                               :motheboardChipset "LG1200"^^xsd:string ;
+                              :motherboardDDR "4"^^xsd:int ;
                               :motherboardFormFactor "ATX"^^xsd:string ;
                               :motherboardHasWiFi "true"^^xsd:boolean ;
                               :motherboardIsRGB "true"^^xsd:boolean ;
@@ -3993,6 +4007,7 @@
 :ROG_MAXIMUS_XIII_APEX rdf:type owl:NamedIndividual ,
                                 :Motherboard ;
                        :motheboardChipset "600"^^xsd:string ;
+                       :motherboardDDR "5"^^xsd:int ;
                        :motherboardFormFactor "ATX"^^xsd:string ;
                        :motherboardHasWiFi "true"^^xsd:boolean ;
                        :motherboardIsRGB "true"^^xsd:boolean ;
@@ -4074,22 +4089,22 @@
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#SEASONIC_FOCUS_GX-650
 :SEASONIC_FOCUS_GX-650 rdf:type owl:NamedIndividual ,
                                 :PSU ;
-                                                  :compatiblePSU :X570_Taichi_Razer_Edition ;
-                                                  :psu6PinConnectors "4"^^xsd:int ;
-                                                  :psu8PinConnectors "4"^^xsd:int ;
-                                                  :psuCertificate "GOLD"^^xsd:string ;
-                                                  :psuFormFactor "ATX"^^xsd:string ;
-                                                  :psuHasOCP "true"^^xsd:boolean ;
-                                                  :psuHasOPP "true"^^xsd:boolean ;
-                                                  :psuHasOTP "true"^^xsd:boolean ;
-                                                  :psuHasOVP "true"^^xsd:boolean ;
-                                                  :psuHasPFC "true"^^xsd:boolean ;
-                                                  :psuHasSCP "false"^^xsd:boolean ;
-                                                  :psuHasUVP "true"^^xsd:boolean ;
-                                                  :psuIsModular "true"^^xsd:boolean ;
-                                                  :psuMolexConnectors "6"^^xsd:int ;
-                                                  :psuPower "650"^^xsd:int ;
-                                                  :psuSATAConnectors "6"^^xsd:int .
+                       :compatiblePSU :X570_Taichi_Razer_Edition ;
+                       :psu6PinConnectors "4"^^xsd:int ;
+                       :psu8PinConnectors "4"^^xsd:int ;
+                       :psuCertificate "GOLD"^^xsd:string ;
+                       :psuFormFactor "ATX"^^xsd:string ;
+                       :psuHasOCP "true"^^xsd:boolean ;
+                       :psuHasOPP "true"^^xsd:boolean ;
+                       :psuHasOTP "true"^^xsd:boolean ;
+                       :psuHasOVP "true"^^xsd:boolean ;
+                       :psuHasPFC "true"^^xsd:boolean ;
+                       :psuHasSCP "false"^^xsd:boolean ;
+                       :psuHasUVP "true"^^xsd:boolean ;
+                       :psuIsModular "true"^^xsd:boolean ;
+                       :psuMolexConnectors "6"^^xsd:int ;
+                       :psuPower "650"^^xsd:int ;
+                       :psuSATAConnectors "6"^^xsd:int .
 
 
 ###  http://www.semanticweb.org/darko/ontologies/2022/6/untitled-ontology-7#Samsung_-_970_Pro
@@ -4353,6 +4368,7 @@
 :X570_Taichi_Razer_Edition rdf:type owl:NamedIndividual ,
                                     :Motherboard ;
                            :motheboardChipset "X570"^^xsd:string ;
+                           :motherboardDDR "4"^^xsd:int ;
                            :motherboardFormFactor "eATX"^^xsd:string ;
                            :motherboardHasWiFi "true"^^xsd:boolean ;
                            :motherboardIsRGB "true"^^xsd:boolean ;
