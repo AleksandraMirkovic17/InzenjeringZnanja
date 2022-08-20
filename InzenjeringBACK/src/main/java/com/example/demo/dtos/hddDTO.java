@@ -31,7 +31,15 @@ public class hddDTO {
         return memoryInterface;
     }
 
+    public hddDTO(String name, String memoryCapacity, String memoryInterface) {
+        this.name = name;
+        this.memoryCapacity = memoryCapacity;
+        this.memoryInterface = memoryInterface;
+    }
+
     public void setMemoryInterface(String memoryInterface) {
         this.memoryInterface = memoryInterface;
     }
 }
+
+

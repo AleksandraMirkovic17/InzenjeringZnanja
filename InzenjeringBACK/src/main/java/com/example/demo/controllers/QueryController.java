@@ -1,8 +1,7 @@
 package com.example.demo.controllers;
 
 
-import com.example.demo.dtos.cpuDTO;
-import com.example.demo.dtos.ramDTO;
+import com.example.demo.dtos.*;
 import com.example.demo.services.QueryService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -67,4 +66,22 @@ public class QueryController {
         System.out.println(selectedMotherboard);
         return new ResponseEntity<>(queryService.upgradeCPU(selectedMotherboard, selectedCPU), HttpStatus.OK);
     }
+
+    @GetMapping("/GPU/{selectedGpu}")
+    @ResponseBody
+    public ResponseEntity<List<gpuDTO>> getAllCompatibileGpu(@PathVariable String selectedGpu) {
+        return new ResponseEntity<>(queryService.upgradeGPU(selectedGpu), HttpStatus.OK);
+    }
+    @GetMapping("/HDD/{selectedHdd}")
+    @ResponseBody
+    public ResponseEntity<List<hddDTO>> getAllCompatibileHdd(@PathVariable String selectedHdd) {
+        return new ResponseEntity<>(queryService.upgradeHDD(selectedHdd), HttpStatus.OK);
+    }
+
+    @GetMapping("/SSD/{selectedSsd}")
+    @ResponseBody
+    public ResponseEntity<List<ssdDTO>> getAllCompatibileSsd(@PathVariable String selectedSsd) {
+        return new ResponseEntity<>(queryService.upgradeSSD(selectedSsd), HttpStatus.OK);
+    }
+
 }

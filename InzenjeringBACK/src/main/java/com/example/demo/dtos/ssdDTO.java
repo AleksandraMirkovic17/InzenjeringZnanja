@@ -33,4 +33,10 @@ public class ssdDTO {
     public void setMemoryInterface(String memoryInterface) {
         this.memoryInterface = memoryInterface;
     }
+
+    public ssdDTO(String name, String memoryCapacity, String memoryInterface) {
+        this.name = name;
+        this.memoryCapacity = memoryCapacity;
+        this.memoryInterface = memoryInterface;
+    }
 }

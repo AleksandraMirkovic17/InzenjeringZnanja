@@ -35,4 +35,11 @@ public class gpuDTO {
     public void setGpuMemory(int gpuMemory) {
         this.gpuMemory = gpuMemory;
     }
+
+    public gpuDTO(String name, String gpuSpeed, int gpuMemory, int gpuTeraflops) {
+        this.name = name;
+        this.gpuSpeed = gpuSpeed;
+        this.gpuMemory = gpuMemory;
+        this.gpuTeraflops = gpuTeraflops;
+    }
 }

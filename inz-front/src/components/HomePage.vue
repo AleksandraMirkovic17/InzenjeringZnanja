@@ -97,6 +97,76 @@
   </tbody>
 </table>
 </div>
+
+<div v-if="view==true && selectedUpgrade=='GPU'">
+ <label for="exampleFormControlSelect1">GPU</label>
+  <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Speed</th>
+      <th scope="col">Memory</th>
+      <th scope="col">Teraflops</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="(gpu, index) in allGpus" :key="gpu.id">
+      <th scope="row">{{index+1}}</th>
+      <td>{{gpu.name}}</td>
+      <td>{{gpu.gpuSpeed}}</td>
+      <td>{{gpu.gpuMemory}}</td>
+       <td>{{gpu.gpuTeraflops}}</td>
+    </tr>
+   
+  </tbody>
+</table>
+</div>
+
+<div v-if="view==true && selectedUpgrade=='HDD'">
+ <label for="exampleFormControlSelect1">HDD</label>
+  <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Memory capacity</th>
+      <th scope="col">Memory interface</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="(gpu, index) in allHdds" :key="gpu.id">
+      <th scope="row">{{index+1}}</th>
+      <td>{{gpu.name}}</td>
+      <td>{{gpu.memoryCapacity}}</td>
+      <td>{{gpu.memoryInterface}}</td>
+    </tr>
+   
+  </tbody>
+</table>
+</div>
+<div v-if="view==true && selectedUpgrade=='SSD'">
+ <label for="exampleFormControlSelect1">SSD</label>
+  <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Memory capacity</th>
+      <th scope="col">Memory interface</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="(gpu, index) in allSsds" :key="gpu.id">
+      <th scope="row">{{index+1}}</th>
+      <td>{{gpu.name}}</td>
+      <td>{{gpu.memoryCapacity}}</td>
+      <td>{{gpu.memoryInterface}}</td>
+    </tr>
+   
+  </tbody>
+</table>
+</div>
   </div>
   </div>
       
@@ -132,7 +202,7 @@ export default{
         }
     },
     mounted(){
-      axios.get('http://localhost:8081/query/getAllMotherboards')
+      axios.get('http://localhost:8082/query/getAllMotherboards')
           .then(response1 => {
             console.log("motherboards ", response1.data)
             this.motherboards = response1.data;
@@ -144,7 +214,7 @@ export default{
     console.log(error.response)
           })
 
-          axios.get('http://localhost:8081/query/getAllCPU')
+          axios.get('http://localhost:8082/query/getAllCPU')
           .then(response1 => {
             console.log("cpus", response1.data)
             this.cpus = response1.data;
@@ -156,7 +226,7 @@ export default{
     console.log(error.response)
           })
 
-          axios.get('http://localhost:8081/query/getAllHDD')
+          axios.get('http://localhost:8082/query/getAllHDD')
           .then(response1 => {
             console.log("hdds", response1.data)
             this.hdds = response1.data;
@@ -168,7 +238,7 @@ export default{
     console.log(error.response)
           })
 
-          axios.get('http://localhost:8081/query/getAllGPU')
+          axios.get('http://localhost:8082/query/getAllGPU')
           .then(response1 => {
             console.log("gpus", response1.data)
             this.gpus = response1.data;
@@ -180,7 +250,7 @@ export default{
     console.log(error.response)
           })
 
-          axios.get('http://localhost:8081/query/getAllSSD')
+          axios.get('http://localhost:8082/query/getAllSSD')
           .then(response1 => {
             console.log("ssd", response1.data)
             this.ssds = response1.data;
@@ -205,7 +275,7 @@ export default{
         if(this.selectedUpgrade == 'RAM')
         {
          
-        axios.get('http://localhost:8081/query/RAM/:'+this.selectedMotherboard)
+        axios.get('http://localhost:8082/query/RAM/:'+this.selectedMotherboard)
         .then(response =>{
           this.allRams=response.data;
           this.view=true;
@@ -218,7 +288,7 @@ export default{
       if(this.selectedUpgrade == 'CPU')
         {
          
-        axios.get('http://localhost:8081/query/CPU/'+this.selectedMotherboard+'/'+this.selectedCPU)
+        axios.get('http://localhost:8082/query/CPU/'+this.selectedMotherboard+'/'+this.selectedCPU)
         .then(response =>{
           this.allCpus=response.data;
           this.view=true;
@@ -227,9 +297,48 @@ export default{
     console.log(error.response)
           })
 
-      }
-      }
 
+      }
+       if(this.selectedUpgrade == 'GPU')
+        {
+         
+        axios.get('http://localhost:8082/query/GPU/'+this.selectedGPU)
+        .then(response =>{
+          this.allGpus=response.data;
+          this.view=true;
+          console.log("all gpus ", response.data)
+        }).catch(error => {
+    console.log(error.response)
+          })
+
+      }
+       if(this.selectedUpgrade == 'HDD')
+        {
+         
+        axios.get('http://localhost:8082/query/HDD/'+this.selectedHDD)
+        .then(response =>{
+          this.allHdds=response.data;
+          this.view=true;
+          console.log("all hdds ", response.data)
+        }).catch(error => {
+    console.log(error.response)
+          })
+
+      }
+      if(this.selectedUpgrade == 'SSD')
+        {
+         
+        axios.get('http://localhost:8082/query/SSD/'+this.selectedSSD)
+        .then(response =>{
+          this.allSsds=response.data;
+          this.view=true;
+          console.log("all ssds ", response.data)
+        }).catch(error => {
+    console.log(error.response)
+          })
+
+      }
+    }
 
     }
 }

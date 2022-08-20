@@ -1,8 +1,6 @@
 package com.example.demo.services;
 
-import com.example.demo.dtos.cpuDTO;
-import com.example.demo.dtos.gpuDTO;
-import com.example.demo.dtos.ramDTO;
+import com.example.demo.dtos.*;
 import org.apache.jena.query.QuerySolution;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -119,7 +117,69 @@ public class QueryService {
 
     public List<gpuDTO> upgradeGPU(String selectedGPU)
     {
-      return null;
+        List<QuerySolution> results = service.executeQuery(queryGetAllInformationGPU());
+        List<QuerySolution> gpu = service.executeQuery(queryGetSelectedGpu(selectedGPU));
+        int teraflops=0;
+        for (QuerySolution qs : gpu){
+            teraflops=qs.get("gpuTeraflops").asLiteral().getInt();
+        }
+        List<gpuDTO> gpus= new ArrayList<>();
+        for (QuerySolution qs : results) {
+            String name = qs.get("name").asResource().getLocalName();
+            String gpuSpeed = qs.get("gpuSpeed").asLiteral().getValue().toString();
+            int gpuMemory = qs.get("gpuMemory").asLiteral().getInt();
+            int gpuTeraflops = qs.get("gpuTeraflops").asLiteral().getInt();
+            if(!name.equals("") && gpuTeraflops >=teraflops)
+                gpus.add(new gpuDTO(name, gpuSpeed, gpuMemory,gpuTeraflops));
+        }
+
+        return gpus;
+    }
+
+    public List<hddDTO> upgradeHDD(String selectedHDD)
+    {
+        List<QuerySolution> results = service.executeQuery(queryGetAllInformationHDD());
+        List<QuerySolution> hdd = service.executeQuery(queryGetSelectedHdd(selectedHDD));
+        String memoryCapacity="";
+        for (QuerySolution qs : hdd){
+            memoryCapacity = qs.get("memoryCapacity").asLiteral().getValue().toString();
+        }
+        int memorycap=Integer.parseInt(memoryCapacity);
+        List<hddDTO> hdds= new ArrayList<>();
+        for (QuerySolution qs : results) {
+            String name = qs.get("name").asResource().getLocalName();
+            String mc = qs.get("memoryCapacity").asLiteral().getValue().toString();
+            String memoryInterface = qs.get("memoryInterface").asLiteral().getValue().toString();
+
+            int mc1= Integer.parseInt(mc);
+            if(!name.equals("") && mc1 >=memorycap)
+                hdds.add(new hddDTO(name, mc, memoryInterface));
+        }
+
+        return hdds;
+    }
+
+    public List<ssdDTO> upgradeSSD(String selectedSSD)
+    {
+        List<QuerySolution> results = service.executeQuery(queryGetAllInformationSSD());
+        List<QuerySolution> ssd = service.executeQuery(queryGetSelectedSSD(selectedSSD));
+        String memoryCapacity="";
+        for (QuerySolution qs : ssd){
+            memoryCapacity = qs.get("memoryCapacity").asLiteral().getValue().toString();
+        }
+        int memorycap=Integer.parseInt(memoryCapacity);
+        List<ssdDTO> ssds= new ArrayList<>();
+        for (QuerySolution qs : results) {
+            String name = qs.get("name").asResource().getLocalName();
+            String mc = qs.get("memoryCapacity").asLiteral().getValue().toString();
+            String memoryInterface = qs.get("memoryInterface").asLiteral().getValue().toString();
+
+            int mc1= Integer.parseInt(mc);
+            if(!name.equals("") && mc1 >=memorycap)
+                ssds.add(new ssdDTO(name, mc, memoryInterface));
+        }
+
+        return ssds;
     }
 
     public List<cpuDTO> upgradeCPU(String selectedMotherboard, String selectedCPU) {
@@ -157,6 +217,21 @@ public class QueryService {
                 ":"+selectedGpu+" :gpuTeraflops ?gpuTeraflops .\n" +
                 "}\n";
     }
+    private String queryGetSelectedHdd(String selectedHdd) {
+        return service.getQuery() +
+                "SELECT ?memoryCapacity \n" +
+                "WHERE {\n" +
+                ":"+selectedHdd+" :memoryCapacity ?memoryCapacity .\n" +
+                "}\n";
+    }
+
+    private String queryGetSelectedSSD(String selectedSsd) {
+        return service.getQuery() +
+                "SELECT ?memoryCapacity \n" +
+                "WHERE {\n" +
+                ":"+selectedSsd+" :memoryCapacity ?memoryCapacity .\n" +
+                "}\n";
+    }
     private String queryGetAllMotherboards() {
         return service.getQuery() +
                 "SELECT ?name \n" +
@@ -169,6 +244,16 @@ public class QueryService {
                 "SELECT ?name \n" +
                 "WHERE {\n" +
                 "?name rdf:type :CPU .\n" +
+                "}\n";
+    }
+    private String queryGetAllInformationGPU() {
+        return service.getQuery() +
+                "SELECT ?name ?gpuSpeed ?gpuMemory ?gpuTeraflops\n" +
+                "WHERE {\n" +
+                "?name rdf:type :GPU .\n" +
+                "?name :gpuSpeed ?gpuSpeed .\n"+
+                "?name :gpuMemory ?gpuMemory .\n"+
+                "?name :gpuTeraflops ?gpuTeraflops .\n"+
                 "}\n";
     }
     private String queryGetAllGPU() {
@@ -199,6 +284,26 @@ public class QueryService {
                 "SELECT ?name \n" +
                 "WHERE {\n" +
                 "?name rdf:type :HDD .\n" +
+                "}\n";
+    }
+
+    private String queryGetAllInformationHDD() {
+        return service.getQuery() +
+                "SELECT ?name ?memoryCapacity ?memoryInterface\n" +
+                "WHERE {\n" +
+                "?name rdf:type :HDD .\n" +
+                "?name :memoryCapacity ?memoryCapacity .\n" +
+                "?name :memoryInterface ?memoryInterface .\n"+
+                "}\n";
+    }
+
+    private String queryGetAllInformationSSD() {
+        return service.getQuery() +
+                "SELECT ?name ?memoryCapacity ?memoryInterface\n" +
+                "WHERE {\n" +
+                "?name rdf:type :SSD .\n" +
+                "?name :memoryCapacity ?memoryCapacity .\n" +
+                "?name :memoryInterface ?memoryInterface .\n"+
                 "}\n";
     }
 
