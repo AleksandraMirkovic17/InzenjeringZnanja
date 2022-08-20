@@ -17,308 +17,308 @@ node hard_disk_disconnected
 node ram_disconnected
 {
      label = "C2";
-     position = (220 161);
+     position = (74 238);
      states = ("no" "yes");
 }
 
 node bios_problem
 {
      label = "C3";
-     position = (139 153);
+     position = (74 408);
      states = ("yes" "no");
 }
 
 node driver_problem
 {
      label = "C4";
-     position = (239 271);
+     position = (239 290);
      states = ("yes" "no");
 }
 
 node virus
 {
      label = "C5";
-     position = (361 267);
+     position = (361 266);
      states = ("yes" "no");
 }
 
 node not_starting
 {
      label = "C6";
-     position = (48 377);
+     position = (1359 352);
      states = ("yes" "no");
 }
 
 node not_booting
 {
      label = "C10";
-     position = (164 379);
+     position = (133 326);
      states = ("yes" "no");
 }
 
 node bsod
 {
      label = "C11";
-     position = (291 334);
+     position = (300 359);
      states = ("yes" "no");
 }
 
 node restart
 {
      label = "C12";
-     position = (402 377);
-     states = ("State 0");
+     position = (19 332);
+     states = ("yes" "no");
 }
 
 node no_display_output
 {
      label = "C13";
-     position = (495 378);
-     states = ("State 0");
+     position = (407 506);
+     states = ("yes" "no");
 }
 
 node keyboard_not_working
 {
      label = "C14";
-     position = (573 376);
-     states = ("State 0");
-}
-
-node mouse_not_working
-{
-     label = "C15";
-     position = (676 381);
-     states = ("State 0");
+     position = (591 584);
+     states = ("yes" "no");
 }
 
 node frozen_screen
 {
      label = "C16";
-     position = (773 378);
-     states = ("State 0");
+     position = (532 314);
+     states = ("yes" "no");
 }
 
 node slow_internet
 {
      label = "C17";
-     position = (857 372);
-     states = ("State 0");
+     position = (1454 103);
+     states = ("yes" "no");
 }
 
 node no_internet
 {
      label = "C18";
-     position = (945 372);
-     states = ("State 0");
+     position = (1454 166);
+     states = ("yes" "no");
 }
 
 node program_not_responding
 {
      label = "C19";
-     position = (78 437);
-     states = ("State 0");
+     position = (97 511);
+     states = ("yes" "no");
 }
 
 node monitor_not_working
 {
      label = "C20";
-     position = (173 437);
-     states = ("State 0");
+     position = (834 607);
+     states = ("yes" "no");
 }
 
 node printer_not_working
 {
      label = "C21";
-     position = (294 439);
-     states = ("State 0");
+     position = (750 606);
+     states = ("yes" "no");
 }
 
 node microphone_not_working
 {
      label = "C22";
-     position = (406 435);
-     states = ("State 0");
+     position = (669 606);
+     states = ("yes" "no");
 }
 
 node camera_not_working
 {
      label = "C23";
-     position = (506 437);
-     states = ("State 0");
+     position = (1119 627);
+     states = ("yes" "no");
 }
 
 node speakers_not_working
 {
      label = "C24";
-     position = (584 433);
-     states = ("State 0");
+     position = (1012 611);
+     states = ("yes" "no");
 }
 
 node loud_noise
 {
      label = "C25";
-     position = (683 442);
-     states = ("State 0");
+     position = (902 106);
+     states = ("yes" "no");
 }
 
 node overheating
 {
      label = "C26";
-     position = (771 433);
-     states = ("State 0");
+     position = (626 97);
+     states = ("yes" "no");
 }
 
 node battery_draining
 {
      label = "C27";
-     position = (849 436);
-     states = ("State 0");
+     position = (1462 250);
+     states = ("yes" "no");
 }
 
 node hard_disk_not_working
 {
      label = "C28";
-     position = (954 432);
-     states = ("State 0");
+     position = (503 624);
+     states = ("yes" "no");
 }
 
 node cable_disconnected
 {
      label = "C29";
-     position = (99 212);
+     position = (759 504);
      states = ("yes" "no");
 }
 
 node insufficient_power
 {
      label = "C31";
-     position = (24 215);
+     position = (1247 283);
      states = ("yes" "no");
 }
 
 node os_problem
 {
      label = "C33";
-     position = (439 150);
+     position = (428 33);
      states = ("yes" "no");
 }
 
 node motherboard_battery
 {
      label = "C34";
-     position = (511 149);
+     position = (1361 445);
      states = ("yes" "no");
 }
 
 node fans_problem
 {
      label = "C35";
-     position = (584 152);
+     position = (749 0);
      states = ("yes" "no");
 }
 
 node cpu_overheating
 {
      label = "C36";
-     position = (664 154);
+     position = (34 119);
      states = ("yes" "no");
 }
 
 node cpu_throttle
 {
      label = "C37";
-     position = (733 157);
+     position = (749 226);
      states = ("yes" "no");
 }
 
-node printer_stuck
+node printer_malfunction
 {
      label = "C38";
-     position = (815 154);
+     position = (750 685);
      states = ("yes" "no");
 }
 
 node battery_problem
 {
      label = "C39";
-     position = (897 170);
+     position = (1363 249);
      states = ("yes" "no");
 }
 
-node antifirus_problem
+node antivirus_problem
 {
      label = "C40";
-     position = (976 156);
+     position = (1585 150);
      states = ("yes" "no");
 }
 
 node storage_corrupted
 {
      label = "C41";
-     position = (447 204);
+     position = (26 570);
      states = ("yes" "no");
 }
 
 node dusty_case
 {
      label = "C42";
-     position = (537 206);
+     position = (747 52);
      states = ("yes" "no");
 }
 
 node mouse_malfunction
 {
      label = "C43";
-     position = (452 254);
-     states = ("yes" "no");
-}
-
-node printer_malfunction
-{
-     label = "C44";
-     position = (518 255);
+     position = (925 681);
      states = ("yes" "no");
 }
 
 node keyboard_malfunction
 {
      label = "C45";
-     position = (585 254);
+     position = (582 685);
      states = ("yes" "no");
 }
 
 node microphone_malfunction
 {
      label = "C47";
-     position = (655 254);
+     position = (660 683);
      states = ("yes" "no");
 }
 
 node camera_malfunction
 {
      label = "C48";
-     position = (724 255);
+     position = (1120 680);
      states = ("yes" "no");
 }
 
 node speaker_malfunction
 {
      label = "C49";
-     position = (794 254);
+     position = (1010 687);
      states = ("yes" "no");
 }
 
 node old_thermal_paste
 {
      label = "C50";
-     position = (877 252);
+     position = (744 108);
      states = ("yes" "no");
 }
 
 node router_malfunction
 {
      label = "C51";
-     position = (955 251);
+     position = (1327 154);
+     states = ("yes" "no");
+}
+
+node mouse_not_working
+{
+     label = "C1";
+     position = (924 607);
+     states = ("yes" "no");
+}
+
+node monitor_malfunction
+{
+     label = "C3";
+     position = (832 680);
      states = ("yes" "no");
 }
 
@@ -347,12 +347,24 @@ potential (virus)
  data = ( 0.05 0.95 );
 }
 
-potential (not_starting | cable_disconnected insufficient_power)
+potential (not_starting | battery_problem motherboard_battery bios_problem insufficient_power)
 {
- data = ((( 0.95 0.05 )
-( 0.9 0.1 ))
-(( 0.9 0.1 )
-( 0.2 0.8 )));
+ data = ((((( 0.92499995 0.075 )
+( 0.55 0.45000002 ))
+(( 0.92499995 0.075 )
+( 0.55 0.45000002 )))
+((( 0.92499995 0.075 )
+( 0.55 0.45000002 ))
+(( 0.92499995 0.075 )
+( 0.55 0.45000002 ))))
+(((( 0.92499995 0.075 )
+( 0.55 0.45000002 ))
+(( 0.92499995 0.075 )
+( 0.55 0.45000002 )))
+((( 0.92499995 0.075 )
+( 0.55 0.45000002 ))
+(( 0.92499995 0.075 )
+( 0.55 0.45000002 )))));
 }
 
 potential (not_booting | bios_problem ram_disconnected cable_disconnected insufficient_power)
@@ -377,99 +389,170 @@ potential (not_booting | bios_problem ram_disconnected cable_disconnected insuff
 
 potential (bsod | virus hard_disk_disconnected driver_problem)
 {
- data = (((( 0.95 0.05 )
+ data = (((( 0.96 0.04 )
+( 0.83 0.17 ))
+(( 0.93 0.07 )
+( 0.89 0.11 )))
+((( 0.95 0.02 )
+( 0.96 0.04 ))
+(( 0.96 0.04 )
+( 0.93 0.07 ))));
+}
+
+potential (restart | cpu_overheating bios_problem ram_disconnected)
+{
+ data = (((( 0.96 0.04 )
+( 0.93 0.07 ))
+(( 0.93 0.07 )
+( 0.89 0.11 )))
+((( 0.98 0.02 )
+( 0.96 0.04 ))
+(( 0.96 0.04 )
+( 0.93 0.07 ))));
+}
+
+potential (no_display_output | bios_problem cable_disconnected)
+{
+ data = ((( 0.96 0.04 )
+( 0.93 0.07 ))
+(( 0.93 0.07 )
+( 0.89 0.11 )));
+}
+
+potential (keyboard_not_working | cable_disconnected keyboard_malfunction)
+{
+ data = ((( 0.96 0.04 )
+( 0.93 0.07 ))
+(( 0.93 0.07 )
+( 0.89 0.11 )));
+}
+
+potential (frozen_screen | os_problem bios_problem)
+{
+ data = ((( 0.9 0.1 )
+( 0.83 0.17 ))
+(( 0.93 0.07 )
+( 0.85 0.15 )));
+}
+
+potential (slow_internet | antivirus_problem router_malfunction)
+{
+ data = ((( 0.96 0.04 )
+( 0.93 0.07 ))
+(( 0.93 0.07 )
+( 0.89 0.11 )));
+}
+
+potential (no_internet | antivirus_problem router_malfunction)
+{
+ data = ((( 0.9 0.1 )
+( 0.83 0.17 ))
+(( 0.93 0.07 )
+( 0.85 0.15 )));
+}
+
+potential (program_not_responding | storage_corrupted os_problem)
+{
+ data = ((( 0.9 0.1 )
+( 0.83 0.17 ))
+(( 0.93 0.07 )
+( 0.85 0.15 )));
+}
+
+potential (monitor_not_working | cable_disconnected monitor_malfunction)
+{
+ data = ((( 0.96 0.04 )
 ( 0.9 0.1 ))
-(( 0.9 0.1 )
-( 0.2 0.8 )))
+(( 0.93 0.07 )
+( 0.85 0.15 )));
+}
+
+potential (printer_not_working | cable_disconnected printer_malfunction)
+{
+ data = ((( 0.96 0.04 )
+( 0.9 0.1 ))
+(( 0.93 0.07 )
+( 0.85 0.15 )));
+}
+
+potential (microphone_not_working | cable_disconnected microphone_malfunction)
+{
+ data = ((( 0.96 0.04 )
+( 0.9 0.1 ))
+(( 0.93 0.07 )
+( 0.85 0.15 )));
+}
+
+potential (camera_not_working | cable_disconnected camera_malfunction)
+{
+ data = ((( 0.96 0.04 )
+( 0.9 0.1 ))
+(( 0.93 0.07 )
+( 0.85 0.15 )));
+}
+
+potential (speakers_not_working | cable_disconnected speaker_malfunction)
+{
+ data = ((( 0.96 0.04 )
+( 0.9 0.1 ))
+(( 0.93 0.07 )
+( 0.85 0.15 )));
+}
+
+potential (loud_noise | old_thermal_paste dusty_case fans_problem cpu_throttle)
+{
+ data = ((((( 0.9 0.1 )
+( 0.83 0.17 ))
+(( 0.93 0.07 )
+( 0.85 0.15 )))
 ((( 0.9 0.1 )
-( 0.8 0.2 ))
-(( 0.8 0.2 )
-( 0.2 0.8 ))));
+( 0.9 0.1 ))
+(( 0.83 0.17 )
+( 0.93 0.07 ))))
+(((( 0.85 0.15 )
+( 0.85 0.15 ))
+(( 0.9 0.1 )
+( 0.83 0.17 )))
+((( 0.93 0.07 )
+( 0.85 0.15 ))
+(( 0.6 0.4 )
+( 0.9 0.1 )))));
 }
 
-potential (restart)
+potential (overheating | old_thermal_paste fans_problem cpu_throttle dusty_case)
 {
- data = ( 1.0 );
+ data = ((((( 0.9 0.1 )
+( 0.83 0.17 ))
+(( 0.93 0.07 )
+( 0.85 0.15 )))
+((( 0.9 0.1 )
+( 0.9 0.1 ))
+(( 0.83 0.17 )
+( 0.93 0.07 ))))
+(((( 0.85 0.15 )
+( 0.85 0.15 ))
+(( 0.9 0.1 )
+( 0.83 0.17 )))
+((( 0.93 0.07 )
+( 0.85 0.15 ))
+(( 0.6 0.4 )
+( 0.9 0.1 )))));
 }
 
-potential (no_display_output)
+potential (battery_draining | antivirus_problem battery_problem)
 {
- data = ( 1.0 );
+ data = ((( 0.96 0.04 )
+( 0.9 0.1 ))
+(( 0.93 0.07 )
+( 0.85 0.15 )));
 }
 
-potential (keyboard_not_working)
+potential (hard_disk_not_working | os_problem cable_disconnected)
 {
- data = ( 1.0 );
-}
-
-potential (mouse_not_working)
-{
- data = ( 1.0 );
-}
-
-potential (frozen_screen)
-{
- data = ( 1.0 );
-}
-
-potential (slow_internet)
-{
- data = ( 1.0 );
-}
-
-potential (no_internet)
-{
- data = ( 1.0 );
-}
-
-potential (program_not_responding)
-{
- data = ( 1.0 );
-}
-
-potential (monitor_not_working)
-{
- data = ( 1.0 );
-}
-
-potential (printer_not_working)
-{
- data = ( 1.0 );
-}
-
-potential (microphone_not_working)
-{
- data = ( 1.0 );
-}
-
-potential (camera_not_working)
-{
- data = ( 1.0 );
-}
-
-potential (speakers_not_working)
-{
- data = ( 1.0 );
-}
-
-potential (loud_noise)
-{
- data = ( 1.0 );
-}
-
-potential (overheating)
-{
- data = ( 1.0 );
-}
-
-potential (battery_draining)
-{
- data = ( 1.0 );
-}
-
-potential (hard_disk_not_working)
-{
- data = ( 1.0 );
+ data = ((( 0.96 0.04 )
+( 0.9 0.1 ))
+(( 0.93 0.07 )
+( 0.85 0.15 )));
 }
 
 potential (cable_disconnected)
@@ -489,86 +572,94 @@ potential (os_problem)
 
 potential (motherboard_battery)
 {
- data = ( 1.0 0.0 );
+ data = ( 0.05 0.95 );
 }
 
 potential (fans_problem)
 {
- data = ( 1.0 0.0 );
+ data = ( 0.85 0.15 );
 }
 
 potential (cpu_overheating)
 {
- data = ( 1.0 0.0 );
+ data = ( 0.91 0.09 );
 }
 
 potential (cpu_throttle)
 {
- data = ( 1.0 0.0 );
-}
-
-potential (printer_stuck)
-{
- data = ( 1.0 0.0 );
-}
-
-potential (battery_problem)
-{
- data = ( 1.0 0.0 );
-}
-
-potential (antifirus_problem)
-{
- data = ( 1.0 0.0 );
-}
-
-potential (storage_corrupted)
-{
- data = ( 1.0 0.0 );
-}
-
-potential (dusty_case)
-{
- data = ( 1.0 0.0 );
-}
-
-potential (mouse_malfunction)
-{
- data = ( 1.0 0.0 );
+ data = ( 0.7 0.3 );
 }
 
 potential (printer_malfunction)
 {
- data = ( 1.0 0.0 );
+ data = ( 0.1 0.9 );
+}
+
+potential (battery_problem)
+{
+ data = ( 0.1 0.9 );
+}
+
+potential (antivirus_problem)
+{
+ data = ( 0.05 0.95 );
+}
+
+potential (storage_corrupted)
+{
+ data = ( 0.5 0.0 );
+}
+
+potential (dusty_case)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (mouse_malfunction)
+{
+ data = ( 0.85 0.15 );
 }
 
 potential (keyboard_malfunction)
 {
- data = ( 1.0 0.0 );
+ data = ( 0.6 0.4 );
 }
 
 potential (microphone_malfunction)
 {
- data = ( 1.0 0.0 );
+ data = ( 0.25 0.75 );
 }
 
 potential (camera_malfunction)
 {
- data = ( 1.0 0.0 );
+ data = ( 0.12 0.88 );
 }
 
 potential (speaker_malfunction)
 {
- data = ( 1.0 0.0 );
+ data = ( 0.1 0.9 );
 }
 
 potential (old_thermal_paste)
 {
- data = ( 1.0 0.0 );
+ data = ( 0.9 0.1 );
 }
 
 potential (router_malfunction)
 {
- data = ( 1.0 0.0 );
+ data = ( 0.05 0.95 );
+}
+
+potential (mouse_not_working | cable_disconnected mouse_malfunction)
+{
+ data = ((( 0.96 0.04 )
+( 0.9 0.1 ))
+(( 0.93 0.07 )
+( 0.85 0.15 )));
+}
+
+potential (monitor_malfunction)
+{
+ data = ( 0.1 0.9 );
 }
 
