@@ -18,7 +18,7 @@ node ram_disconnected
 {
      label = "C2";
      position = (74 238);
-     states = ("no" "yes");
+     states = ("yes" "no");
 }
 
 node bios_problem
@@ -329,7 +329,7 @@ potential (hard_disk_disconnected)
 
 potential (ram_disconnected)
 {
- data = ( 0.02 0.98 );
+ data = ( 0.9 0.1 );
 }
 
 potential (bios_problem)
