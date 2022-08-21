@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../components/HomePage.vue'
+import Bayes from '../components/BayesComponent.vue'
 
 const routes = [
     {
@@ -11,6 +12,11 @@ const routes = [
         path: '/home',
         name: 'HomePage',
         component: HomePage
+      },
+      {
+        path: '/bayes',
+        name: 'Bayes',
+        component: Bayes
       }]
 
       const router = createRouter({
