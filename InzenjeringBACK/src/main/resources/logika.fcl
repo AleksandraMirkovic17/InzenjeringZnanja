@@ -46,10 +46,10 @@ FUZZIFY vram
 END_FUZZIFY
 
 FUZZIFY psu_wattage
-	TERM low    := (0, 1) (300, 1) (400, 0);
-	TERM mid    := (300, 0) (400, 1) (600, 0);
-	TERM high   := (600, 0) (800, 1) (1000, 0);
-	TERM v_high := (800, 0) (1200, 1);
+	TERM low    := (0, 1) (200, 1) (300, 0);
+	TERM mid    := (200, 0) (300, 1) (400, 0);
+	TERM high   := (300, 0) (700, 1) (900, 0);
+	TERM v_high := (700, 0) (1000, 1);
 END_FUZZIFY
 
 FUZZIFY gpu_speed
@@ -65,17 +65,20 @@ DEFUZZIFY use_casual
 	TERM mid     := (0, 0) (50, 1) (100, 0);
 	TERM high    := (50, 0) (100, 1);
 	
-	METHOD : COG;		// 'Center Of Gravity' odn. centar mase (koristi se i MM odn. mean max)
-	DEFAULT := 0;		// podrazumevana vrednost (ukoliko nijedno pravilo nije aktivirano)
+	METHOD : COG;
+	DEFAULT := 0;
 END_DEFUZZIFY
 
 DEFUZZIFY use_gaming
-	TERM low     := (0,  1) (25, 1) (50,  0);
-	TERM mid     := (25, 0) (50, 1) (75,  0);
-	TERM high    := (50, 0) (75, 1) (100, 1);
+	TERM low     := (0,  1) (50, 0);
+	TERM mid     := (0, 0) (50, 1) (100, 0);
+	TERM high    := (50, 0) (100, 1);
+	//TERM low     := (0,  1) (25, 1) (50,  0);
+	//TERM mid     := (25, 0) (50, 1) (75,  0);
+	//TERM high    := (50, 0) (75, 1) (100, 1);
 	
-	METHOD : COG;		// 'Center Of Gravity' odn. centar mase (koristi se i MM odn. mean max)
-	DEFAULT := 0;		// podrazumevana vrednost (ukoliko nijedno pravilo nije aktivirano)
+	METHOD : COG;
+	DEFAULT := 0;
 END_DEFUZZIFY
 
 DEFUZZIFY use_hosting
@@ -83,8 +86,8 @@ DEFUZZIFY use_hosting
 	TERM mid     := (0, 0) (50, 1) (100, 0);
 	TERM high    := (50, 0) (100, 1);
 	
-	METHOD : COG;		// 'Center Of Gravity' odn. centar mase (koristi se i MM odn. mean max)
-	DEFAULT := 0;		// podrazumevana vrednost (ukoliko nijedno pravilo nije aktivirano)
+	METHOD : COG;
+	DEFAULT := 0;
 END_DEFUZZIFY
 
 DEFUZZIFY use_mining
@@ -120,8 +123,8 @@ RULEBLOCK gaming_block
 	ACT  : MIN;
 	ACCU : MAX;
 	
-	RULE 1 : IF (core_num IS low) OR (ram_capacity IS low) OR (ram_capacity IS mid) OR (vram IS low) OR (psu_wattage IS low) OR
-			    (gpu_speed IS low) THEN use_gaming IS low WITH 1;
+	//RULE 1 : IF (core_num IS low) OR (ram_capacity IS low) OR (ram_capacity IS mid) OR (vram IS low) OR (psu_wattage IS low) OR
+	//		    (gpu_speed IS low) THEN use_gaming IS low WITH 1;
 	
 	RULE 2 : IF (core_num IS mid) THEN use_gaming IS mid WITH 0.125;
 	RULE 3 : IF (core_num IS high) OR (core_num IS v_high) THEN use_gaming IS high WITH 0.125;
@@ -145,7 +148,7 @@ RULEBLOCK hosting_block
 	ACT  : MIN;
 	ACCU : MAX;
 	
-	RULE 1 : IF (core_num IS low) OR (core_num IS mid) OR (ram_capacity IS low) OR (ram_capacity IS mid) OR (psu_wattage IS low) THEN use_hosting IS low WITH 1;
+	//RULE 1 : IF (core_num IS low) OR (core_num IS mid) OR (ram_capacity IS low) OR (ram_capacity IS mid) OR (psu_wattage IS low) THEN use_hosting IS low WITH 1;
 	
 	RULE 2 : IF (core_num IS high) THEN use_hosting IS mid WITH 0.25;
 	RULE 3 : IF (core_num IS v_high) THEN use_hosting IS high WITH 0.25;
@@ -163,8 +166,8 @@ RULEBLOCK mining_block
 	ACT  : MIN;
 	ACCU : MAX;
 	
-	RULE 1 : IF (core_num IS low) OR (ram_capacity IS low) OR (psu_wattage IS low) OR (vram IS low) OR (vram IS mid) OR
-				(gpu_speed IS NOT high AND gpu_speed IS NOT v_high AND (gpu_speed IS low OR gpu_speed IS mid)) THEN use_mining IS low WITH 1;
+	//RULE 1 : IF (core_num IS low) OR (ram_capacity IS low) OR (psu_wattage IS low) OR (vram IS low) OR (vram IS mid) OR
+	//			(gpu_speed IS NOT high AND gpu_speed IS NOT v_high AND (gpu_speed IS low OR gpu_speed IS mid)) THEN use_mining IS low WITH 1;
 	
 	RULE 2 : IF (core_num IS high) THEN use_mining IS high WITH 0.05;
 	
@@ -181,17 +184,4 @@ RULEBLOCK mining_block
 	RULE 10 : IF (psu_wattage IS high) OR (psu_wattage IS v_high) THEN use_mining IS high WITH 0.1;
 END_RULEBLOCK
 
-
-//RULEBLOCK blok1
-//	AND : MIN;			// za konjunkciju se koristi minimum (samim tim sa za disjunkciju koristi maksimum)
-//	ACT : MIN;			// za zaključivanje (implikaciju) je izabran minimum (Mamdani implikacija) (osim MIN koristi se i PROD)
-//	ACCU : MAX;			// za kompoziciju je izabran maksimum (osim MAX koristi se i SUM)
-
-//	RULE 1 : IF ulazna_varijabla_1 IS var1_element_1 THEN izlazna_varijabla IS element_1;
-//	RULE 2 : IF ulazna_varijabla_1 IS var1_element_2 AND ulazna_varijabla_2 IS var1_element_1 THEN izlazna_varijabla IS element_2;
-//	RULE 3 : IF ulazna_varijabla_2 IS var1_element_1 THEN izlazna_varijabla IS element_1 WITH 0.5;
-//	RULE 4 : IF ulazna_varijabla_2 IS var1_element_2 THEN izlazna_varijabla IS element_2 WITH 0.5;
-//END_RULEBLOCK
-
 END_FUNCTION_BLOCK
-
