@@ -3669,12 +3669,12 @@
                          :gpuHDMIPorts "2"^^xsd:int ;
                          :gpuHeight "15cm"^^xsd:string ;
                          :gpuLength "18cm"^^xsd:string ;
-                         :gpuMemory "8"^^xsd:int ;
+                         :gpuMemory "24"^^xsd:int ;
                          :gpuMemorySpeed "1000"^^xsd:int ;
                          :gpuMemoryType "GDDR5X"^^xsd:string ;
                          :gpuPCIe "4"^^xsd:int ;
                          :gpuSpeed "10000"^^xsd:string ;
-                         :gpuTeraflops "9"^^xsd:int ;
+                         :gpuTeraflops "36"^^xsd:int ;
                          :gpuWidth "10cm"^^xsd:string .
 
 

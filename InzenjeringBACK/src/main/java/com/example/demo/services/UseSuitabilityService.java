@@ -27,31 +27,18 @@ public class UseSuitabilityService {
 
 	private boolean isMinimumSatisfied(int cores, float gpuSpeed, int psu, float ram, float storage, float vram,
 									   int minCores, float minGpuSpeed, int minPsu, float minRam, float minStorage, float minVram) {
-		int iter = 0;
 		if (cores < minCores)
 			return false;
-		System.out.println(iter);
-		iter++;
 		if (gpuSpeed < minGpuSpeed)
 			return false;
-		System.out.println(iter);
-		iter++;
 		if (psu < minPsu)
 			return false;
-		System.out.println(iter);
-		iter++;
 		if (ram < minRam)
 			return false;
-		System.out.println(iter);
-		iter++;
 		if (storage < minStorage)
 			return false;
-		System.out.println(iter);
-		iter++;
 		if (vram < minVram)
 			return false;
-		System.out.println(iter);
-		iter++;
 		return true;
 	}
 	
@@ -71,7 +58,7 @@ public class UseSuitabilityService {
 		float minGpuSpeed = 0.5f;
 		int minPsu = 400;
 		float minRam = 4;
-		float minStorage = 0;
+		float minStorage = 0.5f;
 		float minVram = 3;
 		
 		return isMinimumSatisfied(cores, gpuSpeed, psu, ram, storage, vram, minCores, minGpuSpeed, minPsu, minRam, minStorage, minVram);
@@ -80,7 +67,7 @@ public class UseSuitabilityService {
 	private boolean IsMinimumMining(int cores, float gpuSpeed, int psu, float ram, float storage, float vram) {
 		int minCores = 1;
 		float minGpuSpeed = 10f;
-		int minPsu = 800;
+		int minPsu = 650;
 		float minRam = 5;
 		float minStorage = 0.5f;
 		float minVram = 5;
@@ -91,7 +78,7 @@ public class UseSuitabilityService {
 	private boolean IsMinimumHosting(int cores, float gpuSpeed, int psu, float ram, float storage, float vram) {
 		int minCores = 8;
 		float minGpuSpeed = 0;
-		int minPsu = 800;
+		int minPsu = 650;
 		float minRam = 16;
 		float minStorage = 0;
 		float minVram = 0;
@@ -135,12 +122,19 @@ public class UseSuitabilityService {
 		System.out.println(ram.getName());
 		System.out.println(ram.getRamCapacity());
 		System.out.println(ram.getRamFrequency());
+		System.out.println(specificationDTO.getRamCount());
+		
+		float hddStorage = 0, ssdStorage = 0;
+		if (hdd.getMemoryCapacity() != null)
+			hddStorage = Float.parseFloat(hdd.getMemoryCapacity());
+		if (ssd.getMemoryCapacity() != null)
+			ssdStorage = Float.parseFloat(ssd.getMemoryCapacity());
 		
 		int coreNumber = cpu.getPhysicalCores();
 		float gpuSpeed = gpu.getGpuTeraflops();
 		int psuWatts = psu.getPower();
-		float ramCapacity = ram.getRamCapacity();
-		float storage = Float.parseFloat(hdd.getMemoryCapacity()); //Treba i SSD
+		float ramCapacity = ram.getRamCapacity() * specificationDTO.getRamCount();
+		float storage = hddStorage + ssdStorage; //Treba i SSD
 		float vramCapacity = gpu.getGpuMemory();
 		
 		System.out.println("Cores: " + coreNumber);

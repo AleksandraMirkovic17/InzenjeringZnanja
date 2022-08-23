@@ -7,13 +7,6 @@
   <div class = "container pt-100" id="forma">
     <div class = "d-sm-flex align-items-center justify-content-between">
    <div class="form-group">
-    <label for="exampleFormControlSelect1"> Select motherboard</label>
-    <select class="form-control" id="exampleFormControlSelect1"  v-model="selectedMotherboard">
-      <option v-for="m in motherboards" v-bind:value="m" :key="m"> {{m}}</option>
-    </select>
-  
-    <br>
-
       <label for="exampleFormControlSelect1"> Select CPU</label>
     <select class="form-control" id="exampleFormControlSelect1"  v-model="selectedCPU">
       <option v-for="m in cpus" v-bind:value="m" :key="m"> {{m}}</option>
@@ -44,11 +37,15 @@
     </select>
 	<br>
 	
+	<div>
 	<label for="ram_selection"> Select RAM</label>
-    <select class="form-control" id="ram_selection"  v-model="selectedRAM">
-      <option v-for="m in rams" v-bind:value="m" :key="m"> {{m}}</option>
-    </select>
-    <br>
+		<select class="form-control" id="ram_selection"  v-model="selectedRAM">
+			<option v-for="m in rams" v-bind:value="m" :key="m"> {{m}}</option>
+		</select>
+		<br>
+		<input id="number" type="number" v-model="selectedRAMCount">
+	</div>
+	<br>
     <div class="col-md-8">
       <button type="submit" class="btn btn-success" v-on:click="Submit()">SUBMIT</button>
     </div>
@@ -93,6 +90,7 @@ export default{
             selectedRAM: '',
             rams: new Array(),
             allRams: new Array(),
+			selectedRAMCount : 1,
 			suitability : {
 				casualScore : 0,
 				gamingScore : 0,
@@ -130,6 +128,7 @@ export default{
           .then(response1 => {
             console.log("hdds", response1.data)
             this.hdds = response1.data;
+			this.hdds.unshift('');
             if(this.hdds.length>0){
               this.selectedHDD = this.hdds[0];
             }
@@ -154,6 +153,7 @@ export default{
           .then(response1 => {
             console.log("ssd", response1.data)
             this.ssds = response1.data;
+			this.ssds.unshift('');
             if(this.ssds.length>0){
               this.selectedSSD = this.ssds[0];
             }
@@ -196,7 +196,8 @@ export default{
             ssd: this.selectedSSD,
             hdd: this.selectedHDD,
             ram: this.selectedRAM,
-            psu: this.selectedPSU
+            psu: this.selectedPSU,
+			ramCount: this.selectedRAMCount
         };
 
         axios.post('http://localhost:8082/suitability', specification)

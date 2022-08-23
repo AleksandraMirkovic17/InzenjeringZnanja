@@ -7,16 +7,18 @@ public class SpecificationDTO {
 	private String ssd;
 	private String ram;
 	private String psu;
+	private int ramCount;
 	
 	public SpecificationDTO() {}
 	
-	public SpecificationDTO(String cpu, String gpu, String hdd, String ssd, String ram, String psu) {
+	public SpecificationDTO(String cpu, String gpu, String hdd, String ssd, String ram, String psu, int ramCount) {
 		this.cpu = cpu;
 		this.gpu = gpu;
 		this.hdd = hdd;
 		this.ssd = ssd;
 		this.ram = ram;
 		this.psu = psu;
+		this.ramCount = ramCount;
 	}
 	
 	public String getCpu() {
@@ -55,4 +57,11 @@ public class SpecificationDTO {
 	public void setPsu(String psu) {
 		this.psu = psu;
 	}
+	public int getRamCount() {
+		return ramCount;
+	}
+	public void setRamCount(int ramCount) {
+		this.ramCount = ramCount;
+	}
+	
 }
