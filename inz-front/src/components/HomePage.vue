@@ -20,6 +20,12 @@
     </select>
     <br>
 
+     <label for="exampleFormControlSelect1"> Select RAM</label>
+    <select class="form-control" id="exampleFormControlSelect1"  v-model="selectedRAM">
+      <option v-for="m in rams" v-bind:value="m" :key="m"> {{m}}</option>
+    </select>
+    <br>
+
       <label for="exampleFormControlSelect1"> Select HDD</label>
     <select class="form-control" id="exampleFormControlSelect1"  v-model="selectedHDD">
       <option v-for="m in hdds" v-bind:value="m" :key="m"> {{m}}</option>
