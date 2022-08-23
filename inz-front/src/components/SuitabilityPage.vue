@@ -7,20 +7,20 @@
   <div class = "container pt-100" id="forma">
     <div class = "d-sm-flex align-items-center justify-content-between">
    <div class="form-group">
-      <label for="exampleFormControlSelect1"> Select CPU</label>
-    <select class="form-control" id="exampleFormControlSelect1"  v-model="selectedCPU">
+      <label for="cpu_selection"> Select CPU</label>
+    <select class="form-control" id="cpu_selection"  v-model="selectedCPU">
       <option v-for="m in cpus" v-bind:value="m" :key="m"> {{m}}</option>
     </select>
     <br>
 
-      <label for="exampleFormControlSelect1"> Select HDD</label>
-    <select class="form-control" id="exampleFormControlSelect1"  v-model="selectedHDD">
+      <label for="hdd_selection"> Select HDD</label>
+    <select class="form-control" id="hdd_selection"  v-model="selectedHDD">
       <option v-for="m in hdds" v-bind:value="m" :key="m"> {{m}}</option>
     </select>
     <br>
 
-      <label for="exampleFormControlSelect1"> Select GPU</label>
-    <select class="form-control" id="exampleFormControlSelect1"  v-model="selectedGPU">
+      <label for="gpu_selection"> Select GPU</label>
+    <select class="form-control" id="gpu_selection"  v-model="selectedGPU">
       <option v-for="m in gpus" v-bind:value="m" :key="m"> {{m}}</option>
     </select>
     <br>
