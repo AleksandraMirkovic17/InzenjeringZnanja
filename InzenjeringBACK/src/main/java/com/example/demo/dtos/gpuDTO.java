@@ -36,7 +36,15 @@ public class gpuDTO {
         this.gpuMemory = gpuMemory;
     }
 
-    public gpuDTO(String name, String gpuSpeed, int gpuMemory, int gpuTeraflops) {
+    public int getGpuTeraflops() {
+		return gpuTeraflops;
+	}
+
+	public void setGpuTeraflops(int gpuTeraflops) {
+		this.gpuTeraflops = gpuTeraflops;
+	}
+
+	public gpuDTO(String name, String gpuSpeed, int gpuMemory, int gpuTeraflops) {
         this.name = name;
         this.gpuSpeed = gpuSpeed;
         this.gpuMemory = gpuMemory;

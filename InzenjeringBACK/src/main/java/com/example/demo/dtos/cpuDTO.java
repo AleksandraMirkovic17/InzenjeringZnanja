@@ -5,9 +5,12 @@ public class cpuDTO {
     public int turboBoost;
     public int cpuMemorySpeed;
     public int logicalCores;
+    public int physicalCores;
+    public int baseClock;
     public String socket;
     public String name;
 
+    public cpuDTO() {}
 
     public cpuDTO(int turboBoost, int cpuMemorySpeed, String socket, String name) {
         this.turboBoost = turboBoost;
@@ -55,4 +58,22 @@ public class cpuDTO {
     public void setSocket(String socket) {
         this.socket = socket;
     }
+
+	public int getPhysicalCores() {
+		return physicalCores;
+	}
+
+	public void setPhysicalCores(int physicalCores) {
+		this.physicalCores = physicalCores;
+	}
+
+	public int getBaseClock() {
+		return baseClock;
+	}
+
+	public void setBaseClock(int baseClock) {
+		this.baseClock = baseClock;
+	}
+	
+	
 }

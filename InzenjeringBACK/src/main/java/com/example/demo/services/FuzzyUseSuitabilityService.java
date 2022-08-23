@@ -22,7 +22,7 @@ public class FuzzyUseSuitabilityService {
 		
 		// Show ruleset
 		FunctionBlock functionBlock = fis.getFunctionBlock(null);
-		JFuzzyChart.get().chart(functionBlock);
+		//JFuzzyChart.get().chart(functionBlock); --
 		
 		// Set inputs
 		functionBlock.setVariable("core_num", cores);
@@ -40,7 +40,7 @@ public class FuzzyUseSuitabilityService {
 		Variable gaming = functionBlock.getVariable("use_gaming");
 		Variable mining = functionBlock.getVariable("use_mining");
 		Variable hosting = functionBlock.getVariable("use_hosting");
-		JFuzzyChart.get().chart(casual, casual.getDefuzzifier(), true);
+		//JFuzzyChart.get().chart(casual, casual.getDefuzzifier(), true); --
 		//Gpr.debug("poor[service]: " + functionBlock.getVariable("service").getMembership("poor"));
 
 		// Print ruleSet

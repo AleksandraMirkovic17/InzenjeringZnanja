@@ -50,6 +50,11 @@ public class QueryController {
     public ResponseEntity<List<String>> getAllSSD() {
         return new ResponseEntity<>(queryService.getAllSSD(), HttpStatus.OK);
     }
+    
+    @GetMapping("/getAllPSU")
+    public ResponseEntity<List<String>> getAllPSU() {
+        return new ResponseEntity<>(queryService.getAllPSU(), HttpStatus.OK);
+    }
 
     @GetMapping("/RAM/{selectedMotherboard}")
     @ResponseBody
