@@ -52,8 +52,8 @@
         <input type="text" class="form-control" id="adventure-name" placeholder="E.g. Titanic" v-model = "ramFrequency" required>
       </div>
       
-<hr>
-      <button class="w-100 btn btn-primary btn-lg" type="submit" v-on:click="Submit()">View similar computers </button>
+	<br>
+      <button class="w-100 btn btn-primary btn-lg" type="button" v-on:click="Submit()">View similar computers </button>
     </form>
 
     <div v-if="view==true">
@@ -138,6 +138,7 @@ export default{
         .then(response =>{
           this.allComputers=response.data;
           console.log("all Computers ", response.data)
+          this.view = true;
         }).catch(error => {
     console.log(error.response)
           })

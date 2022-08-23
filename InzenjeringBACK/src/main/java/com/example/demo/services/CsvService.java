@@ -46,9 +46,9 @@ public class CsvService implements StandardCBRApplication {
         simConfig.addMapping(new Attribute("ramCapacity", csvDTO.class), new Interval(16));
         simConfig.addMapping(new Attribute("motherboardSocket", csvDTO.class), new EqualsStringIgnoreCase());
         simConfig.addMapping(new Attribute("gpuTeraflops", csvDTO.class), new Interval(15));
-        simConfig.addMapping(new Attribute("ramFrequency", csvDTO.class), new Threshold(2500));
-        simConfig.addMapping(new Attribute("turboBoost", csvDTO.class), new Threshold(3000));
-        simConfig.addMapping(new Attribute("cpuMemorySpeed", csvDTO.class), new Threshold(2500));
+        simConfig.addMapping(new Attribute("ramFrequency", csvDTO.class), new Threshold(25));
+        simConfig.addMapping(new Attribute("turboBoost", csvDTO.class), new Threshold(30));
+        simConfig.addMapping(new Attribute("cpuMemorySpeed", csvDTO.class), new Threshold(25));
 
         // Equal - returns 1 if both individuals are equal, otherwise returns 0 [cn, ramType, ]
         // Interval - returns the similarity of two number inside an interval: sim(x,y) = 1-(|x-y|/interval) [other]

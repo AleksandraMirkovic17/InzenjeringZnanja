@@ -10,6 +10,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
+@RequestMapping("Similar")
 public class CsvController {
 
     private final CsvService csvService;
@@ -18,7 +19,7 @@ public class CsvController {
         this.csvService = csvService;
     }
 
-    @GetMapping("/Similar/{motherboardDDR}/{motherboardSocket}/{hddMemoryCapacity}/{ramCapacity}/{turboBoost}/{cpuMemorySpeed}/{gpuTeraflops}/{ramFrequency}")
+    @GetMapping("/{motherboardDDR}/{motherboardSocket}/{hddMemoryCapacity}/{ramCapacity}/{turboBoost}/{cpuMemorySpeed}/{gpuTeraflops}/{ramFrequency}")
     @ResponseBody
     public ResponseEntity<List<csvDTO>> getSimilarity(@PathVariable int motherboardDDR, @PathVariable String motherboardSocket,
                                                       @PathVariable int hddMemoryCapacity,
