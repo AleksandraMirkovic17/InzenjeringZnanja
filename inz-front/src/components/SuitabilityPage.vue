@@ -42,8 +42,9 @@
     <select class="form-control" id="psu_selection"  v-model="selectedPSU">
       <option v-for="m in psus" v-bind:value="m" :key="m"> {{m}}</option>
     </select>
+	<br>
 	
-	<label for="ram_selection"> Select PSU</label>
+	<label for="ram_selection"> Select RAM</label>
     <select class="form-control" id="ram_selection"  v-model="selectedRAM">
       <option v-for="m in rams" v-bind:value="m" :key="m"> {{m}}</option>
     </select>
@@ -52,9 +53,14 @@
       <button type="submit" class="btn btn-success" v-on:click="Submit()">SUBMIT</button>
     </div>
   </div>
+  
+	<div v-if="view==true">
+		<div>Casual: {{suitability.casualScore}}</div>
+		<div>Gaming: {{suitability.gamingScore}}</div>
+		<div>Mining: {{suitability.miningScore}}</div>
+		<div>Hosting: {{suitability.hostingScore}}</div>
+	</div>
   </div>
-      
-     
   </div>
 </section>
 
@@ -86,7 +92,13 @@ export default{
             allPsus: new Array(),
             selectedRAM: '',
             rams: new Array(),
-            allRams: new Array()
+            allRams: new Array(),
+			suitability : {
+				casualScore : 0,
+				gamingScore : 0,
+				miningScore : 0,
+				hostingScore : 0
+			}
         }
     },
     mounted(){
@@ -190,6 +202,11 @@ export default{
         axios.post('http://localhost:8082/suitability', specification)
         .then(response =>{
             this.suitability = response.data;
+			this.suitability.casualScore = Math.round(response.data.casualScore * 100) / 100;
+			this.suitability.gamingScore = Math.round(response.data.gamingScore * 100) / 100;
+			this.suitability.miningScore = Math.round(response.data.miningScore * 100) / 100;
+			this.suitability.hostingScore = Math.round(response.data.hostingScore * 100) / 100;
+			this.view = true;
             console.log(this.suitability);
         }).catch(error => {
             console.log(error.response);

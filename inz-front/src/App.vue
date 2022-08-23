@@ -6,8 +6,8 @@
         <ul class ="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" href="/home">Recommend</a>
-           
           </li>
+          		<a class="nav-link" href="/suitability">Suitability</a>
            <a class="nav-link" href="/bayes">Bayes</a>
             <a class="nav-link" href="/csvConnector">Search for similiar PC's</a>
         </ul>
