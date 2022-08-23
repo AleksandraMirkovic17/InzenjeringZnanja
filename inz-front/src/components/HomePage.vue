@@ -192,6 +192,8 @@ export default{
              selectedUpgrade: '',
              view : false,
              allRams: new Array(),
+             rams: new Array(),
+             selectedRAM: '',
              allCpus: new Array(),
              selectedCPU: '',
              cpus: new Array(),
@@ -267,6 +269,30 @@ export default{
           }).catch(error => {
     console.log(error.response)
           })
+
+          axios.get('http://localhost:8082/query/getAllSSD')
+          .then(response1 => {
+            console.log("ssd", response1.data)
+            this.ssds = response1.data;
+            if(this.ssds.length>0){
+              this.selectedSSD = this.ssds[0];
+            }
+
+          }).catch(error => {
+    console.log(error.response)
+          })
+
+          axios.get('http://localhost:8082/query/getAllRAM')
+          .then(response1 => {
+            console.log("ram", response1.data)
+            this.rams = response1.data;
+            if(this.rams.length>0){
+              this.selectedRAM = this.rams[0];
+            }
+
+          }).catch(error => {
+    console.log(error.response)
+          })
     },
     methods:
     {
@@ -281,7 +307,7 @@ export default{
         if(this.selectedUpgrade == 'RAM')
         {
          
-        axios.get('http://localhost:8082/query/RAM/:'+this.selectedMotherboard)
+        axios.get('http://localhost:8082/query/RAM/'+this.selectedMotherboard)
         .then(response =>{
           this.allRams=response.data;
           this.view=true;

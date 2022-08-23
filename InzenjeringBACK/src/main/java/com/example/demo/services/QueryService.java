@@ -441,7 +441,7 @@ public class QueryService {
                 "SELECT ?name ?ramCapacity ?ramFrequency\n" +
                 "WHERE {\n" +
                 "?name rdf:type :RAM .\n" +
-                "?name :compatibleRAM "+nameMotherboard+" .\n" +
+                "?name :compatibleRAM :"+nameMotherboard+" .\n" +
                 "?name :ramCapacity ?ramCapacity .\n"+
                 "?name :ramFrequency ?ramFrequency .\n"+
                 "}\n";
